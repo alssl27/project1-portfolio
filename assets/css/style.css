@@ -88,6 +88,10 @@ body {
     width: 320px;
     /* Maintain image aspect ratio */
     height: auto;
+    /* Force a solid black background behind transparent PNG pixels */
+    background-color: #000000;
+    /* Ensure background fills edge-to-edge */
+    display: block;
     /* Slightly rounded corners */
     border-radius: 12px;
     /* Subtle separation from dark background */
