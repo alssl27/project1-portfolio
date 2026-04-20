@@ -19,6 +19,12 @@ body {
     position: center;
 }
 
+.navbar-icon {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
 .navbar {
     background-color: black;
     position: fixed;
