@@ -28,15 +28,15 @@ body {
     z-index: 1030;
 }
 
-.   justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+.navbar-nav {
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .portfolio-container {
     display: flex;
-    align-items48flex-start; /* Keeps the cursor aligned with the text */
+    align-items: flex-start; /* Keeps the cursor aligned with the text */
     font-size: 96px;
     line-height: 1.6;
 }
