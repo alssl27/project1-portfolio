@@ -34,16 +34,6 @@ body {
     position: center;
 }
 
-/* Navbar icon sizing */
-.navbar-icon {
-    /* Make the icon fit the navbar */
-    height: 50px;
-    /* Preserve aspect ratio */
-    width: auto;
-    /* Space between icon and links */
-    margin-right: 10px;
-}
-
 /* Fixed navbar container */
 .navbar {
     /* Black navbar background */
@@ -70,14 +60,14 @@ body {
     gap: 2rem;
 }
 
-/* Main typewriter and video container */
+/* Main typewriter container */
 .portfolio-container {
-    /* Place text and video side by side */
+    /* Center the text block */
     display: flex;
-    /* Align the text and video vertically */
+    /* Align the text vertically */
     align-items: center;
-    /* Add space between text and video */
-    gap: 40px;
+    /* Space between text and image */
+    gap: 2rem;
     /* Large text size */
     font-size: 96px;
     /* Comfortable line spacing */
@@ -92,14 +82,33 @@ body {
     align-items: flex-start;
 }
 
-/* Embedded video sizing */
-.portfolio-video {
-    /* Set a fixed readable width */
-    width: 400px;
-    /* Keep the original video ratio */
+/* Profile image styling */
+.profile-image {
+    /* Keep image size balanced with large text */
+    width: 320px;
+    /* Maintain image aspect ratio */
     height: auto;
-    /* Rounded corners */
-    border-radius: 8px;
+    /* Slightly rounded corners */
+    border-radius: 12px;
+    /* Subtle separation from dark background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 992px) {
+    .portfolio-container {
+        /* Stack text above image on smaller screens */
+        flex-direction: column;
+        /* Keep centered alignment when stacked */
+        align-items: center;
+        /* Reduce global text size for smaller devices */
+        font-size: 56px;
+    }
+
+    .profile-image {
+        /* Let image scale to screen width */
+        width: min(80vw, 320px);
+    }
 }
 
 /* Typewriter text block */
