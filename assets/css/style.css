@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 body {
     background-color: #121212;
@@ -37,9 +38,8 @@ body {
 .portfolio-container {
     display: flex;
     align-items: flex-start; /* Keeps the cursor aligned with the text */
-    font-size: 120px;
+    font-size: 24px;
     line-height: 1.6;
-    font-family: 'Orbitron', sans-serif;
 }
 
 #typewriter-text {
@@ -48,8 +48,13 @@ body {
     white-space: pre-wrap; /* This ensures the (new line) commands work */
 }
 
+.highlight-text {
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
+
 .cursor {
-    font-size: 144px;
+    font-size: 28px;
     color: orange; /* Change to match your portfolio's theme color */
     font-weight: bold;
     animation: blink 1s infinite;
