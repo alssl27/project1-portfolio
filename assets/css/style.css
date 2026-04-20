@@ -13,12 +13,16 @@ body {
     margin: 0;
     /* Push content below the fixed navbar */
     padding-top: 72px;
-    /* Center the main content */
+    /* Place main content from the left side */
     display: flex;
-    /* Center content horizontally */
-    justify-content: center;
-    /* Center content vertically */
+    /* Keep content aligned to the left */
+    justify-content: flex-start;
+    /* Keep content vertically centered */
     align-items: center;
+    /* Add space from the left edge */
+    padding-left: 5vw;
+    /* Keep content away from the right fixed image */
+    padding-right: 28rem;
     /* Full viewport height */
     min-height: 100vh;
 }
@@ -62,12 +66,12 @@ body {
 
 /* Main typewriter container */
 .portfolio-container {
-    /* Center the text block */
+    /* Keep text block on the left */
     display: flex;
-    /* Align the text vertically */
+    /* Align text vertically */
     align-items: center;
-    /* Space between text and image */
-    gap: 2rem;
+    /* Ensure text section uses available width */
+    width: 100%;
     /* Large text size */
     font-size: 96px;
     /* Comfortable line spacing */
@@ -92,6 +96,14 @@ body {
     background-color: #000000;
     /* Ensure background fills edge-to-edge */
     display: block;
+    /* Keep PNG fixed in place on the right */
+    position: fixed;
+    /* Distance from the right edge */
+    right: 6vw;
+    /* Vertically center image */
+    top: 50%;
+    /* Fine-tune true vertical centering */
+    transform: translateY(-50%);
     /* Slightly rounded corners */
     border-radius: 12px;
     /* Subtle separation from dark background */
@@ -110,8 +122,19 @@ body {
     }
 
     .profile-image {
+        /* Return image to normal flow on mobile */
+        position: static;
+        /* Remove desktop transform */
+        transform: none;
         /* Let image scale to screen width */
         width: min(80vw, 320px);
+    }
+
+    body {
+        /* Remove desktop right reservation on mobile */
+        padding-right: 1rem;
+        /* Keep left breathing room on mobile */
+        padding-left: 1rem;
     }
 }
 
