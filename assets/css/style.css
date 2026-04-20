@@ -60,3 +60,22 @@ body {
     0%, 49% { opacity: 1; }
     50%, 100% { opacity: 0; }
 }
+
+.social-footer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+}
+
+.social-icon {
+    color: rgb(238, 192, 215);
+    font-size: 32px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+}
