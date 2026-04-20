@@ -37,7 +37,7 @@ body {
 .portfolio-container {
     display: flex;
     align-items48flex-start; /* Keeps the cursor aligned with the text */
-    font-size: 64px;
+    font-size: 96px;
     line-height: 1.6;
 }
 
