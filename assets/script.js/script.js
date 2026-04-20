@@ -1,8 +1,7 @@
 // The text you want to type
 const lines = [
-    "Hi,",
-    "My name is Sarah Collins,",
-    "I am a Fullstack Web Developer"
+    "My name is <b>Sarah Collins</b>,",
+    "I am a <b>Fullstack Web Developer</b>"
 ];
 
 const speed = 75; // Typing speed in milliseconds
