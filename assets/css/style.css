@@ -1,99 +1,167 @@
+/* Orbitron font import for navbar text */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
+/* Global page styling */
 body {
+    /* Dark page background */
     background-color: #121212;
+    /* Light pink text color */
     color: rgb(238, 192, 215);
+    /* Monospace body font */
     font-family: 'Courier New', Courier, monospace;
+    /* Remove default page margin */
     margin: 0;
+    /* Push content below the fixed navbar */
     padding-top: 72px;
+    /* Center the main content */
     display: flex;
+    /* Center content horizontally */
     justify-content: center;
+    /* Center content vertically */
     align-items: center;
+    /* Full viewport height */
     min-height: 100vh;
 }
 
+/* Navbar text styling */
 .navbar-brand,
 .nav-link {
+    /* Orbitron for the nav labels */
     font-family: 'Orbitron', sans-serif;
+    /* Match the navbar text color */
     color: rgb(238, 192, 215)!important;
+    /* Keep the brand aligned */
     position: center;
 }
 
+/* Navbar icon sizing */
 .navbar-icon {
+    /* Make the icon fit the navbar */
     height: 50px;
+    /* Preserve aspect ratio */
     width: auto;
+    /* Space between icon and links */
     margin-right: 10px;
 }
 
+/* Fixed navbar container */
 .navbar {
+    /* Black navbar background */
     background-color: black;
+    /* Lock navbar to the top */
     position: fixed;
+    /* Pin to top edge */
     top: 0;
+    /* Pin to left edge */
     left: 0;
+    /* Full width across page */
     width: 100%;
+    /* Keep above content */
     z-index: 1030;
 }
 
+/* Center the navigation links */
 .navbar-nav {
+    /* Center the nav group */
     margin: 0 auto;
+    /* Center items inside the row */
     justify-content: center;
+    /* Add space between links */
     gap: 2rem;
 }
 
+/* Main typewriter and video container */
 .portfolio-container {
+    /* Place text and video side by side */
     display: flex;
+    /* Align the text and video vertically */
     align-items: center;
+    /* Add space between text and video */
     gap: 40px;
+    /* Large text size */
     font-size: 96px;
+    /* Comfortable line spacing */
     line-height: 1.6;
 }
 
+/* Wrapper for the typed text */
 .text-section {
+    /* Keep the text and cursor aligned */
     display: flex;
+    /* Align text at the top */
     align-items: flex-start;
 }
 
+/* Embedded video sizing */
 .portfolio-video {
+    /* Set a fixed readable width */
     width: 400px;
+    /* Keep the original video ratio */
     height: auto;
+    /* Rounded corners */
     border-radius: 8px;
 }
 
+/* Typewriter text block */
 #typewriter-text {
+    /* Remove default heading margin */
     margin: 0;
+    /* Keep normal weight */
     font-weight: normal;
+    /* Preserve typed line breaks */
     white-space: pre-wrap; /* This ensures the (new line) commands work */
 }
 
+/* Blinking cursor */
 .cursor {
+    /* Cursor size */
     font-size: 28px;
+    /* Cursor color */
     color: orange; /* Change to match your portfolio's theme color */
+    /* Bold cursor for visibility */
     font-weight: bold;
+    /* Blink animation */
     animation: blink 1s infinite;
+    /* Small gap after the text */
     margin-left: 2px;
 }
 
 /* The cursor blinking animation */
 @keyframes blink {
+    /* Cursor visible */
     0%, 49% { opacity: 1; }
+    /* Cursor hidden */
     50%, 100% { opacity: 0; }
 }
 
+/* Social icons footer */
 .social-footer {
+    /* Fix footer to the corner */
     position: fixed;
+    /* Distance from the bottom */
     bottom: 30px;
+    /* Distance from the right */
     right: 30px;
+    /* Lay icons out in a row */
     display: flex;
+    /* Space between icons */
     gap: 20px;
+    /* Keep above page content */
     z-index: 100;
 }
 
+/* Social icon link styling */
 .social-icon {
+    /* Match the navbar text color */
     color: rgb(238, 192, 215);
+    /* Set icon size */
     font-size: 32px;
+    /* Smooth hover transition */
     transition: color 0.3s ease;
 }
 
+/* Hover effect for social icons */
 .social-icon:hover {
+    /* Turn white on hover */
     color: #ffffff;
 }
