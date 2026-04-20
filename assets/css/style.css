@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
 body {
-    background-color: black;
+    background-color: #121212;
+    color: rgb(238, 192, 215);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding-top: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .navbar-brand,
@@ -13,11 +21,43 @@ body {
 
 .navbar {
     background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
-.navbar-nav {
-    margin: 0 auto;
-    justify-content: center;
-    gap: 2rem;
+.   justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
+.portfolio-container {
+    display: flex;
+    align-items: flex-start; /* Keeps the cursor aligned with the text */
+    font-size: 40px;
+    line-height: 1.6;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#typewriter-text {
+    margin: 0;
+    font-weight: normal;
+    white-space: pre-wrap; /* This ensures the (new line) commands work */
+}
+
+.cursor {
+    font-size: 48px;
+    color: orange; /* Change to match your portfolio's theme color */
+    font-weight: bold;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+/* The cursor blinking animation */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
 }
