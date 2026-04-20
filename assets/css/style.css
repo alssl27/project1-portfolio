@@ -1,13 +1,18 @@
 body {
-    background-color: purple;
+    background-color: black;
 }
 
 .navbar-brand,
 .nav-link {
-    color: #FFB6D9 !important;
+    color: rgb(238, 192, 215)!important;
+    position: center;
 }
 
 .navbar {
-    background-color: blueviolet;
     background-color: black;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    justify-content: center;
 }
