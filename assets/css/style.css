@@ -36,9 +36,21 @@ body {
 
 .portfolio-container {
     display: flex;
-    align-items: flex-start; /* Keeps the cursor aligned with the text */
+    align-items: center;
+    gap: 40px;
     font-size: 96px;
     line-height: 1.6;
+}
+
+.text-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.portfolio-video {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
 #typewriter-text {
