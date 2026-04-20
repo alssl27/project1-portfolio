@@ -1,3 +1,13 @@
 body {
     background-color: purple;
 }
+
+.navbar-brand,
+.nav-link {
+    color: #FFB6D9 !important;
+}
+
+.navbar {
+    background-color: blueviolet;
+    background-color: black;
+}
