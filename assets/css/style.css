@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
 body {
     background-color: black;
 }
 
 .navbar-brand,
 .nav-link {
+    font-family: 'Orbitron', sans-serif;
     color: rgb(238, 192, 215)!important;
     position: center;
 }
