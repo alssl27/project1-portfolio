@@ -19,10 +19,10 @@ body {
     justify-content: flex-start;
     /* Keep content vertically centered */
     align-items: center;
-    /* Add space from the left edge */
-    padding-left: 5vw;
-    /* Keep content away from the right fixed image */
-    padding-right: 28rem;
+    /* Keep content away from the left fixed image */
+    padding-left: 28rem;
+    /* Add space from the right edge */
+    padding-right: 5vw;
     /* Full viewport height */
     min-height: 100vh;
 }
@@ -72,6 +72,8 @@ body {
     align-items: center;
     /* Ensure text section uses available width */
     width: 100%;
+    /* Push typing block toward the right side */
+    justify-content: flex-end;
     /* Large text size */
     font-size: 96px;
     /* Comfortable line spacing */
@@ -96,10 +98,10 @@ body {
     background-color: #000000;
     /* Ensure background fills edge-to-edge */
     display: block;
-    /* Keep PNG fixed in place on the right */
+    /* Keep PNG fixed in place on the left */
     position: fixed;
-    /* Distance from the right edge */
-    right: 6vw;
+    /* Distance from the left edge */
+    left: 6vw;
     /* Vertically center image */
     top: 50%;
     /* Fine-tune true vertical centering */
@@ -131,10 +133,10 @@ body {
     }
 
     body {
-        /* Remove desktop right reservation on mobile */
-        padding-right: 1rem;
-        /* Keep left breathing room on mobile */
+        /* Use equal side spacing on mobile */
         padding-left: 1rem;
+        /* Use equal side spacing on mobile */
+        padding-right: 1rem;
     }
 }
 
