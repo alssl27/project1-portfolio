@@ -1,89 +1,55 @@
-<!-- Document type declaration -->
 <!DOCTYPE html>
-<!-- Root HTML element -->
 <html lang="en">
-  <!-- Head section for metadata and styles -->
   <head>
-    <!-- Character encoding -->
-    <meta charset="utf-8">
-    <!-- Responsive viewport setup -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Page title -->
-    <title>Bootstrap demo</title>
-    <!-- Bootstrap CSS from CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Custom site styles -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <!-- Visible page content starts here -->
   <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <!-- Full-width nav container -->
-      <div class="container-fluid">
-        <!-- Navbar brand placeholder left empty on purpose -->
-        <span class="navbar-brand"></span>
-        <!-- Mobile menu button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- Hamburger icon -->
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Collapsible nav links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- Navigation list -->
-          <ul class="navbar-nav">
-            <!-- Home link -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
-            </li>
-            <!-- About link -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT ME</a>
-            </li>
-            <!-- Projects link -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">PROJECTS</a>
-            </li>
-            <!-- Contact link -->
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">CONTACT</a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar bg-dark">
+      <div class="nav-wrapper">
+        <a class="nav-link active" href="#">HOME</a>
+        <a class="nav-link" href="#">ABOUT ME</a>
+        <a class="nav-link" href="#">PROJECTS</a>
+        <a class="nav-link" href="#">CONTACT</a>
       </div>
     </nav>
-    <!-- Typewriter text section -->
+
     <div class="portfolio-container">
-      <!-- Text block for typing effect -->
+      <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />
       <div class="text-section">
-        <!-- Typed text target -->
         <h1 id="typewriter-text"></h1>
-        <!-- Cursor indicator -->
         <span class="cursor">|</span>
       </div>
-      <!-- Profile image on the right side -->
-      <img src="assets/images/profile.png" alt="Profile photo" class="profile-image">
     </div>
-    <!-- Social icons footer -->
+
     <footer class="social-footer">
-      <!-- GitHub icon link -->
-      <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github-square"></i></a>
-      <!-- Discord icon link -->
-      <a href="#" class="social-icon" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-      <!-- Facebook icon link -->
-      <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      <!-- Instagram icon link -->
-      <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social-icon" aria-label="GitHub">
+        <i class="fa-brands fa-github-square"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Discord">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
     </footer>
-    <!-- Typewriter script -->
+
     <script src="assets/script.js/script.js"></script>
   </body>
-</html>
-<!-- Legacy duplicated snippet retained as commented reference:
-  </body>
-</html>
-    <title>Document</title>
-</body>
 </html>

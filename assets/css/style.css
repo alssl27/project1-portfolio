@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
 /* Global page styling */
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
 body {
     /* Dark page background */
-    background-color: #121212;
+    background-color: #000;
     /* Light pink text color */
     color: rgb(238, 192, 215);
     /* Monospace body font */
@@ -12,19 +19,15 @@ body {
     /* Remove default page margin */
     margin: 0;
     /* Push content below the fixed navbar */
-    padding-top: 72px;
-    /* Place main content from the left side */
-    display: flex;
-    /* Keep content aligned to the left */
-    justify-content: flex-start;
-    /* Keep content vertically centered */
-    align-items: center;
-    /* Keep content away from the left fixed image */
-    padding-left: 28rem;
-    /* Add space from the right edge */
-    padding-right: 5vw;
+    padding-top: 0%;
+    /* Horizontal breathing room */
+    padding-left: 1.5rem;
+    /* Horizontal breathing room */
+    padding-right: 1.5rem;
     /* Full viewport height */
     min-height: 100vh;
+    /* Overflow on the x-axis */
+    overflow-x: hidden;
 }
 
 /* Navbar text styling */
@@ -34,8 +37,8 @@ body {
     font-family: 'Orbitron', sans-serif;
     /* Match the navbar text color */
     color: rgb(238, 192, 215)!important;
-    /* Keep the brand aligned */
-    position: center;
+    /* Slight letter spacing for readability */
+    letter-spacing: 0.04em;
 }
 
 /* Fixed navbar container */
@@ -52,110 +55,131 @@ body {
     width: 100%;
     /* Keep above content */
     z-index: 1030;
+    /* Justify content to the right */
+    justify-content: flex-end !important;
+    /* Padding on the right */
+    padding-right: 24px !important;
+    border-bottom: pink solid 2px !important;
 }
 
-/* Center the navigation links */
-.navbar-nav {
-    /* Center the nav group */
-    margin: 0 auto;
-    /* Center items inside the row */
-    justify-content: center;
-    /* Add space between links */
-    gap: 2rem;
-}
-
-/* Main typewriter container */
-.portfolio-container {
-    /* Keep text block on the left */
-    display: flex;
-    /* Align text vertically */
-    align-items: center;
-    /* Ensure text section uses available width */
+.nav-wrapper {
+    display: block;          /* no flexbox */
+    white-space: nowrap;
+    /* Width of the navbar container */
     width: 100%;
-    /* Push typing block toward the right side */
-    justify-content: flex-end;
-    /* Large text size */
-    font-size: 96px;
-    /* Comfortable line spacing */
-    line-height: 1.6;
+    /* Text alignment of the navbar */
+    text-align: right !important;
 }
 
-/* Wrapper for the typed text */
+.nav-wrapper .nav-link {
+    display: inline-block;   /* horizontal without flex */
+    margin: 0 18px;
+    margin-left: 18px;
+    margin-right: 0;
+    text-decoration: none;
+    /* Orbitron for the nav labels */
+    font-family: 'Orbitron', sans-serif;
+    /* Match the navbar text color */
+    color: rgb(238, 192, 215)!important;
+    /* Slight letter spacing for readability */
+    letter-spacing: 0.04em;
+}
+
+/* Full-screen hero fix */
+body {
+  padding-left: 70px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+
+.portfolio-container {
+  position: relative;
+  width: 100%;
+  height: 100%vh; /* full viewport height minus navbar */
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: #000;
+  padding: 0 !important;
+}
+
 .text-section {
-    /* Keep the text and cursor aligned */
-    display: flex;
-    /* Align text at the top */
-    align-items: flex-start;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
-/* Profile image styling */
 .profile-image {
-    /* Keep image size balanced with large text */
-    width: 320px;
-    /* Maintain image aspect ratio */
-    height: auto;
-    /* Force a solid black background behind transparent PNG pixels */
-    background-color: #000000;
-    /* Ensure background fills edge-to-edge */
-    display: block;
-    /* Keep PNG fixed in place on the left */
-    position: fixed;
-    /* Distance from the left edge */
-    left: 6vw;
-    /* Vertically center image */
-    top: 50%;
-    /* Fine-tune true vertical centering */
-    transform: translateY(-50%);
-    /* Slightly rounded corners */
-    border-radius: 12px;
-    /* Subtle separation from dark background */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill viewport without distortion */
+  object-position: center;
+  z-index: 1;
+  border: 6px solid rgb(238, 192, 215) !important; /* pastel pink */
+  box-sizing: border-box;
+  padding-top: 24px !important;
+  margin: 16px !important;
+  width: calc(50% - 32px) !important; /* keeps layout from overflowing */
+  padding: 0 !important;
+  margin-top: 24px !important;
+  margin-right: 24px !important;
+  margin-bottom: 24px !important;
+  margin-left: 24px !important;
+
+  /* prevent overflow after adding margins */
+  width: calc(50% - 48px) !important;
+  height: calc(100% - 48px) !important;
+  box-sizing: border-box !important;
 }
 
-/* Mobile layout adjustments */
-@media (max-width: 992px) {
-    .portfolio-container {
-        /* Stack text above image on smaller screens */
-        flex-direction: column;
-        /* Keep centered alignment when stacked */
-        align-items: center;
-        /* Reduce global text size for smaller devices */
-        font-size: 56px;
-    }
-
-    .profile-image {
-        /* Return image to normal flow on mobile */
-        position: static;
-        /* Remove desktop transform */
-        transform: none;
-        /* Let image scale to screen width */
-        width: min(80vw, 320px);
-    }
-
-    body {
-        /* Use equal side spacing on mobile */
-        padding-left: 1rem;
-        /* Use equal side spacing on mobile */
-        padding-right: 1rem;
-    }
+/* FINAL OVERRIDE: image left, typewriter right */
+.portfolio-container{
+  display: flex !important;
+  height: calc(100vh - 72px) !important;
+  overflow: hidden !important;
 }
 
-/* Typewriter text block */
-#typewriter-text {
-    /* Remove default heading margin */
+.profile-image{
+  position: relative !important;
+  inset: auto !important;
+  width: 50% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.text-section{
+  position: relative !important;
+  inset: auto !important;
+  width: 50% !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  padding-right: 48px !important;
+  text-align: right !important;
+}
+
+#typewriter-text,
+.cursor {
+    color: rgb(238, 192, 215);  /* pastel pink */
     margin: 0;
-    /* Keep normal weight */
-    font-weight: normal;
-    /* Preserve typed line breaks */
-    white-space: pre-wrap; /* This ensures the (new line) commands work */
 }
 
-/* Blinking cursor */
 .cursor {
     /* Cursor size */
     font-size: 28px;
     /* Cursor color */
-    color: orange; /* Change to match your portfolio's theme color */
+    color: #000; /* Change to match your portfolio's theme color */
     /* Bold cursor for visibility */
     font-weight: bold;
     /* Blink animation */
@@ -177,13 +201,13 @@ body {
     /* Fix footer to the corner */
     position: fixed;
     /* Distance from the bottom */
-    bottom: 30px;
+    bottom: 16px !important;
     /* Distance from the right */
-    right: 30px;
+    right: 16px !important;
     /* Lay icons out in a row */
     display: flex;
     /* Space between icons */
-    gap: 20px;
+    gap: 10px !important;
     /* Keep above page content */
     z-index: 100;
 }
@@ -193,7 +217,7 @@ body {
     /* Match the navbar text color */
     color: rgb(238, 192, 215);
     /* Set icon size */
-    font-size: 32px;
+    font-size: 20px !important;
     /* Smooth hover transition */
     transition: color 0.3s ease;
 }
@@ -202,4 +226,148 @@ body {
 .social-icon:hover {
     /* Turn white on hover */
     color: #ffffff;
+}
+
+/* Final hero sizing fix: keep full image visible + leave room for footer */
+:root {
+  --nav-height: 72px;
+  --footer-space: 110px;
+}
+
+.portfolio-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--nav-height) - var(--footer-space));
+  min-height: 0;
+  overflow: hidden;
+}
+
+.text-section {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.profile-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill viewport without distortion */
+  object-position: center;
+  z-index: 1;
+}
+
+.text-section {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;   /* move text to right side */
+  align-items: center;
+  padding-right: 48px;
+  text-align: right;
+}
+
+.profile-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#typewriter-text,
+.cursor{
+  position: static !important;
+  transform: none !important;
+  color: rgb(238, 192, 215) !important;
+}
+
+/* Keep typed text centered without flexbox */
+#typewriter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 10ch);
+  transform: translateY(-50%);
+}
+
+/* Optional mobile stack */
+@media (max-width: 992px) {
+  .portfolio-container {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 72px);
+  }
+
+  .text-section,
+  .profile-image {
+    width: 100%;
+  }
+
+  .profile-image {
+    height: 50vh;
+  }
+}
+
+/* FINAL FIX: show full profile border on all 4 sides + container padding */
+.portfolio-container {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 24px !important;
+  padding: 24px !important;         /* padding around container */
+  height: calc(100vh - 72px) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  margin-bottom: 20 % !important; /* add breathing room below hero */
+}
+
+.profile-image {
+  position: relative !important;
+  inset: auto !important;
+  flex: 0 0 calc(50% - 12px) !important;
+  width: calc(50% - 12px) !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  box-sizing: border-box !important;
+  border: 6px solid rgb(238, 192, 215) !important; /* pastel pink border */
+  margin-bottom: 20% !important;
+   !important;
+  margin-top: 50px !important;
+}
+
+.text-section {
+  position: relative !important;
+  inset: auto !important;
+  flex: 1 1 calc(50% - 12px) !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  padding-right: 24px !important;
+  text-align: right !important;
+}
+
+/* Ensure full border is visible (top/bottom/left/right) */
+.portfolio-container {
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.profile-image {
+  margin: 0 !important;                 /* remove clipping margins */
+  height: calc(100% - 48px) !important; /* account for container padding */
+  max-height: calc(100% - 48px) !important;
+  box-sizing: border-box !important;
+  border: 6px solid rgb(238, 192, 215) !important;
 }

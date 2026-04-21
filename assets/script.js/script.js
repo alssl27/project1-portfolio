@@ -1,7 +1,7 @@
 // The text you want to type.
 const lines = [
-    // First line that appears in the loop.
-    "Welcome to my Portfilio,",
+   
+
     // Second line that appears in the loop.
     "My name is Sarah Collins,",
     // Third line that appears in the loop.
