@@ -11,45 +11,59 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link href="assets/css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link href="assets/css/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <nav class="navbar bg-dark">
-      <div class="nav-wrapper">
-        <a class="nav-link active" href="#">HOME</a>
-        <a class="nav-link" href="#">ABOUT ME</a>
-        <a class="nav-link" href="#">PROJECTS</a>
-        <a class="nav-link" href="#">CONTACT</a>
+  
+  <body class="bg-dark text-light">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-4">
+      <div class="container pe-4 pe-lg-5">
+        <div class="navbar-nav ms-auto d-flex flex-row gap-4 fs-5 fw-semibold">
+          <a class="nav-link active" href="index.html">HOME</a>
+          <a class="nav-link" href="aboutme.html">ABOUT ME</a>
+          <a class="nav-link" href="projects.html">PROJECTS</a>
+          <a class="nav-link" href="contact.html">CONTACT</a>
+        </div>
       </div>
     </nav>
 
-    <div class="portfolio-container">
-      <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />
-      <div class="text-section">
-        <h1 id="typewriter-text"></h1>
-        <span class="cursor">|</span>
+    <main class="container min-vh-100 d-flex align-items-center pb-5">
+      <div class="row w-100 align-items-center justify-content-between">
+        
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+          <div class="profile-media-wrapper profile-rectangle mx-auto">
+            <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-7 mb-5 mb-lg-0">
+          <div class="profile-info">
+            <h1 id="typewriter-text">Sarah Collins</h1>
+            <h2 class="display-5">FullStack Web Developer</h2>
+            <p class="lead">Hello, I'm Sarah Collins, a passionate web developer with over 5 years of experience in creating stunning and functional websites.</p>
+            <p class="text-muted">I specialize in HTML, CSS, JavaScript, and modern web frameworks.</p>
+            <p class="text-muted">I'm currently working on a variety of projects, from simple static sites to complex web applications.</p>
+            <p class="text-muted">I'm always open to new opportunities and challenges.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <footer class="social-footer">
-      <a href="#" class="social-icon" aria-label="GitHub">
-        <i class="fa-brands fa-github-square"></i>
-      </a>
-      <a href="#" class="social-icon" aria-label="Discord">
-        <i class="fa-brands fa-discord"></i>
-      </a>
-      <a href="#" class="social-icon" aria-label="Facebook">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a href="#" class="social-icon" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
+    <footer class="bg-dark text-light py-4 mt-auto">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-light"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
     </footer>
-
+    <audio id="typing-sound" src="assets/audio/typing.mp3" preload="auto"></audio>
     <script src="assets/script.js/script.js"></script>
   </body>
 </html>

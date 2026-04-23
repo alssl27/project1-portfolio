@@ -1,373 +1,245 @@
-/* Orbitron font import for navbar text */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
-/* Global page styling */
-html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-}
-
-body {
-    /* Dark page background */
-    background-color: #000;
-    /* Light pink text color */
-    color: rgb(238, 192, 215);
-    /* Monospace body font */
-    font-family: 'Courier New', Courier, monospace;
-    /* Remove default page margin */
-    margin: 0;
-    /* Push content below the fixed navbar */
-    padding-top: 0%;
-    /* Horizontal breathing room */
-    padding-left: 1.5rem;
-    /* Horizontal breathing room */
-    padding-right: 1.5rem;
-    /* Full viewport height */
-    min-height: 100vh;
-    /* Overflow on the x-axis */
-    overflow-x: hidden;
-}
-
-/* Navbar text styling */
-.navbar-brand,
-.nav-link {
-    /* Orbitron for the nav labels */
-    font-family: 'Orbitron', sans-serif;
-    /* Match the navbar text color */
-    color: rgb(238, 192, 215)!important;
-    /* Slight letter spacing for readability */
-    letter-spacing: 0.04em;
-}
-
-/* Fixed navbar container */
-.navbar {
-    /* Black navbar background */
-    background-color: black;
-    /* Lock navbar to the top */
-    position: fixed;
-    /* Pin to top edge */
-    top: 0;
-    /* Pin to left edge */
-    left: 0;
-    /* Full width across page */
-    width: 100%;
-    /* Keep above content */
-    z-index: 1030;
-    /* Justify content to the right */
-    justify-content: flex-end !important;
-    /* Padding on the right */
-    padding-right: 24px !important;
-    border-bottom: pink solid 2px !important;
-}
-
-.nav-wrapper {
-    display: block;          /* no flexbox */
-    white-space: nowrap;
-    /* Width of the navbar container */
-    width: 100%;
-    /* Text alignment of the navbar */
-    text-align: right !important;
-}
-
-.nav-wrapper .nav-link {
-    display: inline-block;   /* horizontal without flex */
-    margin: 0 18px;
-    margin-left: 18px;
-    margin-right: 0;
-    text-decoration: none;
-    /* Orbitron for the nav labels */
-    font-family: 'Orbitron', sans-serif;
-    /* Match the navbar text color */
-    color: rgb(238, 192, 215)!important;
-    /* Slight letter spacing for readability */
-    letter-spacing: 0.04em;
-}
-
-/* Full-screen hero fix */
-body {
-  padding-left: 70px;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px
-}
-
-.portfolio-container {
-  position: relative;
-  width: 100%;
-  height: 100%vh; /* full viewport height minus navbar */
-  margin: 0;
-  overflow: hidden;
-  box-sizing: border-box !important;
-  padding-top: 24px !important;
-  padding-bottom: 24px !important;
-  padding-right: 24px;
-  padding-left: 24px;
-  background-color: #000;
-  padding: 0 !important;
-}
-
-.text-section {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.profile-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* fill viewport without distortion */
-  object-position: center;
-  z-index: 1;
-  border: 6px solid rgb(238, 192, 215) !important; /* pastel pink */
-  box-sizing: border-box;
-  padding-top: 24px !important;
-  margin: 16px !important;
-  width: calc(50% - 32px) !important; /* keeps layout from overflowing */
-  padding: 0 !important;
-  margin-top: 24px !important;
-  margin-right: 24px !important;
-  margin-bottom: 24px !important;
-  margin-left: 24px !important;
-
-  /* prevent overflow after adding margins */
-  width: calc(50% - 48px) !important;
-  height: calc(100% - 48px) !important;
-  box-sizing: border-box !important;
-}
-
-/* FINAL OVERRIDE: image left, typewriter right */
-.portfolio-container{
-  display: flex !important;
-  height: calc(100vh - 72px) !important;
-  overflow: hidden !important;
-}
-
-.profile-image{
-  position: relative !important;
-  inset: auto !important;
-  width: 50% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-.text-section{
-  position: relative !important;
-  inset: auto !important;
-  width: 50% !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: center !important;
-  padding-right: 48px !important;
-  text-align: right !important;
-}
-
-#typewriter-text,
-.cursor {
-    color: rgb(238, 192, 215);  /* pastel pink */
-    margin: 0;
-}
-
-.cursor {
-    /* Cursor size */
-    font-size: 28px;
-    /* Cursor color */
-    color: #000; /* Change to match your portfolio's theme color */
-    /* Bold cursor for visibility */
-    font-weight: bold;
-    /* Blink animation */
-    animation: blink 1s infinite;
-    /* Small gap after the text */
-    margin-left: 2px;
-}
-
-/* The cursor blinking animation */
-@keyframes blink {
-    /* Cursor visible */
-    0%, 49% { opacity: 1; }
-    /* Cursor hidden */
-    50%, 100% { opacity: 0; }
-}
-
-/* Social icons footer */
-.social-footer {
-    /* Fix footer to the corner */
-    position: fixed;
-    /* Distance from the bottom */
-    bottom: 16px !important;
-    /* Distance from the right */
-    right: 16px !important;
-    /* Lay icons out in a row */
-    display: flex;
-    /* Space between icons */
-    gap: 10px !important;
-    /* Keep above page content */
-    z-index: 100;
-}
-
-/* Social icon link styling */
-.social-icon {
-    /* Match the navbar text color */
-    color: rgb(238, 192, 215);
-    /* Set icon size */
-    font-size: 20px !important;
-    /* Smooth hover transition */
-    transition: color 0.3s ease;
-}
-
-/* Hover effect for social icons */
-.social-icon:hover {
-    /* Turn white on hover */
-    color: #ffffff;
-}
-
-/* Final hero sizing fix: keep full image visible + leave room for footer */
 :root {
-  --nav-height: 72px;
-  --footer-space: 110px;
+  /* Using your original pink, but adding a slightly brighter version for neon glows */
+  --pink: rgb(238, 192, 215);
+  --pink-neon: #ff66c4; 
+  --page-bg: hsl solid(0, 0%, 0%); /* Deepened the black slightly for better contrast */
 }
 
-.portfolio-container {
-  display: flex;
+/* =========================================
+   Global Styles
+========================================= */
+html,
+body {
+  margin: 0;
   width: 100%;
-  height: calc(100vh - var(--nav-height) - var(--footer-space));
-  min-height: 0;
+  height: 100%;
+  background-color: var(--page-bg) !important;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow: hidden; /* removes scrollbar */
+}
+
+body {
+  padding-bottom: 72px; /* space for fixed footer */
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Apply the cyberpunk font to all headings */
+h1, h2, h3, h4, h5, h6, .navbar-nav a, .custom-cta {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Custom text utility class used in HTML */
+.text-pink {
+  color: var(--pink-neon) !important;
+}
+
+/* =========================================
+   Navbar Styling
+========================================= */
+.navbar {
+  border-bottom: none !important;
+  background-color: rgba(10, 10, 10, 0.85) !important; /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Gives a modern, frosted glass effect over content */
+  z-index: 1030;
+}
+
+.nav-link {
+  color: #ffffff !important; /* Start white */
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+  color: var(--pink-neon) !important;
+  text-shadow: 0 0 10px var(--pink-neon); /* Neon glow on hover */
+}
+
+/* =========================================
+   Hero / Media Section
+========================================= */
+/* Softens the video boundary and gives it a cyberpunk glow */
+.profile-media-wrapper {
+  border: 2px solid var(--pink-neon) !important;
+  box-shadow: 0 0 25px rgba(255, 102, 196, 0.2) !important;
+  transition: box-shadow 0.4s ease;
+  width: 70% !important;      /* 30% smaller */
+  max-width: 70% !important;
+  margin: 0 auto !important;  /* center */
   overflow: hidden;
 }
 
-.text-section {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+.profile-media-wrapper:hover {
+  box-shadow: 0 0 40px rgba(255, 102, 196, 0.4) !important;
 }
 
-.profile-image {
-  position: absolute;
-  inset: 0;
+.profile-media-wrapper video,
+.profile-image,
+video.profile-image {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+}
+
+.profile-circle {
+  width: min(70vw, 420px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgb(238, 192, 215);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.profile-circle-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* fill viewport without distortion */
-  object-position: center;
-  z-index: 1;
-}
-
-.text-section {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;   /* move text to right side */
-  align-items: center;
-  padding-right: 48px;
-  text-align: right;
-}
-
-.profile-image {
-  width: 50%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-#typewriter-text,
-.cursor{
-  position: static !important;
-  transform: none !important;
-  color: rgb(238, 192, 215) !important;
+/* Rectangle video frame */
+.profile-rectangle {
+  width: min(80vw, 520px);
+  aspect-ratio: 4 / 5;   /* rectangle */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 6px solid rgb(238, 192, 215);
 }
 
-/* Keep typed text centered without flexbox */
-#typewriter-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.profile-rectangle-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-rectangle .profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Increase image size + restore pink border */
+.profile-media-wrapper {
+  width: 90% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+.profile-rectangle {
+  width: 100% !important;
+  border: 4px solid var(--pink-neon) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 20px rgba(255, 102, 196, 0.35) !important;
+  overflow: hidden;
+}
+
+.profile-rectangle .profile-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+/* Optional: disable old circle style if still applied */
+.profile-circle,
+.profile-circle-video {
+  border-radius: 0 !important;
+}
+
+/* =========================================
+   Call to Action (CTA) Button
+========================================= */
+.custom-cta {
+  color: var(--pink-neon);
+  border-color: var(--pink-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.custom-cta:hover {
+  background-color: var(--pink-neon);
+  color: #000 !important;
+  box-shadow: 0 0 20px var(--pink-neon); /* Button lights up */
+  border-color: var(--pink-neon);
+}
+
+/* =========================================
+   Typewriter Animation
+========================================= */
+.typewriter-wrapper {
+  min-height: 30px; /* Prevents layout shift when typing */
 }
 
 .cursor {
-  position: absolute;
-  top: 50%;
-  left: calc(50% + 10ch);
-  transform: translateY(-50%);
+  color: var(--pink-neon);
+  font-weight: 700;
+  animation: blink 1s infinite;
 }
 
-/* Optional mobile stack */
-@media (max-width: 992px) {
-  .portfolio-container {
-    flex-direction: column;
-    height: auto;
-    min-height: calc(100vh - 72px);
-  }
-
-  .text-section,
-  .profile-image {
-    width: 100%;
-  }
-
-  .profile-image {
-    height: 50vh;
-  }
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
-/* FINAL FIX: show full profile border on all 4 sides + container padding */
-.portfolio-container {
-  display: flex !important;
-  align-items: stretch !important;
-  gap: 24px !important;
-  padding: 24px !important;         /* padding around container */
-  height: calc(100vh - 72px) !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  margin-bottom: 20 % !important; /* add breathing room below hero */
+/* =========================================
+   Social Icons
+========================================= */
+.social-icon {
+  transition: all 0.3s ease;
 }
 
-.profile-image {
-  position: relative !important;
-  inset: auto !important;
-  flex: 0 0 calc(50% - 12px) !important;
-  width: calc(50% - 12px) !important;
-  height: 100% !important;
+.social-icon:hover {
+  color: var(--pink-neon) !important;
+  transform: translateY(-4px); /* Slight jump effect */
+  text-shadow: 0 0 15px var(--pink-neon);
+}
+
+/* Fix: show video + typing, and reduce media size by 30% */
+.profile-media-wrapper {
+  width: 70% !important;      /* 30% smaller */
+  max-width: 70% !important;
+  margin: 0 auto !important;  /* center */
+  overflow: hidden;
+}
+
+.profile-media-wrapper video,
+.profile-image,
+video.profile-image {
   display: block !important;
-  object-fit: cover !important;
-  box-sizing: border-box !important;
-  border: 6px solid rgb(238, 192, 215) !important; /* pastel pink border */
-  margin-bottom: 20% !important;
-   !important;
-  margin-top: 50px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
 }
 
-.text-section {
-  position: relative !important;
-  inset: auto !important;
-  flex: 1 1 calc(50% - 12px) !important;
-  width: auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  padding-right: 24px !important;
-  text-align: right !important;
+/* Ensure typing is visible above media */
+.typewriter-wrapper,
+.text-section,
+#typewriter-text {
+  position: relative;
+  z-index: 2;
+  color: var(--pink-neon) !important;
 }
 
-/* Ensure full border is visible (top/bottom/left/right) */
-.portfolio-container {
-  padding: 24px !important;
-  box-sizing: border-box !important;
-  align-items: center !important;
-  overflow: hidden !important;
-}
-
-.profile-image {
-  margin: 0 !important;                 /* remove clipping margins */
-  height: calc(100% - 48px) !important; /* account for container padding */
-  max-height: calc(100% - 48px) !important;
-  box-sizing: border-box !important;
-  border: 6px solid rgb(238, 192, 215) !important;
+.profile-media-wrapper,
+.profile-circle,
+.profile-rectangle,
+.profile-image,
+.profile-rectangle-video,
+.profile-circle-video {
+  border: none !important;
+  box-shadow: none !important;
 }
