@@ -153,6 +153,22 @@ video.profile-image {
   display: block;
 }
 
+/* Permanent glow (always on) */
+.profile-media-wrapper.profile-rectangle {
+  border: 4px solid var(--pink-neon) !important;
+  box-shadow: 0 0 18px var(--pink-neon), 0 0 36px rgba(255, 102, 196, 0.55) !important;
+}
+
+.profile-media-wrapper.profile-rectangle .profile-image {
+  border: 4px solid var(--pink-neon) !important;
+  box-shadow: 0 0 18px var(--pink-neon), 0 0 36px rgba(255, 102, 196, 0.55) !important;
+}
+
+/* Disable hover override so glow does not depend on hover */
+.profile-media-wrapper:hover {
+  box-shadow: 0 0 18px var(--pink-neon), 0 0 36px rgba(255, 102, 196, 0.55) !important;
+}
+
 /* Optional: disable old circle style if still applied */
 .profile-circle,
 .profile-circle-video {
