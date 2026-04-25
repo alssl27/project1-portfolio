@@ -2,9 +2,7 @@ const textElement = document.getElementById("typewriter-text");
 const typingSound = document.getElementById("typing-sound");
 
 // Rotating phrases to showcase your skills dynamically
-const phrases = [
-  "> _ SARAH COLLINS ",
-];
+const phrases = ["> _ SARAH COLLINS "];
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -14,7 +12,7 @@ function playTypingSound() {
   if (!typingSound) return;
   typingSound.volume = 0.2; // Lowered volume so it's a subtle background click
   typingSound.currentTime = 0;
-  
+
   // Browsers strictly block autoplaying audio without user interaction.
   // The catch block prevents your console from flooding with error messages.
   typingSound.play().catch(() => {});
@@ -22,7 +20,7 @@ function playTypingSound() {
 
 function typeEffect() {
   const currentPhrase = phrases[phraseIndex];
-  
+
   if (isDeleting) {
     // Remove a character
     textElement.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -39,7 +37,7 @@ function typeEffect() {
 
   // Add slight randomization to typing speed for a realistic "human" feel
   if (!isDeleting) {
-    typeSpeed += Math.random() * 50; 
+    typeSpeed += Math.random() * 50;
   }
 
   // State transitions
@@ -51,7 +49,7 @@ function typeEffect() {
     // Finished deleting: pause briefly, then move to the next phrase
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
-    typeSpeed = 500; 
+    typeSpeed = 500;
   }
 
   setTimeout(typeEffect, typeSpeed);
