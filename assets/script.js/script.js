@@ -1,77 +1,126 @@
 const textElement = document.getElementById("typewriter-text");
+const subTextElement = document.getElementById("typewriter-subtext");
 const typingSound = document.getElementById("typing-sound");
 
-// Rotating phrases to showcase your skills dynamically
-const phrases = ["> _ SARAH COLLINS "];
+const mainText = ">_SARAH COLLINS";
+const subText = "FullStack Web Developer";
 
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+let mainIndex = 0;
+let subIndex = 0;
 
 function playTypingSound() {
   if (!typingSound) return;
-  typingSound.volume = 0.2; // Lowered volume so it's a subtle background click
+  typingSound.volume = 0.2;
   typingSound.currentTime = 0;
-
-  // Browsers strictly block autoplaying audio without user interaction.
-  // The catch block prevents your console from flooding with error messages.
   typingSound.play().catch(() => {});
 }
 
-function typeEffect() {
-  const currentPhrase = phrases[phraseIndex];
-
-  if (isDeleting) {
-    // Remove a character
-    textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-    charIndex--;
+function typeMainText() {
+  if (mainIndex <= mainText.length) {
+    textElement.textContent = mainText.substring(0, mainIndex);
+    mainIndex++;
+    playTypingSound();
+    setTimeout(typeMainText, 90 + Math.random() * 60);
   } else {
-    // Add a character
-    textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-    charIndex++;
-    playTypingSound(); // Play sound only when typing, not when deleting
+    setTimeout(typeSubText, 400);
   }
-
-  // Variable typing speeds: Deleting is faster than typing
-  let typeSpeed = isDeleting ? 40 : 80;
-
-  // Add slight randomization to typing speed for a realistic "human" feel
-  if (!isDeleting) {
-    typeSpeed += Math.random() * 50;
-  }
-
-  // State transitions
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    // Finished typing: pause longer so the user can read it
-    typeSpeed = 1500;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    // Finished deleting: pause briefly, then move to the next phrase
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-    typeSpeed = 500;
-  }
-
-  setTimeout(typeEffect, typeSpeed);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.getElementById("typewriter-text");
-  const typingSound = document.getElementById("typing-sound");
-  if (!textElement) return;
 
-  // Wait 1 second after page load before starting the typing effect
-  setTimeout(typeEffect, 1000);
+function typeSubText() {
+  if (subIndex <= subText.length) {
+    subTextElement.textContent = subText.substring(0, subIndex);
+    subIndex++;
+    playTypingSound();
+    setTimeout(typeSubText, 90 + Math.random() * 60);
+  } else {
+    setTimeout(() => {
+      // Clear and restart typing effect after a pause
+      textElement.textContent = "";
+      subTextElement.textContent = "";
+      mainIndex = 0;
+      subIndex = 0;
+      setTimeout(typeMainText, 800);
+    }, 1200);
+  }
+}
 
-  const video = document.getElementById("hero-video");
-  if (!video) return;
+window.addEventListener("DOMContentLoaded", () => {
+  textElement.textContent = "";
+  subTextElement.textContent = "";
+  mainIndex = 0;
+  subIndex = 0;
+  typeMainText();
+});
+const cards = document.querySelectorAll('.card');
+const overlay = document.getElementById('overlay');
+const closeBtn = document.getElementById('closeBtn');
+const modalContent = document.getElementById('modalContent');
 
-  video.muted = true;
-  const tryPlay = () => video.play().catch(() => {});
+// Open Card
 
-  tryPlay();
-  video.addEventListener("canplay", tryPlay);
-  document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) tryPlay();
+cards.forEach(card => {
+  // Card click (anywhere on card)
+  card.addEventListener('click', (e) => {
+    // Prevent double open if 'More' button is clicked
+    if (e.target.classList.contains('more-btn')) return;
+    expandCard(card);
   });
+  // More button click
+  const moreBtn = card.querySelector('.more-btn');
+  if (moreBtn) {
+    moreBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      expandCard(card);
+    });
+  }
+});
+
+function expandCard(card) {
+  const title = card.getAttribute('data-title');
+  const desc = card.getAttribute('data-desc');
+  // Find the image and avatar from the clicked card
+  const img = card.querySelector('.card-image');
+  const avatar = card.querySelector('.card-avatar');
+  const imgSrc = img ? img.src : '';
+  const imgAlt = img ? img.alt : '';
+  const avatarSrc = avatar ? avatar.src : '';
+  const avatarAlt = avatar ? avatar.alt : '';
+
+  modalContent.innerHTML = `
+    <div class="card-image-container" style="margin-bottom:1.5rem;">
+      <img src="${imgSrc}" alt="${imgAlt}" class="card-image" />
+      <img src="${avatarSrc}" alt="${avatarAlt}" class="card-avatar" />
+    </div>
+    <h2>${title}</h2>
+    <hr>
+    <p>${desc}</p>
+    <p>You can add images or long-form case studies here.</p>
+  `;
+
+  overlay.classList.add('active');
+}
+
+// Close Card
+if (closeBtn && overlay) {
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+  });
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+    }
+  });
+}
+
+// Close Card
+closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+});
+
+// Close if user clicks background (outside the card)
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        overlay.classList.remove('active');
+    }
 });

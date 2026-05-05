@@ -3,25 +3,53 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio</title>
+    <title>Portfolio - Sarah Collins</title>
     <link rel="icon" type="image/png" href="assets/images/programming.png" />
 
+    <!-- Bootstrap 5 CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Added Google Fonts -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" 
+      rel="stylesheet"
+    />
+    <!-- Custom Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --palette-purple: #6237a4;
+        --palette-pink: #de57dc;
+        --palette-blue: #75bddd;
+        --palette-dark: #191034;
+        --palette-pink2: #e06e98;
+        --palette-blue2: #5262b1;
+        --palette-purple2: #9d3baf;
+        --palette-lavender: #d6a4e5;
+        --palette-purple3: #382266;
+      }
+
+      /* Ensuring the body stays within bounds */
+      body, html {
+        overflow-x: hidden;
+        width: 100%;
+      }
+    </style>
   </head>
 
-  <body class="bg-dark text-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
-      <div class="container px-3 px-lg-4">
+  <body class="bg-dark text-light d-flex flex-column min-vh-100">
+    
+    <!-- Navbar: Added container-fluid for better edge handling -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 z-3">
+      <div class="container">
         <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
         <button
           class="navbar-toggler"
@@ -35,7 +63,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="siteNavbar">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0">
+          <ul class="navbar-nav ms-auto align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center">
             <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
             <li class="nav-item"><a class="nav-link" href="aboutme.html">ABOUT ME</a></li>
             <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
@@ -45,57 +73,56 @@
       </div>
     </nav>
 
-    <main class="container min-vh-100 d-flex align-items-center pb-5">
-      <div class="row w-100 align-items-center justify-content-between">
-        <div class="col-12 col-lg-5 mb-5 mb-lg-0">
-          <div class="profile-media-wrapper profile-rectangle mx-auto">
-            <video class="profile-image" autoplay muted loop>
-              <source src="assets/images/profile.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+    <!-- Background Video: Using fixed to keep it behind everything during scroll -->
+    <div class="main-bg-video position-fixed top-0 start-0 w-100 h-100">
+      <video class="bg-video w-100 h-100 object-fit-cover" autoplay muted loop>
+        <source src="assets/images/profile.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    </div>
+
+    <!-- Hero Section: Removed manual negative margin, used flex-grow -->
+    <main class="container flex-grow-1 d-flex align-items-center position-relative py-5">
+      
+      <div class="profile-info z-2 px-3 px-md-0 w-100">
+        <div class="typewriter-bg typewriter-wrapper">
+          <h2 class="terminal-prompt text-pink">> _</h2>
+          <!-- Adjusted font sizes via CSS classes we will define -->
+          <h1 id="typewriter-text" class="hero-title fw-black display-1 text-uppercase">SARAH<br>COLLINS</h1>
+          <h2 id="typewriter-subtext" class="hero-subtitle h4 text-info"></h2>
         </div>
 
-        <div class="col-12 col-lg-7 mb-5 mb-lg-0">
-          <div class="profile-info">
-            <h1 id="typewriter-text">Sarah Collins</h1>
-            <h2 class="display-5">FullStack Web Developer</h2>
-            <p class="lead">
-              Hello, I'm Sarah Collins, a passionate web developer with over 5
-              years of experience in creating stunning and functional websites.
-            </p>
-            <p class="text-muted">
-              I specialize in HTML, CSS, JavaScript, and modern web frameworks.
-            </p>
-            <p class="text-muted">
-              I'm currently working on a variety of projects, from simple static
-              sites to complex web applications.
-            </p>
-            <p class="text-muted">
-              I'm always open to new opportunities and challenges.
-            </p>
-          </div>
+        <div class="mt-4">
+          <a class="primary-btn btn btn-outline-pink px-4 py-2" href="contact.html">Contact Me</a>
         </div>
       </div>
     </main>
 
-    <aside class="body-social-tab" aria-label="Social links">
-      <a href="#" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#" aria-label="Discord" title="Discord"><i class="fa-brands fa-discord"></i></a>
+    <!-- Social Sidebar: Optimized for Mobile (Hidden on small, shown on MD up) -->
+    <!-- We will handle the mobile version of this in the footer for better UX -->
+    <aside class="body-social-tab d-none d-md-flex flex-column position-fixed end-0 top-50 translate-middle-y z-3 p-3 gap-3" aria-label="Social links">
+      <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light fs-4"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light fs-4"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Instagram" aria-label="Instagram" class="text-light fs-4"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-light fs-4"><i class="fa-brands fa-facebook"></i></a>
     </aside>
 
-    <footer class="bg-black text-light py-4 mt-auto">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
-        <p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
-        <a class="btn btn-sm custom-cta" href="contact.html" aria-label="Go to contact page">Contact Me</a>
+    <!-- Footer: Added social icons for mobile users specifically -->
+    <footer class="bg-black text-light py-4 z-3">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-center text-md-start">© 2026 Sarah Collins. All rights reserved.</p>
+        
+        <!-- Mobile-only social icons -->
+        <div class="d-flex d-md-none gap-4 fs-4">
+            <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" title="Instagram" aria-label="Instagram" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+        </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/script.js/script.js"></script>
   </body>
 </html>

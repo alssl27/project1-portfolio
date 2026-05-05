@@ -20,7 +20,7 @@
 		<link href="assets/css/style.css" rel="stylesheet" />
 	</head>
 
-	<body class="bg-dark text-light">
+	<body class="bg-dark text-light projects-page">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
 			<div class="container px-3 px-lg-4">
 				<a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -45,105 +45,97 @@
 				</div>
 			</div>
 		</nav>
-
-		<main class="container project-page-main d-flex align-items-start justify-content-center">
-			<div class="w-100 project-page-content text-center pt-3">
-				<h1 class="display-4 mb-3">Projects</h1>
-				<section class="mx-auto w-full max-w-5xl" aria-label="Featured projects carousel">
-					<div id="tailwindProjectsCarousel" class="relative overflow-hidden rounded-2xl border-2 border-pink-500/80 bg-black/70 shadow-[0_0_20px_rgba(255,43,214,0.55)]">
-						<div class="flex transition-transform duration-500 ease-out" data-carousel-track>
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 1">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="Portfolio home page project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">Portfolio Home Refresh</h3>
-										<p class="mb-0 text-zinc-300">A rebuilt homepage with animated hero media, cleaner typography, and stronger neon visual hierarchy for desktop and mobile.</p>
-									</div>
-								</div>
-							</article>
-
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 2">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="About and skills project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">About and Skills Grid</h3>
-										<p class="mb-0 text-zinc-300">A two-column resume-style content system with qualifications and technology highlights, optimized for readability on all breakpoints.</p>
-									</div>
-								</div>
-							</article>
-
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 3">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="Responsive contact and navigation project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">Responsive Nav and Contact</h3>
-										<p class="mb-0 text-zinc-300">A responsive navigation and contact flow that keeps interactions clear on mobile while preserving the neon aesthetic.</p>
-									</div>
-								</div>
-							</article>
-
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 4">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="Neon cards and interactions project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">Neon Cards and Interactions</h3>
-										<p class="mb-0 text-zinc-300">An interaction-focused component set with hover states, glow accents, and reusable card patterns for consistent UI behavior.</p>
-									</div>
-								</div>
-							</article>
-
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 5">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="Accessibility and layout tuning project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">Accessibility and Layout Tuning</h3>
-										<p class="mb-0 text-zinc-300">A quality pass focused on spacing, contrast, keyboard focus states, and responsive balance across tablet and desktop views.</p>
-									</div>
-								</div>
-							</article>
-
-							<article class="min-w-full p-4 md:p-6" aria-label="Project 6">
-								<div class="grid items-stretch gap-4 md:grid-cols-[1.2fr_1fr]">
-									<div class="overflow-hidden rounded-xl border border-pink-400/70">
-										<img class="h-full min-h-[220px] w-full object-cover" src="assets/images/profile.png" alt="Portfolio performance and polish project preview" />
-									</div>
-									<div class="rounded-xl border border-pink-500/70 bg-zinc-950/70 p-5 text-left">
-										<h3 class="mb-2 text-xl font-semibold text-white">Performance and Polish</h3>
-										<p class="mb-0 text-zinc-300">A final optimization and polish cycle that improves loading behavior, content flow, and visual consistency across all core pages.</p>
-									</div>
-								</div>
-							</article>
-						</div>
-
-						<button type="button" class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-pink-400/80 bg-black/60 px-3 py-2 text-white transition hover:bg-pink-500/30" data-carousel-prev aria-label="Previous project">
-							<i class="fa-solid fa-chevron-left"></i>
-						</button>
-						<button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-pink-400/80 bg-black/60 px-3 py-2 text-white transition hover:bg-pink-500/30" data-carousel-next aria-label="Next project">
-							<i class="fa-solid fa-chevron-right"></i>
-						</button>
-					</div>
-
-					<div class="mt-4 flex items-center justify-center gap-2" data-carousel-dots aria-label="Carousel pagination">
-						<button type="button" class="h-2.5 w-8 rounded-full bg-pink-500" data-slide="0" aria-label="Go to project 1"></button>
-						<button type="button" class="h-2.5 w-2.5 rounded-full bg-zinc-500" data-slide="1" aria-label="Go to project 2"></button>
-						<button type="button" class="h-2.5 w-2.5 rounded-full bg-zinc-500" data-slide="2" aria-label="Go to project 3"></button>
-						<button type="button" class="h-2.5 w-2.5 rounded-full bg-zinc-500" data-slide="3" aria-label="Go to project 4"></button>
-						<button type="button" class="h-2.5 w-2.5 rounded-full bg-zinc-500" data-slide="4" aria-label="Go to project 5"></button>
-						<button type="button" class="h-2.5 w-2.5 rounded-full bg-zinc-500" data-slide="5" aria-label="Go to project 6"></button>
-					</div>
-				</section>
+		<main class="grid-container projects-page-main">
+		<div class="card" data-title="Modern Web App" data-desc="A full-stack application built with React.">
+			<div class="card-image-container">
+				<img src="assets/images/project1.png" alt="Modern Web App" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
 			</div>
+			<h3>Project One</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="E-Commerce UI" data-desc="Custom shopping cart experience.">
+			<div class="card-image-container">
+				<img src="assets/images/project2.png" alt="E-Commerce UI" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Two</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="AI Dashboard" data-desc="Data visualization using D3.js.">
+			<div class="card-image-container">
+				<img src="assets/images/project3.png" alt="AI Dashboard" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Three</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+
+		<div class="card" data-title="Portfolio Website" data-desc="Personal portfolio built with HTML, CSS, and JS.">
+			<div class="card-image-container">
+				<img src="assets/images/project4.png" alt="Portfolio Website" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Four</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="Mobile App" data-desc="Cross-platform mobile app using Flutter.">
+			<div class="card-image-container">
+				<img src="assets/images/project5.png" alt="Mobile App" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Five</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="Landing Page" data-desc="High-converting marketing landing page.">
+			<div class="card-image-container">
+				<img src="assets/images/project6.png" alt="Landing Page" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Six</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="Blog Platform" data-desc="Full-featured blog with CMS backend.">
+			<div class="card-image-container">
+				<img src="assets/images/project7.png" alt="Blog Platform" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Seven</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="Weather Dashboard" data-desc="Live weather dashboard using APIs.">
+			<div class="card-image-container">
+				<img src="assets/images/project8.png" alt="Weather Dashboard" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Eight</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
+		<div class="card" data-title="Task Manager" data-desc="Productivity tool for managing tasks.">
+			<div class="card-image-container">
+				<img src="assets/images/project9.png" alt="Task Manager" class="card-image" />
+				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
+			</div>
+			<h3>Project Nine</h3>
+			<p>Click to expand</p>
+			<button class="more-btn" type="button">More</button>
+		</div>
 		</main>
+
+		<div class="overlay" id="overlay">
+			<div class="expanded-card">
+				<button class="close-btn" id="closeBtn">&times;</button>
+				<div id="modalContent"></div>
+			</div>
+		</div>
 
 		<aside class="body-social-tab" aria-label="Social links">
 			<a href="#" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -159,58 +151,8 @@
 				<a class="btn btn-sm custom-cta" href="contact.html" aria-label="Go to contact page">Contact Me</a>
 			</div>
 		</footer>
-		<script>
-			(() => {
-				const root = document.getElementById("tailwindProjectsCarousel");
-				if (!root) return;
-
-				const track = root.querySelector("[data-carousel-track]");
-				const prev = root.querySelector("[data-carousel-prev]");
-				const next = root.querySelector("[data-carousel-next]");
-				const dotsContainer = document.querySelector("[data-carousel-dots]");
-				const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll("[data-slide]")) : [];
-				const slides = track ? Array.from(track.children) : [];
-
-				let current = 0;
-				const last = slides.length - 1;
-
-				const render = () => {
-					if (!track) return;
-					track.style.transform = `translateX(-${current * 100}%)`;
-					dots.forEach((dot, index) => {
-						dot.className = index === current
-							? "h-2.5 w-8 rounded-full bg-pink-500"
-							: "h-2.5 w-2.5 rounded-full bg-zinc-500";
-					});
-				};
-
-				if (prev) {
-					prev.addEventListener("click", () => {
-						current = current === 0 ? last : current - 1;
-						render();
-					});
-				}
-
-				if (next) {
-					next.addEventListener("click", () => {
-						current = current === last ? 0 : current + 1;
-						render();
-					});
-				}
-
-				dots.forEach((dot) => {
-					dot.addEventListener("click", () => {
-						const target = Number(dot.getAttribute("data-slide"));
-						if (!Number.isNaN(target)) {
-							current = target;
-							render();
-						}
-					});
-				});
-
-				render();
-			})();
-		</script>
+		<!-- Card modal logic is handled in assets/script.js/script.js -->
+		<script src="assets/script.js/script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 	</body>
 </html>
