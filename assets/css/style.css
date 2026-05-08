@@ -339,6 +339,17 @@ html, body, button, input, textarea, select {
   --palette-lavender: #d6a4e5;
   --palette-purple3: #382266;
 
+  /* Solic Palette (new) */
+  --solic-purple: #843cb2;
+  --solic-pink: #d853da;
+  --solic-blue: #80bcdf;
+  --solic-dark: #1c1137;
+  --solic-rose: #ea7e9e;
+  --solic-indigo: #5361b0;
+  --solic-deep: #39256e;
+  --solic-lilac: #da96e2;
+  --solic-magenta: #ad308f;
+
   /* For backward compatibility */
   --purple-1: var(--palette-purple);
   --pink-1: var(--palette-pink);
@@ -367,6 +378,39 @@ body {
 
 body {
   padding-bottom: 72px; /* space for fixed footer */
+}
+
+/* Contact page background using profile.png */
+.contact-page {
+  /* background handled by pseudo-element to allow shadow */
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image with shadow using a pseudo-element */
+.contact-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/profile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  /* inner darkening + outer shadow for depth */
+  box-shadow: inset 0 0 120px rgba(0,0,0,0.55), 0 30px 80px rgba(0,0,0,0.6);
+  pointer-events: none;
+}
+
+/* Slight translucent panel for contact content for readability */
+.contact-page .contact-page-main {
+  background: rgba(0,0,0,0.52);
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
 }
 
 footer {
@@ -1044,6 +1088,14 @@ body {
   min-height: clamp(160px, 16vh, 210px);
 }
 
+.about-page-main .resume-panel {
+  background-color: #191034 var(--solic-dark); 
+  border: 1px solid rgba(222, 87, 220, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
 .resume-panel-summary {
   grid-area: summary;
   min-height: clamp(240px, 24vh, 320px);
@@ -1079,6 +1131,31 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.about-page-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
+    url("../images/profile.png") center top / cover no-repeat fixed;
+}
+
+.about-page-bg .about-page-main {
+  background: transparent;
+}
+
+.about-page-spaced,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+a {
+  letter-spacing: 2px;
 }
 
 @media (max-width: 991.98px) {

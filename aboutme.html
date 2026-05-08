@@ -27,10 +27,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-dark text-light">
+  <body class="bg-dark text-light about-page-bg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
       <div class="container px-3 px-lg-4">
         <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -56,12 +60,12 @@
       </div>
     </nav>
 
-    <main class="container about-page-main">
-      <h1 class="display-4 mb-4">About Me</h1>
+    <main class="container about-page-main about-page-spaced text-light">
+      <h1 class="display-4 mb-4 text-pink">About Me</h1>
 
       <div class="resume-grid mb-5">
-        <section class="p-4 rounded-3 bg-black bg-opacity-50 neon-grid-card resume-panel resume-panel-summary">
-          <h2 class="h4 mb-3">Who I Am</h2>
+        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-summary">
+          <h2 class="h4 mb-3 text-info">Who I Am</h2>
           <p class="mb-0">
             I am a full-stack web developer focused on building clean,
             responsive, and user-friendly experiences. I enjoy turning ideas
@@ -70,21 +74,22 @@
           </p>
           <a
             class="btn custom-cta mt-4"
-            href="contact.html"
-            aria-label="Go to contact page"
-            >Contact Me</a
+            href="assets/resume.pdf"
+            download
+            aria-label="Download resume"
+            >Download Resume</a
           >
         </section>
-        <section class="p-4 rounded-3 bg-black bg-opacity-50 neon-grid-card resume-panel resume-panel-qualifications">
-          <h2 class="h4 mb-3">Qualifications</h2>
+        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-qualifications">
+          <h2 class="h4 mb-3 text-info">Qualifications</h2>
           <ul class="mb-0 ps-3 resume-list">
             <li>Full-stack web development experience</li>
             <li>Responsive UI and accessible design focus</li>
             <li>Strong problem-solving and collaboration skills</li>
           </ul>
         </section>
-        <section class="p-4 rounded-3 bg-black bg-opacity-50 neon-grid-card resume-panel resume-panel-techstack">
-          <h2 class="h4 mb-3">Tech Stack</h2>
+        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-techstack">
+          <h2 class="h4 mb-3 text-info">Tech Stack</h2>
           <div class="resume-skills-grid">
             <div class="d-flex align-items-center gap-2">
               <i class="fa-brands fa-html5 fs-3 quick-fact-icon neon-html"></i>
@@ -112,8 +117,8 @@
             </div>
           </div>
         </section>
-        <section class="p-4 rounded-3 bg-black bg-opacity-50 neon-grid-card resume-panel resume-panel-skills-list">
-          <h2 class="h4 mb-3">Skills</h2>
+        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-skills-list">
+          <h2 class="h4 mb-3 text-info">Skills</h2>
           <ul class="mb-0 ps-3 resume-list">
             <li>Frontend layout and responsive design</li>
             <li>UI building with Bootstrap and custom CSS</li>
