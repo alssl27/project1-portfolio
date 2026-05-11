@@ -17,8 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Added Google Fonts -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
     <!-- Custom Stylesheet -->
@@ -38,7 +38,8 @@
       }
 
       /* Ensuring the body stays within bounds */
-      body, html {
+      body,
+      html {
         overflow-x: hidden;
         width: 100%;
       }
@@ -46,11 +47,14 @@
   </head>
 
   <body class="bg-dark text-light d-flex flex-column min-vh-100">
-    
     <!-- Navbar: Added container-fluid for better edge handling -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 z-3">
       <div class="container">
-        <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
+        <a
+          class="navbar-brand fw-bold text-pink navbar-brand-glow"
+          href="index.html"
+          >&lt; / &gt;</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -63,11 +67,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="siteNavbar">
-          <ul class="navbar-nav ms-auto align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center">
-            <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
-            <li class="nav-item"><a class="nav-link" href="aboutme.html">ABOUT ME</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <ul
+            class="navbar-nav ms-auto align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -78,45 +92,112 @@
       <video class="bg-video w-100 h-100 object-fit-cover" autoplay muted loop>
         <source src="assets/images/profile.mp4" type="video/mp4" />
       </video>
-      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+      <div
+        class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
+      ></div>
     </div>
 
     <!-- Hero Section: Removed manual negative margin, used flex-grow -->
-    <main class="container flex-grow-1 d-flex align-items-center position-relative py-5">
-      
-      <div class="profile-info z-2 px-3 px-md-0 w-100">
+    <main
+      class="container flex-grow-1 d-flex align-items-end justify-content-center position-relative py-5 pb-5"
+    >
+      <div class="profile-info z-2 px-3 px-md-0 w-100 text-center">
         <div class="typewriter-bg typewriter-wrapper">
-          <h2 class="terminal-prompt text-pink">> _</h2>
+          <h2 class="terminal-prompt text-pink"></h2>
           <!-- Adjusted font sizes via CSS classes we will define -->
-          <h1 id="typewriter-text" class="hero-title fw-black display-1 text-uppercase">SARAH<br>COLLINS</h1>
+          <h1
+            id="typewriter-text"
+            class="hero-title fw-black display-1 text-uppercase"
+          >
+            SARAH COLLINS
+          </h1>
           <h2 id="typewriter-subtext" class="hero-subtitle h4 text-info"></h2>
         </div>
 
         <div class="mt-4">
-          <a class="primary-btn btn btn-outline-pink px-4 py-2" href="assets/resume.pdf" download>Download Resume</a>
+          <a
+            class="primary-btn btn btn-outline-pink px-4 py-2"
+            href="assets/resume.pdf"
+            download
+            >Download Resume</a
+          >
         </div>
       </div>
     </main>
 
     <!-- Social Sidebar: Optimized for Mobile (Hidden on small, shown on MD up) -->
     <!-- We will handle the mobile version of this in the footer for better UX -->
-    <aside class="body-social-tab d-none d-md-flex flex-column position-fixed end-0 top-50 translate-middle-y z-3 p-3 gap-3" aria-label="Social links">
-      <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light fs-4"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light fs-4"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" title="Instagram" aria-label="Instagram" class="text-light fs-4"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-light fs-4"><i class="fa-brands fa-facebook"></i></a>
+    <aside
+      class="body-social-tab d-none d-md-flex flex-column position-fixed end-0 top-50 translate-middle-y z-3 p-3 gap-3"
+      aria-label="Social links"
+    >
+      <a
+        href="https://github.com/alssl27"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GitHub"
+        aria-label="GitHub"
+        class="text-light fs-4"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="LinkedIn"
+        aria-label="LinkedIn"
+        class="text-light fs-4"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+        href="https://www.facebook.com/bdens69/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Facebook"
+        aria-label="Facebook"
+        class="text-light fs-4"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
     </aside>
 
     <!-- Footer: Added social icons for mobile users specifically -->
     <footer class="bg-black text-light py-4 z-3">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-        <p class="mb-0 text-center text-md-start">© 2026 Sarah Collins. All rights reserved.</p>
-        
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <p class="mb-0 text-center text-md-start">
+          © 2026 Sarah Collins. All rights reserved.
+        </p>
+
         <!-- Mobile-only social icons -->
         <div class="d-flex d-md-none gap-4 fs-4">
-            <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" title="Instagram" aria-label="Instagram" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+          <a
+            href="https://github.com/alssl27"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="GitHub"
+            class="text-light"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+            class="text-light"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/bdens69/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+            aria-label="Facebook"
+            class="text-light"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
       </div>
     </footer>

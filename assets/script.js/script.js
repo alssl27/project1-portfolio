@@ -2,7 +2,7 @@ const textElement = document.getElementById("typewriter-text");
 const subTextElement = document.getElementById("typewriter-subtext");
 const typingSound = document.getElementById("typing-sound");
 
-const mainText = ">_SARAH COLLINS";
+const mainText = "SARAH COLLINS";
 const subText = "FullStack Web Developer";
 
 let mainIndex = 0;

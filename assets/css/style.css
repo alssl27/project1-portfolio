@@ -1,10 +1,10 @@
 .profile-info #typewriter-text {
-  font-size: 8rem;
+  font-size: 4.5rem;
   text-shadow: 4px 4px 14px rgba(0, 0, 0, 0.95);
 }
 
 .profile-info #typewriter-subtext {
-  font-size: 6rem;
+  font-size: 3rem;
   text-shadow: 4px 4px 14px rgba(0, 0, 0, 0.9);
 }
 
@@ -430,6 +430,21 @@ footer:hover {
     0 0 34px rgba(255, 43, 214, 0.35);
 }
 
+.bottom-social-nav {
+  position: relative;
+  z-index: 1029;
+  border-top: 1px solid rgba(255, 43, 214, 0.35);
+}
+
+.bottom-social-nav a {
+  color: var(--pink-neon) !important;
+  text-shadow: 0 0 10px var(--pink-neon), 0 0 18px rgba(255, 43, 214, 0.45);
+}
+
+.bottom-social-nav a:hover {
+  color: #ffffff !important;
+}
+
 /* Apply the cyberpunk font to all headings */
 h1,
 h2,
@@ -570,6 +585,20 @@ h6,
     padding-bottom: 92px;
   }
 
+  body.has-bottom-social-nav {
+    padding-bottom: 150px;
+  }
+
+  .bottom-social-nav {
+    position: fixed;
+    left: 0;
+    bottom: 86px;
+    width: 100%;
+    z-index: 1031;
+    border-top: 2px solid var(--pink-neon);
+    box-shadow: 0 0 16px rgba(255, 43, 214, 0.35);
+  }
+
   main.container {
     padding-top: 3rem;
     padding-bottom: 4.5rem;
@@ -597,12 +626,12 @@ h6,
   }
 
   .hero-title {
-    font-size: clamp(3rem, 7vw, 5rem) !important;
+    font-size: clamp(1.9rem, 5vw, 3rem) !important;
     line-height: 0.92;
   }
 
   .hero-subtitle {
-    font-size: clamp(1.2rem, 3.2vw, 2rem) !important;
+    font-size: clamp(0.9rem, 2.2vw, 1.2rem) !important;
     line-height: 1.08;
   }
 
@@ -904,6 +933,10 @@ video.profile-image {
   position: relative;
   z-index: 2;
   color: #de57dc;
+}
+
+#typewriter-text {
+  white-space: nowrap;
 }
 
 
@@ -1347,11 +1380,11 @@ main,
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 11vw, 3.7rem) !important;
+    font-size: clamp(1.6rem, 9vw, 2.5rem) !important;
   }
 
   .hero-subtitle {
-    font-size: clamp(1rem, 4vw, 1.45rem) !important;
+    font-size: clamp(0.8rem, 3vw, 1rem) !important;
   }
 
   .terminal-prompt {
