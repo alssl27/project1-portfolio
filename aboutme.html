@@ -32,9 +32,33 @@
       rel="stylesheet"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+      main.container-lg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .card {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .card-body {
+        flex: 1;
+      }
+      .card:first-of-type {
+        grid-column: 1 / -1;
+      }
+      @media (max-width: 768px) {
+        main.container-lg {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
-  <body class="bg-dark text-light about-page-bg has-bottom-social-nav">
+  <body class="bg-dark text-light has-bottom-social-nav">
     <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
       <div class="container px-3 px-lg-4">
         <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -50,7 +74,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="siteNavbar">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center">
             <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
             <li class="nav-item"><a class="nav-link active" href="aboutme.html">ABOUT ME</a></li>
             <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
@@ -60,92 +84,147 @@
       </div>
     </nav>
 
-    <main class="container about-page-main about-page-spaced text-light">
-      <h1 class="display-4 mb-4 text-pink">About Me</h1>
-
-      <div class="resume-grid mb-5">
-        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-summary">
-          <h2 class="h4 mb-3 text-info">Who I Am</h2>
-          <p class="mb-0">
-            I am a full-stack web developer focused on building clean,
-            responsive, and user-friendly experiences. I enjoy turning ideas
-            into real products and constantly improving my craft through
-            hands-on projects.
-          </p>
-          <a
-            class="btn custom-cta mt-4"
-            href="assets/resume.pdf"
-            download
-            aria-label="Download resume"
-            >Download Resume</a
-          >
-        </section>
-        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-qualifications">
-          <h2 class="h4 mb-3 text-info">Qualifications</h2>
-          <ul class="mb-0 ps-3 resume-list">
-            <li>Full-stack web development experience</li>
-            <li>Responsive UI and accessible design focus</li>
-            <li>Strong problem-solving and collaboration skills</li>
-          </ul>
-        </section>
-        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-techstack">
-          <h2 class="h4 mb-3 text-info">Tech Stack</h2>
-          <div class="resume-skills-grid">
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-brands fa-html5 fs-3 quick-fact-icon neon-html"></i>
-              <span>HTML</span>
+    <main class="container-lg about-page-main about-page-spaced text-light py-5" data-bionic>
+      <!-- Resume Header with Card -->
+      <div class="card bg-black border-secondary mb-5">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-lg-3 text-center text-lg-start mb-4 mb-lg-0">
+              <img src="assets/images/circleprofile.png" alt="Profile" class="img-fluid rounded-circle" style="max-width: 280px; border: 3px solid #ff2bd6;">
             </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-brands fa-css3-alt fs-3 quick-fact-icon neon-css"></i>
-              <span>CSS</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-brands fa-js fs-3 quick-fact-icon neon-js"></i>
-              <span>JavaScript</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-brands fa-python fs-3 quick-fact-icon neon-python"></i>
-              <span>Python</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-solid fa-code fs-3 quick-fact-icon neon-cplus"></i>
-              <span>C+</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="fa-solid fa-database fs-3 quick-fact-icon neon-sql"></i>
-              <span>SQL</span>
+            <div class="col-lg-9">
+              <h1 class="display-5 mb-2 text-pink">Sarah Collins</h1>
+              <h2 class="h5 text-info mb-3">Full-Stack Web Developer</h2>
+              <p class="mb-4">Focused on building clean, responsive, and user-friendly experiences. I enjoy turning ideas into real products and constantly improving my craft through hands-on projects.</p>
+              <a class="btn btn-outline-light" href="assets/resume.pdf" download aria-label="Download resume">
+                <i class="fa-solid fa-download me-2"></i>Download Resume
+              </a>
             </div>
           </div>
-        </section>
-        <section class="p-4 rounded-3 bg-black neon-grid-card resume-panel resume-panel-skills-list">
-          <h2 class="h4 mb-3 text-info">Skills</h2>
-          <ul class="mb-0 ps-3 resume-list">
-            <li>Frontend layout and responsive design</li>
-            <li>UI building with Bootstrap and custom CSS</li>
-            <li>Problem solving, debugging, and iteration</li>
-            <li>Clear communication and collaboration</li>
-          </ul>
-        </section>
+        </div>
+      </div>
+
+      <!-- Technical Skills Section -->
+      <div class="card bg-black border-secondary mb-5">
+        <div class="card-header bg-dark border-secondary">
+          <h2 class="h4 mb-0 text-pink"><i class="fa-solid fa-code me-2"></i>Technical Skills</h2>
+        </div>
+        <div class="card-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h6 class="text-info mb-3 fw-bold">Programming Languages</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-brands fa-js me-2 neon-js"></i>JavaScript
+                </span>
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-brands fa-python me-2 neon-python"></i>Python
+                </span>
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-solid fa-code me-2 neon-cplus"></i>C++
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-info mb-3 fw-bold">Web Technologies</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-brands fa-html5 me-2 neon-html"></i>HTML5
+                </span>
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-brands fa-css3-alt me-2 neon-css"></i>CSS3
+                </span>
+                <span class="badge bg-dark border border-info text-light">
+                  <i class="fa-solid fa-database me-2 neon-sql"></i>SQL
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Competencies Section -->
+      <div class="card bg-black border-secondary mb-5">
+        <div class="card-header bg-dark border-secondary">
+          <h2 class="h4 mb-0 text-pink"><i class="fa-solid fa-star me-2"></i>Core Competencies</h2>
+        </div>
+        <div class="card-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Full-stack web development
+                </li>
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Responsive UI/UX design
+                </li>
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Frontend frameworks and libraries
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Problem solving and debugging
+                </li>
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Clear communication
+                </li>
+                <li class="list-group-item bg-transparent border-secondary text-light">
+                  <i class="fa-solid fa-check text-pink me-2"></i>Collaborative development
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualifications Section -->
+      <div class="card bg-black border-secondary mb-5">
+        <div class="card-header bg-dark border-secondary">
+          <h2 class="h4 mb-0 text-pink"><i class="fa-solid fa-graduation-cap me-2"></i>Qualifications</h2>
+        </div>
+        <div class="card-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h6 class="text-info mb-3 fw-bold">Expertise Areas</h6>
+              <ul class="list-unstyled ps-0">
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>Frontend layout and responsive design</li>
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>UI building with Bootstrap and custom CSS</li>
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>Cross-browser compatibility</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-info mb-3 fw-bold">Soft Skills</h6>
+              <ul class="list-unstyled ps-0">
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>Problem solving and iteration</li>
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>Attention to detail</li>
+                <li class="mb-2"><i class="fa-solid fa-arrow-right text-pink me-2"></i>Team collaboration and communication</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
     </main>
 
-    <nav class="bg-black py-3 bottom-social-nav" aria-label="Social media links">
-      <div class="container d-flex justify-content-center gap-4 fs-4">
-        <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-light"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-    </nav>
+    <!-- Side social tab removed; icons moved into navbar -->
 
     <footer class="bg-black text-light py-4 mt-auto">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
       >
         <p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
-        <a class="btn btn-sm custom-cta" href="contact.html" aria-label="Go to contact page">Contact Me</a>
+        <div class="d-flex gap-4 fs-4">
+          <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-pink"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-pink"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://discord.com/users/alsslc220702" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord" class="text-pink"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-pink"><i class="fa-brands fa-facebook"></i></a>
+        </div>
       </div>
     </footer>
+    <script src="assets/script.js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

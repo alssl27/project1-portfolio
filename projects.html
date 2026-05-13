@@ -41,7 +41,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="siteNavbar">
-					<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0">
+					<ul class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center">
 						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
 						<li class="nav-item"><a class="nav-link" href="aboutme.html">ABOUT ME</a></li>
 						<li class="nav-item"><a class="nav-link active" href="projects.html">PROJECTS</a></li>
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 		</nav>
-		<main class="grid-container projects-page-main">
+		<main class="grid-container projects-page-main" data-bionic>
 		<div class="card" data-title="Modern Web App" data-desc="A full-stack application built with React.">
 			<div class="card-image-container">
 				<img src="assets/images/project1.png" alt="Modern Web App" class="card-image" />
@@ -135,6 +135,8 @@
 		</div>
 		</main>
 
+		<!-- Side social tab removed; icons moved into navbar -->
+
 		<div class="overlay" id="overlay">
 			<div class="expanded-card">
 				<button class="close-btn" id="closeBtn">&times;</button>
@@ -142,18 +144,15 @@
 			</div>
 		</div>
 
-		<nav class="bg-black py-3 bottom-social-nav" aria-label="Social media links">
-			<div class="container d-flex justify-content-center gap-4 fs-4">
-				<a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-light"><i class="fa-brands fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
-				<a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-light"><i class="fa-brands fa-facebook"></i></a>
-			</div>
-		</nav>
-
 		<footer class="bg-black text-light py-4 mt-auto">
-			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
 				<p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
-				<a class="btn btn-sm custom-cta" href="contact.html" aria-label="Go to contact page">Contact Me</a>
+				<div class="d-flex gap-4 fs-4">
+					<a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-pink"><i class="fa-brands fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-pink"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://discord.com/users/alsslc220702" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord" class="text-pink"><i class="fa-brands fa-discord"></i></a>
+					<a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-pink"><i class="fa-brands fa-facebook"></i></a>
+				</div>
 			</div>
 		</footer>
 		<!-- Card modal logic is handled in assets/script.js/script.js -->

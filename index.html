@@ -68,7 +68,7 @@
         </button>
         <div class="collapse navbar-collapse" id="siteNavbar">
           <ul
-            class="navbar-nav ms-auto align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center"
+            class="navbar-nav justify-content-center align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center"
           >
             <li class="nav-item">
               <a class="nav-link active" href="index.html">HOME</a>
@@ -86,7 +86,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Background Video: Using fixed to keep it behind everything during scroll -->
     <div class="main-bg-video position-fixed top-0 start-0 w-100 h-100">
       <video class="bg-video w-100 h-100 object-fit-cover" autoplay muted loop>
@@ -116,7 +115,7 @@
 
         <div class="mt-4">
           <a
-            class="primary-btn btn btn-outline-pink px-4 py-2"
+            class="btn custom-cta primary-btn px-4 py-2 mt-4"
             href="assets/resume.pdf"
             download
             >Download Resume</a
@@ -125,42 +124,9 @@
       </div>
     </main>
 
-    <!-- Social Sidebar: Optimized for Mobile (Hidden on small, shown on MD up) -->
-    <!-- We will handle the mobile version of this in the footer for better UX -->
-    <aside
-      class="body-social-tab d-none d-md-flex flex-column position-fixed end-0 top-50 translate-middle-y z-3 p-3 gap-3"
-      aria-label="Social links"
-    >
-      <a
-        href="https://github.com/alssl27"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="GitHub"
-        aria-label="GitHub"
-        class="text-light fs-4"
-        ><i class="fa-brands fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-        aria-label="LinkedIn"
-        class="text-light fs-4"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
-      <a
-        href="https://www.facebook.com/bdens69/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-        aria-label="Facebook"
-        class="text-light fs-4"
-        ><i class="fa-brands fa-facebook"></i
-      ></a>
-    </aside>
+    <!-- Side social tab removed; icons moved into navbar -->
 
-    <!-- Footer: Added social icons for mobile users specifically -->
+    <!-- Footer with social icons -->
     <footer class="bg-black text-light py-4 z-3">
       <div
         class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
@@ -168,16 +134,15 @@
         <p class="mb-0 text-center text-md-start">
           © 2026 Sarah Collins. All rights reserved.
         </p>
-
-        <!-- Mobile-only social icons -->
-        <div class="d-flex d-md-none gap-4 fs-4">
+        <!-- Social icons in footer -->
+        <div class="d-flex gap-4 fs-4">
           <a
             href="https://github.com/alssl27"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"
             aria-label="GitHub"
-            class="text-light"
+            class="text-pink"
             ><i class="fa-brands fa-github"></i
           ></a>
           <a
@@ -186,8 +151,17 @@
             rel="noopener noreferrer"
             title="LinkedIn"
             aria-label="LinkedIn"
-            class="text-light"
+            class="text-pink"
             ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://discord.com/users/alsslc220702"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Discord"
+            aria-label="Discord"
+            class="text-pink"
+            ><i class="fa-brands fa-discord"></i
           ></a>
           <a
             href="https://www.facebook.com/bdens69/"
@@ -195,7 +169,7 @@
             rel="noopener noreferrer"
             title="Facebook"
             aria-label="Facebook"
-            class="text-light"
+            class="text-pink"
             ><i class="fa-brands fa-facebook"></i
           ></a>
         </div>
