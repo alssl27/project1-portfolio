@@ -15,6 +15,113 @@
   color: inherit;
 }
 
+.about-me-row {
+  align-items: stretch;
+}
+
+.about-me-column {
+  display: flex;
+}
+
+.about-me-column > .card {
+  width: 100%;
+}
+
+.about-me-bio-body {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .about-me-bio-body {
+    padding: 2rem 2.25rem;
+  }
+}
+
+.text-highlight {
+  color: #ff2bd6;
+  text-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
+}
+
+.resume-download-btn {
+  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.resume-download-btn:hover,
+.resume-download-btn:focus-visible {
+  background-color: #ff2bd6;
+  border-color: #ff2bd6;
+  color: #000;
+  box-shadow: 0 0 18px rgba(255, 43, 214, 0.65), 0 0 36px rgba(255, 43, 214, 0.25);
+  transform: translateY(-1px);
+}
+
+.tech-skill-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 110px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.tech-skill-cell:hover,
+.tech-skill-cell:focus-within {
+  transform: scale(1.05);
+  border-color: #ff2bd6;
+  box-shadow: 0 0 18px rgba(255, 43, 214, 0.28);
+  background: rgba(255, 43, 214, 0.06);
+}
+
+.tech-skill-cell:hover .tech-logo,
+.tech-skill-cell:focus-within .tech-logo {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(255, 43, 214, 0.45));
+}
+
+.tech-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(224, 110, 152, 0.45));
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+@media (max-width: 575.98px) {
+  .tech-logo {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.tech-skill-name {
+  display: block;
+  line-height: 1.1;
+}
+
+.qualification-list {
+  list-style: disc outside;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.qualification-list li {
+  margin-bottom: 0.65rem;
+}
+
+.qualification-list li::marker {
+  color: #ff2bd6;
+}
+
+.qualification-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Load Orbitron and set as the global font */
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
 
@@ -46,7 +153,7 @@ html, body, button, input, textarea, select {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  background: #23272e;
+  transform: scale(1.08);
   height: 2.2em;
   padding: 0 1em;
   border-bottom: 1.5px solid #23272e;
@@ -60,6 +167,7 @@ html, body, button, input, textarea, select {
   margin-top: 0.5em;
 }
 .term-btn.red { background: #ff5f56; border: 1.5px solid #e0443e; }
+  transition: transform 180ms ease, filter 180ms ease;
 .term-btn.yellow { background: #ffbd2e; border: 1.5px solid #dea123; }
 .term-btn.green { background: #27c93f; border: 1.5px solid #13a10e; }
 
