@@ -219,8 +219,9 @@
           const email = String(formData.get('email') || '').trim();
           const subject = String(formData.get('subject') || '').trim();
           const message = String(formData.get('message') || '').trim();
+          const recipient = ['alsslc220702', 'gmail.com'].join('@');
           const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-          const mailtoUrl = `mailto:alsslc220702@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
           window.location.href = mailtoUrl;
           successMessage.style.display = 'block';
