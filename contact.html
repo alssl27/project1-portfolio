@@ -30,6 +30,19 @@
       /* Keep form placeholder and muted text readable */
       .contact-page ::placeholder { color: rgba(255,255,255,0.7) !important; }
       .contact-page .text-muted { color: rgba(255,255,255,0.75) !important; }
+      .contact-page .invalid-feedback,
+      .contact-page .valid-feedback {
+        color: #ff9dbf !important;
+      }
+      .contact-page .form-control:focus,
+      .contact-page .form-control:focus-visible {
+        border-color: #ff2bd6 !important;
+        box-shadow: 0 0 0 0.2rem rgba(255, 43, 214, 0.2) !important;
+      }
+      .contact-page .form-control.is-invalid,
+      .contact-page .was-validated .form-control:invalid {
+        border-color: #ff6b9d !important;
+      }
       /* Force neon pink color for footer icons to match other pages */
       footer a.text-pink, footer a.text-pink i { color: #ff2bd6 !important; }
       /* Darker background for form */
