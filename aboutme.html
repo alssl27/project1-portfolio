@@ -1,14 +1,3 @@
-    <style>:root {
-      --palette-purple: #6237a4;
-      --palette-pink: #de57dc;
-      --palette-blue: #75bddd;
-      --palette-dark: #191034;
-      --palette-pink2: #e06e98;
-      --palette-blue2: #5262b1;
-      --palette-purple2: #9d3baf;
-      --palette-lavender: #d6a4e5;
-      --palette-purple3: #382266;
-    }</style>
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,216 +21,10 @@
       rel="stylesheet"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <style>
-      html,
-      body {
-        letter-spacing: 5px;
-      }
-
-      .resume-shell {
-        max-width: 1180px;
-      }
-
-      .resume-shell .card {
-        background-color: #000 !important;
-        color: #f8f9fa;
-      }
-
-      .resume-shell .card-header {
-        background-color: #111 !important;
-      }
-
-      .resume-photo {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-        border: 3px solid #ff2bd6;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-        transition: max-width 200ms ease;
-      }
-
-      @media (min-width: 576px) {
-        .resume-photo { max-width: 300px; }
-      }
-
-      @media (min-width: 768px) {
-        .resume-photo { max-width: 380px; }
-      }
-
-      @media (min-width: 992px) {
-        .resume-photo { max-width: 520px; }
-      }
-
-      @media (min-width: 1200px) {
-        .resume-photo { max-width: 760px; }
-      }
-
-      .resume-summary {
-        min-height: 100%;
-      }
-
-      .resume-summary p {
-        max-width: 48rem;
-      }
-
-      .profile-skill-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(52px, 1fr));
-        gap: 0.8rem;
-        width: 100%;
-        max-width: 260px;
-        margin: 0 auto 1rem;
-      }
-
-      .profile-skill-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 52px;
-        height: 52px;
-        margin: 0 auto;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        font-size: 1.35rem;
-      }
-
-      .profile-typing {
-        min-height: 3.2rem;
-        width: 100%;
-        max-width: 100%;
-        margin: 0 0 1rem;
-        font-family: "Orbitron", "Inter", sans-serif;
-        line-height: 2.4;
-        white-space: pre;
-        text-align: left !important;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      .typing-lines {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .typing-line {
-        line-height: 1.2;
-      }
-
-      .typing-line-name {
-        font-size: 2rem;
-        font-weight: 400;
-        letter-spacing: 5px;
-        color: #ff00cc;
-        text-shadow: 0 0 12px rgba(255, 0, 204, 0.55);
-      }
-
-      .typing-line-role {
-        font-size: 1.25rem;
-        font-weight: 400;
-        letter-spacing: 5px;
-        color: #4db8ff;
-        text-shadow: 0 0 10px rgba(77, 184, 255, 0.5);
-      }
-
-      /* About Me paragraph styling: unbold and increase letter spacing */
-      .about-me-text {
-        font-weight: 400 !important;
-        letter-spacing: 0.02em !important;
-        line-height: 1.7;
-      }
-
-      .typing-cursor {
-        display: inline-block;
-        margin-left: 0.15rem;
-        color: #75bddd;
-        animation: blink-cursor 1s steps(1) infinite;
-      }
-
-      @keyframes blink-cursor {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-
-      .neon-html { color: #ff5f44; text-shadow: 0 0 10px rgba(255, 95, 68, 0.85); }
-      .neon-css { color: #3cb7ff; text-shadow: 0 0 10px rgba(60, 183, 255, 0.85); }
-      .neon-js { color: #ffe26a; text-shadow: 0 0 10px rgba(255, 226, 106, 0.85); }
-      .neon-python { color: #7ef7cf; text-shadow: 0 0 10px rgba(126, 247, 207, 0.85); }
-      .neon-react { color: #7ee8ff; text-shadow: 0 0 10px rgba(126, 232, 255, 0.85); }
-      .neon-git { color: #ff8a73; text-shadow: 0 0 10px rgba(255, 138, 115, 0.85); }
-
-      .tech-skill-badge {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50% !important;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        font-size: 1.5rem;
-        line-height: 1;
-      }
-
-      .tech-skill-badge i {
-        font-size: 1.5rem;
-        margin: 0 !important;
-      }
-
-      .tech-table td {
-        vertical-align: middle;
-        text-align: center;
-      }
-
-      .tech-table {
-        table-layout: fixed;
-        width: 100%;
-        background-color: #000 !important;
-      }
-
-      .tech-table th,
-      .tech-table td {
-        width: 33.333%;
-        padding: 1rem 0.5rem;
-        background-color: #000 !important;
-      }
-
-      /* Ensure consistent font size across resume/grid sections */
-      .resume-section .card,
-      .resume-section .card-body,
-      .resume-section .card-body ul,
-      .resume-section .card-body li,
-      .resume-section .card-body table,
-      .resume-section .card-body p,
-      .resume-section .card-body .list-group-item {
-        font-size: 1rem;
-      }
-
-      /* Ensure the 'lead' paragraph in the summary matches other grid text */
-      .resume-summary .lead {
-        font-size: 1rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-      }
-
-      .resume-section .card-body {
-        padding: 1.25rem;
-      }
-
-      @media (max-width: 575.98px) {
-        .display-5 {
-          font-size: 1.8rem;
-        }
-
-        .resume-section .card-body {
-          padding: 1rem;
-        }
-      }
-    </style>
   </head>
 
-  <body class="bg-dark text-light has-bottom-social-nav">
+  <body class="bg-dark text-light has-bottom-social-nav about-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
       <div class="container px-3 px-lg-4">
         <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -267,12 +50,17 @@
       </div>
     </nav>
 
-    <main class="container-fluid resume-shell text-light py-5 px-3 px-lg-4" data-bionic>
+    <main id="main-content" class="page-shell resume-shell text-light py-5" data-bionic>
+      <header class="page-header mb-4">
+        <p class="eyebrow">About</p>
+        <h1 class="page-title text-pink">About Me</h1>
+        <p class="page-subtitle">Building data-centric web apps with a focus on clarity, performance, and business impact.</p>
+      </header>
       <div class="row g-4 align-items-stretch about-me-row mb-4 mb-lg-5">
         <div class="col-lg-5 about-me-column">
           <div class="card bg-black border-secondary h-100 shadow-sm">
             <div class="card-body d-flex flex-column align-items-center justify-content-center text-center p-4">
-              <img src="assets/images/circleprofile.png" alt="Profile photo of Sarah Collins" class="img-fluid rounded-circle resume-photo mb-4">
+              <img src="assets/images/circleprofile.png" alt="Profile photo of Sarah Collins" class="img-fluid rounded-circle resume-photo mb-4" loading="lazy" decoding="async">
               <a class="btn btn-outline-light mt-auto resume-download-btn" href="assets/resume.pdf" download aria-label="Download resume">
                 <i class="fa-solid fa-download me-2"></i>Download Resume
               </a>
@@ -282,10 +70,7 @@
 
         <div class="col-lg-7 about-me-column">
           <div class="card bg-black border-secondary h-100 shadow-sm resume-summary">
-            <div class="card-body about-me-bio-body d-flex flex-column justify-content-center">
-              <div class="small text-uppercase text-info fw-semibold mb-2"></div>
-              <h2 class="h3 text-pink mb-3"></h2>
-      
+            <div class="card-body about-me-bio-body d-flex flex-column justify-content-center text-start">
               <div class="profile-typing" aria-label="Profile typing text">
                 <span class="typing-lines">
                   <span id="profileTypingLine1" class="typing-line typing-line-name"></span>
@@ -295,9 +80,11 @@
               </div>
               <p class="h6 fw-normal mb-3 about-me-text">Based in Greater Manchester, I am a Full-Stack Developer currently completing a <span class="text-highlight">Level 5 Diploma</span> in Web Application Development.</p>
 
-              <p class="h6 fw-normal mb-3 about-me-text">I specialize in building robust, data-centric applications using Python, Django, and React.</p>
+              <p class="h6 fw-normal mb-3 about-me-text">I specialize in building robust, data-centric applications with Python, Django, and React that balance performance with clarity.</p>
 
-              <p class="h6 fw-normal mb-0 about-me-text">My background isn't traditional—I bring over a decade of high-stakes experience in <span class="text-highlight">sales and property management</span> to the tech space. This means I don’t just write code; I understand business logic, client relationships, and the importance of delivering projects that drive ROI. I’m a <span class="text-highlight">Vibe Coder</span> at heart, blending cutting-edge AI workflows with clean, high-impact design to solve real-world problems.</p>
+              <p class="h6 fw-normal mb-3 about-me-text">My background spans over a decade in <span class="text-highlight">sales and property management</span>, so I approach projects with business goals in mind.</p>
+
+              <p class="h6 fw-normal mb-0 about-me-text">I’m a <span class="text-highlight">Vibe Coder</span> at heart, blending AI-assisted workflows with clean, high-impact design to solve real-world problems.</p>
             </div>
           </div>
         </div>
@@ -311,7 +98,7 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-borderless table-dark mb-0 tech-table mx-auto" style="max-width:760px;">
+                <table class="table table-borderless table-dark mb-0 tech-table mx-auto">
                   <tbody>
                     <tr>
                       <td>

@@ -126,16 +126,28 @@ function setupTypewriter() {
 }
 
 function setupCardModal() {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".project-card");
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("closeBtn");
   const modalContent = document.getElementById("modalContent");
 
   if (!cards.length || !overlay || !closeBtn || !modalContent) return;
 
+  let lastFocusedElement = null;
+  const focusableSelector = [
+    "button",
+    "[href]",
+    "input",
+    "select",
+    "textarea",
+    "[tabindex]:not([tabindex='-1'])",
+  ].join(",");
+
   cards.forEach((card) => {
     card.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
       if (e.target.classList.contains("more-btn")) return;
+      lastFocusedElement = document.activeElement;
       expandCard(card, overlay, modalContent);
     });
 
@@ -143,18 +155,57 @@ function setupCardModal() {
     if (moreBtn) {
       moreBtn.addEventListener("click", (e) => {
         e.stopPropagation();
+        lastFocusedElement = document.activeElement;
         expandCard(card, overlay, modalContent);
       });
     }
+
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        lastFocusedElement = document.activeElement;
+        expandCard(card, overlay, modalContent);
+      }
+    });
   });
 
-  closeBtn.addEventListener("click", () => {
+  const closeModal = () => {
     overlay.classList.remove("active");
-  });
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  };
+
+  closeBtn.addEventListener("click", closeModal);
 
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
-      overlay.classList.remove("active");
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!overlay.classList.contains("active")) return;
+
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeModal();
+    }
+
+    if (e.key === "Tab") {
+      const focusable = overlay.querySelectorAll(focusableSelector);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 }
@@ -162,6 +213,9 @@ function setupCardModal() {
 function expandCard(card, overlay, modalContent) {
   const title = card.getAttribute("data-title");
   const desc = card.getAttribute("data-desc");
+  const role = card.getAttribute("data-role");
+  const tech = card.getAttribute("data-tech");
+  const link = card.getAttribute("data-link");
   const img = card.querySelector(".card-image");
   const avatar = card.querySelector(".card-avatar");
   const imgSrc = img ? img.src : "";
@@ -170,17 +224,25 @@ function expandCard(card, overlay, modalContent) {
   const avatarAlt = avatar ? avatar.alt : "";
 
   modalContent.innerHTML = `
-    <div class="card-image-container" style="margin-bottom:1.5rem;">
+    <div class="card-image-container modal-image">
       <img src="${imgSrc}" alt="${imgAlt}" class="card-image" />
       <img src="${avatarSrc}" alt="${avatarAlt}" class="card-avatar" />
     </div>
-    <h2>${title}</h2>
+    <h2 id="modalTitle">${title}</h2>
+    <p class="text-muted" id="modalDescription">${desc}</p>
     <hr>
-    <p>${desc}</p>
-    <p>You can add images or long-form case studies here.</p>
+    <p><strong>Role:</strong> ${role || "Product Design + Frontend"}</p>
+    <p><strong>Tech:</strong> ${tech || "HTML · CSS · JavaScript"}</p>
+    <a href="${link || "#"}" class="project-link" target="_blank" rel="noopener">View Source</a>
   `;
 
   overlay.classList.add("active");
+  overlay.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  const closeBtn = overlay.querySelector("#closeBtn");
+  if (closeBtn) {
+    closeBtn.focus();
+  }
 }
 
 function initializeApp() {
