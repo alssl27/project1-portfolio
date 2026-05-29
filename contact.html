@@ -166,16 +166,6 @@
               </div>
             </form>
 
-            <!-- Success Message (Hidden by default) -->
-            <div
-              class="alert alert-success alert-dismissible fade"
-              id="successMessage"
-              role="alert"
-              style="display: none; margin-top: 2rem;"
-            >
-              <strong>Thanks.</strong> Your email client should open with the message details ready to send.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
           </div>
         </div>
       </div>
@@ -203,7 +193,6 @@
       (function () {
         'use strict';
         const form = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
 
         form.addEventListener('submit', function (event) {
           event.preventDefault();
@@ -219,22 +208,13 @@
           const email = String(formData.get('email') || '').trim();
           const subject = String(formData.get('subject') || '').trim();
           const message = String(formData.get('message') || '').trim();
-          const recipient = String.fromCharCode(
-            97, 108, 115, 115, 108, 99, 50, 50, 48, 55, 48, 50, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109
-          );
+          const recipient = 'alsslc220702@gmail.com';
           const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
           const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
           window.location.href = mailtoUrl;
-          successMessage.style.display = 'block';
-          successMessage.classList.add('show');
           form.reset();
           form.classList.remove('was-validated');
-
-          setTimeout(() => {
-            successMessage.classList.remove('show');
-            successMessage.style.display = 'none';
-          }, 5000);
         });
       })();
     </script>
