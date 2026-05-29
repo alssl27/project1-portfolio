@@ -16,16 +16,15 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
-		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap"
+			rel="stylesheet"
+		/>
 		<link href="assets/css/style.css" rel="stylesheet" />
-		<style>
-			.projects-page .card {
-				background-color: #000;
-			}
-		</style>
 	</head>
 
 	<body class="bg-dark text-light projects-page has-bottom-social-nav">
+		<a class="skip-link" href="#main-content">Skip to content</a>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
 			<div class="container px-3 px-lg-4">
 				<a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -50,96 +49,202 @@
 				</div>
 			</div>
 		</nav>
-		<main class="grid-container projects-page-main" data-bionic>
-		<div class="card" data-title="Modern Web App" data-desc="A full-stack application built with React.">
-			<div class="card-image-container">
-				<img src="assets/images/project1.png" alt="Modern Web App" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project One</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="E-Commerce UI" data-desc="Custom shopping cart experience.">
-			<div class="card-image-container">
-				<img src="assets/images/project2.png" alt="E-Commerce UI" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Two</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="AI Dashboard" data-desc="Data visualization using D3.js.">
-			<div class="card-image-container">
-				<img src="assets/images/project3.png" alt="AI Dashboard" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Three</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
+		<main id="main-content" class="page-shell projects-page-main section-stack" data-bionic>
+			<header class="page-header">
+				<p class="eyebrow">Selected work</p>
+				<h1 class="page-title text-pink">Projects</h1>
+				<p class="page-subtitle">A snapshot of recent builds, each focused on UX clarity, responsive layouts, and measurable outcomes.</p>
+			</header>
+			<section class="projects-grid">
+				<article class="project-card" data-title="Modern Web App" data-desc="A full-stack application built with React and a focus on performance-first UX." data-role="Full-Stack Development" data-tech="React · Node.js · PostgreSQL" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project1.png" alt="Modern Web App preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project One</h3>
+						<p class="project-meta mb-1">Role: Full-stack</p>
+						<p class="mb-2">A conversion-focused platform with personalized dashboards and real-time reporting.</p>
+						<div class="project-tech">
+							<span>React</span>
+							<span>Node.js</span>
+							<span>PostgreSQL</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="E-Commerce UI" data-desc="Custom shopping cart experience with accessibility-first interaction design." data-role="UI/UX + Frontend" data-tech="HTML · CSS · JavaScript" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project2.png" alt="E-Commerce UI preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Two</h3>
+						<p class="project-meta mb-1">Role: UI/UX</p>
+						<p class="mb-2">Refined checkout flow with frictionless navigation and trust-building microcopy.</p>
+						<div class="project-tech">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>JavaScript</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="AI Dashboard" data-desc="Data visualization experience built around clear, narrative storytelling." data-role="Frontend + Data Viz" data-tech="D3.js · React · API" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project3.png" alt="AI Dashboard preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Three</h3>
+						<p class="project-meta mb-1">Role: Frontend</p>
+						<p class="mb-2">Insight-led dashboard with accessible charts and progressive data reveal.</p>
+						<div class="project-tech">
+							<span>D3.js</span>
+							<span>React</span>
+							<span>REST API</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
 
-		<div class="card" data-title="Portfolio Website" data-desc="Personal portfolio built with HTML, CSS, and JS.">
-			<div class="card-image-container">
-				<img src="assets/images/project4.png" alt="Portfolio Website" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Four</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Mobile App" data-desc="Cross-platform mobile app using Flutter.">
-			<div class="card-image-container">
-				<img src="assets/images/project5.png" alt="Mobile App" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Five</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Landing Page" data-desc="High-converting marketing landing page.">
-			<div class="card-image-container">
-				<img src="assets/images/project6.png" alt="Landing Page" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Six</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Blog Platform" data-desc="Full-featured blog with CMS backend.">
-			<div class="card-image-container">
-				<img src="assets/images/project7.png" alt="Blog Platform" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Seven</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Weather Dashboard" data-desc="Live weather dashboard using APIs.">
-			<div class="card-image-container">
-				<img src="assets/images/project8.png" alt="Weather Dashboard" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Eight</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Task Manager" data-desc="Productivity tool for managing tasks.">
-			<div class="card-image-container">
-				<img src="assets/images/project9.png" alt="Task Manager" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Nine</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
+				<article class="project-card" data-title="Portfolio Website" data-desc="Personal portfolio with modular sections and a polished visual identity." data-role="Frontend + Design" data-tech="HTML · CSS · Bootstrap" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project1.png" alt="Portfolio Website preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Four</h3>
+						<p class="project-meta mb-1">Role: Frontend</p>
+						<p class="mb-2">Multi-page portfolio with a clean narrative and responsive layout system.</p>
+						<div class="project-tech">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>Bootstrap</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="Mobile App" data-desc="Cross-platform app with a focus on accessibility and onboarding." data-role="UI Engineering" data-tech="Flutter · Firebase · Figma" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project2.png" alt="Mobile App preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Five</h3>
+						<p class="project-meta mb-1">Role: UI Engineering</p>
+						<p class="mb-2">Mobile-first onboarding with guided flows and accessible controls.</p>
+						<div class="project-tech">
+							<span>Flutter</span>
+							<span>Firebase</span>
+							<span>Figma</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="Landing Page" data-desc="High-converting marketing landing page with A/B tested sections." data-role="UX + Frontend" data-tech="HTML · CSS · Analytics" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project3.png" alt="Landing Page preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Six</h3>
+						<p class="project-meta mb-1">Role: UX + Frontend</p>
+						<p class="mb-2">Narrative-driven layout with scroll storytelling and conversion uplift.</p>
+						<div class="project-tech">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>Analytics</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="Blog Platform" data-desc="Full-featured blog platform with a CMS-style workflow." data-role="Full-stack" data-tech="Django · PostgreSQL · React" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project1.png" alt="Blog Platform preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Seven</h3>
+						<p class="project-meta mb-1">Role: Full-stack</p>
+						<p class="mb-2">Editorial workflow with role-based access and publishing automation.</p>
+						<div class="project-tech">
+							<span>Django</span>
+							<span>PostgreSQL</span>
+							<span>React</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="Weather Dashboard" data-desc="Live weather dashboard with API-driven forecasts and alerts." data-role="Frontend" data-tech="JavaScript · APIs · CSS" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project2.png" alt="Weather Dashboard preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Eight</h3>
+						<p class="project-meta mb-1">Role: Frontend</p>
+						<p class="mb-2">Forecast visualizations with responsive design and fast data parsing.</p>
+						<div class="project-tech">
+							<span>JavaScript</span>
+							<span>APIs</span>
+							<span>CSS</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+				<article class="project-card" data-title="Task Manager" data-desc="Productivity tool focused on prioritization and daily planning." data-role="Product Design" data-tech="React · TypeScript · Firebase" data-link="https://github.com/alssl27" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="projectModal">
+					<div class="card-image-container">
+						<img src="assets/images/project3.png" alt="Task Manager preview" class="card-image" loading="lazy" decoding="async" />
+						<img src="assets/images/profile.png" alt="Sarah Collins avatar" class="card-avatar" loading="lazy" decoding="async" />
+					</div>
+					<div class="project-card-body">
+						<h3 class="h5 mb-1">Project Nine</h3>
+						<p class="project-meta mb-1">Role: Product Design</p>
+						<p class="mb-2">Task prioritization experience with smart reminders and status updates.</p>
+						<div class="project-tech">
+							<span>React</span>
+							<span>TypeScript</span>
+							<span>Firebase</span>
+						</div>
+					</div>
+					<div class="project-links">
+						<a class="project-link" href="https://github.com/alssl27" target="_blank" rel="noopener">Source</a>
+						<button class="more-btn" type="button">Case Study</button>
+					</div>
+				</article>
+			</section>
 		</main>
 
 		<!-- Side social tab removed; icons moved into navbar -->
 
-		<div class="overlay" id="overlay">
-			<div class="expanded-card">
-				<button class="close-btn" id="closeBtn">&times;</button>
+		<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+			<div class="expanded-card" id="projectModal" tabindex="-1">
+				<button class="close-btn" id="closeBtn" type="button" aria-label="Close project details">&times;</button>
 				<div id="modalContent"></div>
 			</div>
 		</div>

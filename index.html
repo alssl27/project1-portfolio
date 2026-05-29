@@ -24,29 +24,10 @@
     <!-- Custom Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
-    <style>
-      :root {
-        --palette-purple: #6237a4;
-        --palette-pink: #de57dc;
-        --palette-blue: #75bddd;
-        --palette-dark: #191034;
-        --palette-pink2: #e06e98;
-        --palette-blue2: #5262b1;
-        --palette-purple2: #9d3baf;
-        --palette-lavender: #d6a4e5;
-        --palette-purple3: #382266;
-      }
-
-      /* Ensuring the body stays within bounds */
-      body,
-      html {
-        overflow-x: hidden;
-        width: 100%;
-      }
-    </style>
   </head>
 
   <body class="bg-dark text-light d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Navbar: Added container-fluid for better edge handling -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 z-3">
       <div class="container">
@@ -87,8 +68,16 @@
       </div>
     </nav>
     <!-- Background Video: Using fixed to keep it behind everything during scroll -->
-    <div class="main-bg-video position-fixed top-0 start-0 w-100 h-100">
-      <video class="bg-video w-100 h-100 object-fit-cover" autoplay muted loop>
+    <div class="main-bg-video position-fixed top-0 start-0 w-100 h-100" aria-hidden="true">
+      <video
+        class="bg-video w-100 h-100 object-fit-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/profile.png"
+      >
         <source src="assets/images/profile.mp4" type="video/mp4" />
       </video>
       <div
@@ -98,11 +87,12 @@
 
     <!-- Hero Section: Removed manual negative margin, used flex-grow -->
     <main
-      class="container flex-grow-1 d-flex align-items-end justify-content-center position-relative py-5 pb-5"
+      id="main-content"
+      class="page-shell hero-section flex-grow-1 d-flex align-items-center justify-content-center position-relative py-5"
     >
       <div class="profile-info z-2 px-3 px-md-0 w-100 text-center">
         <div class="typewriter-bg typewriter-wrapper">
-          <h2 class="terminal-prompt text-pink"></h2>
+          <p class="terminal-prompt text-pink mb-1"></p>
           <!-- Adjusted font sizes via CSS classes we will define -->
           <h1
             id="typewriter-text"
@@ -110,7 +100,7 @@
           >
             SARAH COLLINS
           </h1>
-          <h2 id="typewriter-subtext" class="hero-subtitle h4 text-info"></h2>
+          <p id="typewriter-subtext" class="hero-subtitle h4 text-info mb-0"></p>
         </div>
 
         <div class="mt-4">
@@ -118,6 +108,7 @@
             class="btn custom-cta primary-btn px-4 py-2 mt-4"
             href="assets/resume.pdf"
             download
+            aria-label="Download resume"
             >Download Resume</a
           >
         </div>
