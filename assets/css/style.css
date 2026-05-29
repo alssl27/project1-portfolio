@@ -104,6 +104,23 @@
   line-height: 1.1;
 }
 
+.tech-skill-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  background: radial-gradient(circle at top, rgba(255, 43, 214, 0.4), rgba(98, 55, 164, 0.95));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(255, 43, 214, 0.3);
+}
+
 .qualification-list {
   list-style: disc outside;
   padding-left: 1.25rem;
