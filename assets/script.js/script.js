@@ -59,6 +59,7 @@ function applyBionicReading() {
     "SVG",
     "TEXTAREA",
     "INPUT",
+    "BUTTON",
     "CODE",
     "PRE",
     "KBD",
@@ -126,42 +127,83 @@ function setupTypewriter() {
 }
 
 function setupCardModal() {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".project-card");
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("closeBtn");
   const modalContent = document.getElementById("modalContent");
+  let lastFocusedElement = null;
 
   if (!cards.length || !overlay || !closeBtn || !modalContent) return;
 
   cards.forEach((card) => {
     card.addEventListener("click", (e) => {
       if (e.target.classList.contains("more-btn")) return;
+      lastFocusedElement = document.activeElement;
       expandCard(card, overlay, modalContent);
+      closeBtn.focus();
     });
 
     const moreBtn = card.querySelector(".more-btn");
     if (moreBtn) {
+      moreBtn.setAttribute("aria-expanded", "false");
       moreBtn.addEventListener("click", (e) => {
         e.stopPropagation();
+        lastFocusedElement = document.activeElement;
         expandCard(card, overlay, modalContent);
+        closeBtn.focus();
       });
     }
   });
 
   closeBtn.addEventListener("click", () => {
-    overlay.classList.remove("active");
+    closeCardModal(overlay, lastFocusedElement);
   });
 
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
-      overlay.classList.remove("active");
+      closeCardModal(overlay, lastFocusedElement);
     }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!overlay.classList.contains("active")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeCardModal(overlay, lastFocusedElement);
+      return;
+    }
+
+    if (event.key === "Tab") {
+      keepFocusInsideDialog(event, overlay);
+    }
+  });
+
+  function expandCardWithFocus(card) {
+    lastFocusedElement = document.activeElement;
+    expandCard(card, overlay, modalContent);
+    closeBtn.focus();
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && event.target === card) {
+        expandCardWithFocus(card);
+      }
+    });
   });
 }
 
 function expandCard(card, overlay, modalContent) {
   const title = card.getAttribute("data-title");
   const desc = card.getAttribute("data-desc");
+  const problem = card.getAttribute("data-problem");
+  const users = card.getAttribute("data-users");
+  const decisions = card.getAttribute("data-decisions");
+  const accessibility = card.getAttribute("data-accessibility");
+  const testing = card.getAttribute("data-testing");
+  const outcome = card.getAttribute("data-outcome");
   const img = card.querySelector(".card-image");
   const avatar = card.querySelector(".card-avatar");
   const imgSrc = img ? img.src : "";
@@ -174,18 +216,90 @@ function expandCard(card, overlay, modalContent) {
       <img src="${imgSrc}" alt="${imgAlt}" class="card-image" />
       <img src="${avatarSrc}" alt="${avatarAlt}" class="card-avatar" />
     </div>
-    <h2>${title}</h2>
+    <h2 id="modalTitle">${title}</h2>
     <hr>
     <p>${desc}</p>
-    <p>You can add images or long-form case studies here.</p>
+    <ul class="case-study-list">
+      <li><strong>User problem:</strong> ${problem}</li>
+      <li><strong>Target users:</strong> ${users}</li>
+      <li><strong>UX decisions:</strong> ${decisions}</li>
+      <li><strong>Accessibility:</strong> ${accessibility}</li>
+      <li><strong>Testing evidence:</strong> ${testing}</li>
+      <li><strong>Outcome:</strong> ${outcome}</li>
+    </ul>
   `;
 
   overlay.classList.add("active");
+  overlay.setAttribute("aria-hidden", "false");
+  const activeButton = document.activeElement;
+  if (activeButton && activeButton.matches(".more-btn")) {
+    activeButton.setAttribute("aria-expanded", "true");
+  }
+  document.body.classList.add("modal-open");
+}
+
+function closeCardModal(overlay, lastFocusedElement) {
+  overlay.classList.remove("active");
+  overlay.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+    if (lastFocusedElement.matches && lastFocusedElement.matches(".more-btn")) {
+      lastFocusedElement.setAttribute("aria-expanded", "false");
+    }
+    lastFocusedElement.focus();
+  }
+}
+
+function keepFocusInsideDialog(event, overlay) {
+  const focusable = overlay.querySelectorAll(
+    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+  );
+
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function setupMotionToggle() {
+  const video = document.getElementById("heroVideo");
+  const button = document.getElementById("motionToggle");
+
+  if (!video || !button) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    video.pause();
+    button.textContent = "Play motion";
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  button.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      button.textContent = "Pause motion";
+      button.setAttribute("aria-pressed", "false");
+    } else {
+      video.pause();
+      button.textContent = "Play motion";
+      button.setAttribute("aria-pressed", "true");
+    }
+  });
 }
 
 function initializeApp() {
   setupTypewriter();
   setupCardModal();
+  setupMotionToggle();
   applyBionicReading();
 }
 

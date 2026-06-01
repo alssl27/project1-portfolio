@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="UX-focused project case studies by Sarah Collins, including user problems, accessibility decisions, testing evidence, and outcomes."
+		/>
 		<title>Projects | Portfolio</title>
 		<link rel="icon" type="image/png" href="assets/images/programming.png" />
 
@@ -16,7 +20,6 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
-		<script src="https://cdn.tailwindcss.com"></script>
 		<link href="assets/css/style.css" rel="stylesheet" />
 		<style>
 			.projects-page .card {
@@ -26,6 +29,12 @@
 	</head>
 
 	<body class="bg-dark text-light projects-page has-bottom-social-nav">
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<noscript>
+			<p class="noscript-alert">
+				JavaScript is disabled. Project summaries remain visible, but expandable case-study dialogs need JavaScript.
+			</p>
+		</noscript>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
 			<div class="container px-3 px-lg-4">
 				<a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
@@ -50,96 +59,83 @@
 				</div>
 			</div>
 		</nav>
-		<main class="grid-container projects-page-main" data-bionic>
-		<div class="card" data-title="Modern Web App" data-desc="A full-stack application built with React.">
-			<div class="card-image-container">
-				<img src="assets/images/project1.png" alt="Modern Web App" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project One</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="E-Commerce UI" data-desc="Custom shopping cart experience.">
-			<div class="card-image-container">
-				<img src="assets/images/project2.png" alt="E-Commerce UI" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Two</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="AI Dashboard" data-desc="Data visualization using D3.js.">
-			<div class="card-image-container">
-				<img src="assets/images/project3.png" alt="AI Dashboard" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Three</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
+		<main id="main-content" class="projects-page-main" data-bionic>
+			<section class="projects-intro" aria-labelledby="projects-heading">
+				<p class="eyebrow">Portfolio case studies</p>
+				<h1 id="projects-heading">Selected UX-Focused Web Projects</h1>
+				<p>
+					Each case study shows the user problem, design decision, accessibility consideration, and testing evidence behind the work.
+				</p>
+			</section>
 
-		<div class="card" data-title="Portfolio Website" data-desc="Personal portfolio built with HTML, CSS, and JS.">
-			<div class="card-image-container">
-				<img src="assets/images/project4.png" alt="Portfolio Website" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Four</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Mobile App" data-desc="Cross-platform mobile app using Flutter.">
-			<div class="card-image-container">
-				<img src="assets/images/project5.png" alt="Mobile App" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Five</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Landing Page" data-desc="High-converting marketing landing page.">
-			<div class="card-image-container">
-				<img src="assets/images/project6.png" alt="Landing Page" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Six</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Blog Platform" data-desc="Full-featured blog with CMS backend.">
-			<div class="card-image-container">
-				<img src="assets/images/project7.png" alt="Blog Platform" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Seven</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Weather Dashboard" data-desc="Live weather dashboard using APIs.">
-			<div class="card-image-container">
-				<img src="assets/images/project8.png" alt="Weather Dashboard" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Eight</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
-		<div class="card" data-title="Task Manager" data-desc="Productivity tool for managing tasks.">
-			<div class="card-image-container">
-				<img src="assets/images/project9.png" alt="Task Manager" class="card-image" />
-				<img src="assets/images/profile.png" alt="Profile" class="card-avatar" />
-			</div>
-			<h3>Project Nine</h3>
-			<p>Click to expand</p>
-			<button class="more-btn" type="button">More</button>
-		</div>
+			<section class="grid-container" aria-label="Project case studies">
+				<article
+					class="card project-card"
+					data-title="Developer Portfolio"
+					data-desc="A responsive portfolio designed for recruiters, tutors, and collaborators who need to understand Sarah's skills quickly."
+					data-problem="Visitors need a fast route to skills, evidence, and contact details without reading long supporting notes."
+					data-users="Primary users are recruiters, course assessors, and collaborators reviewing work on mobile and desktop."
+					data-decisions="The layout prioritises a clear hero, consistent navigation, concise project cards, and a contact route available from every page."
+					data-accessibility="Semantic page landmarks, visible focus states, descriptive image text, reduced-motion support, and keyboard-operable dialogs are used across the site."
+					data-testing="Manual checks covered navigation, responsive breakpoints, form validation, modal open/close behaviour, and internal asset links."
+					data-outcome="The project now communicates purpose immediately and provides stronger evidence for user-centred frontend development."
+				>
+					<div class="card-image-container">
+						<img src="assets/images/project1.png" alt="Portfolio homepage displayed on a desktop screen" class="card-image" />
+						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
+					</div>
+					<h2 class="h3">Developer Portfolio</h2>
+					<p>Responsive personal brand and project evidence hub.</p>
+					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Developer Portfolio case study">View case study</button>
+				</article>
+
+				<article
+					class="card project-card"
+					data-title="Service Booking Interface"
+					data-desc="A booking journey concept focused on reducing friction for customers comparing services and making enquiries."
+					data-problem="Users need a simple way to understand service options, trust the provider, and submit a clear enquiry."
+					data-users="Primary users are time-poor customers on mobile devices who expect clear information hierarchy and fast feedback."
+					data-decisions="Cards, short labels, strong contrast, and validation feedback keep the path to action understandable."
+					data-accessibility="The design uses labelled form fields, clear error messages, large tap targets, and contrast-aware neon accents."
+					data-testing="The flow was checked with required-field validation, keyboard tab order, mobile layout review, and broken-link scanning."
+					data-outcome="The interface supports user confidence by keeping the enquiry route obvious and recoverable."
+				>
+					<div class="card-image-container">
+						<img src="assets/images/project2.png" alt="Service booking interface preview with card-based content" class="card-image" />
+						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
+					</div>
+					<h2 class="h3">Service Booking Interface</h2>
+					<p>Accessible enquiry flow with clear validation feedback.</p>
+					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Service Booking Interface case study">View case study</button>
+				</article>
+
+				<article
+					class="card project-card"
+					data-title="Data Dashboard Concept"
+					data-desc="A dashboard concept for turning business information into scannable, decision-ready summaries."
+					data-problem="Business users need to spot priority information quickly without losing context or control."
+					data-users="Primary users are small business owners and managers who need concise visual summaries."
+					data-decisions="The dashboard uses grouped content, strong headings, consistent visual rhythm, and restrained interaction feedback."
+					data-accessibility="Readable headings, consistent card structure, descriptive media text, and keyboard-friendly expansion behaviour support inclusive use."
+					data-testing="Responsive grid behaviour, image scaling, modal focus handling, and internal links were checked after implementation."
+					data-outcome="The case study demonstrates how visual hierarchy and interaction feedback can support confident decision-making."
+				>
+					<div class="card-image-container">
+						<img src="assets/images/project3.png" alt="Data dashboard concept preview with visual panels" class="card-image" />
+						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
+					</div>
+					<h2 class="h3">Data Dashboard Concept</h2>
+					<p>Scannable reporting interface for business decisions.</p>
+					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Data Dashboard Concept case study">View case study</button>
+				</article>
+			</section>
 		</main>
 
 		<!-- Side social tab removed; icons moved into navbar -->
 
-		<div class="overlay" id="overlay">
-			<div class="expanded-card">
-				<button class="close-btn" id="closeBtn">&times;</button>
+		<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+			<div class="expanded-card" role="document">
+				<button class="close-btn" id="closeBtn" type="button" aria-label="Close case study">&times;</button>
 				<div id="modalContent"></div>
 			</div>
 		</div>
