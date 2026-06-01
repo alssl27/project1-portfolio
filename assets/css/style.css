@@ -39,7 +39,7 @@
 .tech-skill-cell:hover,
 .card:focus-within,
 .tech-skill-cell:focus-within {
-  box-shadow: 0 0 32px var(--pink-neon) !important, 0 0 64px rgba(255,43,214,0.32) !important;
+  box-shadow: 0 0 32px var(--pink-neon), 0 0 64px rgba(255,43,214,0.32) !important;
   border-color: var(--pink-neon) !important;
 }
 
