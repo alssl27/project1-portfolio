@@ -1,0 +1,111 @@
+{
+  "version": "26.6.1",
+  "messages": [
+    {
+      "type": "info",
+      "lastLine": 4,
+      "lastColumn": 28,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "head>\n    <meta charset=\"utf-8\" />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 24
+    },
+    {
+      "type": "info",
+      "lastLine": 5,
+      "lastColumn": 74,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 70
+    },
+    {
+      "type": "info",
+      "lastLine": 9,
+      "firstLine": 6,
+      "lastColumn": 6,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "1\" />\n    <meta\n      name=\"description\"\n      content=\"About Sarah Collins, including frontend and full-stack skills, qualifications, resume access, and professional profile.\"\n    />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 173
+    },
+    {
+      "type": "info",
+      "lastLine": 11,
+      "lastColumn": 77,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "itle>\n    <link rel=\"icon\" type=\"image/png\" href=\"assets/images/programming.png\" />\n\n    ",
+      "hiliteStart": 10,
+      "hiliteLength": 73
+    },
+    {
+      "type": "info",
+      "lastLine": 18,
+      "firstLine": 13,
+      "lastColumn": 6,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "\" />\n\n    <link\n      href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css\"\n      rel=\"stylesheet\"\n      integrity=\"sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB\"\n      crossorigin=\"anonymous\"\n    />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 240
+    },
+    {
+      "type": "info",
+      "lastLine": 22,
+      "firstLine": 19,
+      "lastColumn": 6,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "   />\n    <link\n      rel=\"stylesheet\"\n      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\"\n    />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 122
+    },
+    {
+      "type": "info",
+      "lastLine": 26,
+      "firstLine": 23,
+      "lastColumn": 6,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "   />\n    <link\n      href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap\"\n      rel=\"stylesheet\"\n    />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 154
+    },
+    {
+      "type": "info",
+      "lastLine": 27,
+      "lastColumn": 57,
+      "firstColumn": 5,
+      "message": "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.",
+      "extract": "   />\n    <link href=\"assets/css/style.css\" rel=\"stylesheet\" />\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 53
+    },
+    {
+      "type": "info",
+      "lastLine": 286,
+      "lastColumn": 44,
+      "firstColumn": 15,
+      "subType": "warning",
+      "message": "Empty heading.",
+      "extract": "          <h2 class=\"h3 text-pink mb-3\"></h2>\n",
+      "hiliteStart": 10,
+      "hiliteLength": 30
+    },
+    {
+      "type": "info",
+      "lastLine": 286,
+      "lastColumn": 44,
+      "firstColumn": 15,
+      "subType": "warning",
+      "message": "This document has heading elements but none of them has a computed heading level of 1.",
+      "extract": "          <h2 class=\"h3 text-pink mb-3\"></h2>\n",
+      "hiliteStart": 10,
+      "hiliteLength": 30
+    }
+  ]
+}

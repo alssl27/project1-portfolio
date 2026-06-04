@@ -2,10 +2,10 @@ import React from 'react'
 import { Code, Smartphone, Zap, BookOpen } from 'lucide-react'
 
 const features = [
-  {icon: Code, title: 'Clean Code', desc: 'Readable, maintainable code with tests.'},
-  {icon: Smartphone, title: 'Responsive Design', desc: 'Pixel-perfect across devices.'},
-  {icon: Zap, title: 'Performance', desc: 'Fast, optimized interactions.'},
-  {icon: BookOpen, title: 'Always Learning', desc: 'Continuous improvement and curiosity.'}
+  {icon: Code, title: 'Semantic Code', desc: 'Structured HTML, external CSS, and focused JavaScript.'},
+  {icon: Smartphone, title: 'Responsive Design', desc: 'Layouts adapt across mobile, tablet, and desktop widths.'},
+  {icon: Zap, title: 'User Control', desc: 'Motion, dialogs, and validation feedback are user controlled.'},
+  {icon: BookOpen, title: 'Documented Testing', desc: 'Manual test evidence supports assessment review.'}
 ]
 
 export default function FeatureGrid(){

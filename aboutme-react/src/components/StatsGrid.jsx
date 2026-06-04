@@ -1,10 +1,10 @@
 import React from 'react'
 
 const stats = [
-  {label: 'Projects Completed', value: '48+'},
-  {label: 'Happy Clients', value: '22+'},
-  {label: 'GitHub Commits', value: '12.3k'},
-  {label: 'Cups of Coffee', value: '3.2k'}
+  {label: 'Static pages', value: '4'},
+  {label: 'Case studies', value: '3'},
+  {label: 'Skill areas', value: '9'},
+  {label: 'Manual tests', value: '14+'}
 ]
 
 export default function StatsGrid(){

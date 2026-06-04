@@ -7,382 +7,253 @@
       name="description"
       content="About Sarah Collins, including frontend and full-stack skills, qualifications, resume access, and professional profile."
     />
-    <title>About Me | Portfolio</title>
+    <title>About Sarah Collins | Portfolio</title>
     <link rel="icon" type="image/png" href="assets/images/programming.png" />
 
+    <!-- Bootstrap is an external layout and responsive component library. -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome is an external icon library used for social and section icons. -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <style>
-      html,
-      body {
-        letter-spacing: 5px;
-      }
-
-      .resume-shell {
-        max-width: 1180px;
-      }
-
-      .resume-shell .card {
-        background-color: #000 !important;
-        color: #f8f9fa;
-      }
-
-      .resume-shell .card-header {
-        background-color: #111 !important;
-      }
-
-      .resume-photo {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-        border: 3px solid #ff2bd6;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-        transition: max-width 200ms ease;
-      }
-
-      @media (min-width: 576px) {
-        .resume-photo { max-width: 300px; }
-      }
-
-      @media (min-width: 768px) {
-        .resume-photo { max-width: 380px; }
-      }
-
-      @media (min-width: 992px) {
-        .resume-photo { max-width: 520px; }
-      }
-
-      @media (min-width: 1200px) {
-        .resume-photo { max-width: 760px; }
-      }
-
-      .resume-summary {
-        min-height: 100%;
-      }
-
-      .resume-summary p {
-        max-width: 48rem;
-      }
-
-      .profile-skill-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(52px, 1fr));
-        gap: 0.8rem;
-        width: 100%;
-        max-width: 260px;
-        margin: 0 auto 1rem;
-      }
-
-      .profile-skill-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 52px;
-        height: 52px;
-        margin: 0 auto;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        font-size: 1.35rem;
-      }
-
-      .profile-typing {
-        min-height: 3.2rem;
-        width: 100%;
-        max-width: 100%;
-        margin: 0 0 1rem;
-        font-family: "Orbitron", "Inter", sans-serif;
-        line-height: 2.4;
-        white-space: pre;
-        text-align: left !important;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-
-      .typing-lines {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .typing-line {
-        line-height: 1.2;
-      }
-
-      .typing-line-name {
-        font-size: 2rem;
-        font-weight: 400;
-        letter-spacing: 5px;
-        color: #ff00cc;
-        text-shadow: 0 0 12px rgba(255, 0, 204, 0.55);
-      }
-
-      .typing-line-role {
-        font-size: 1.25rem;
-        font-weight: 400;
-        letter-spacing: 5px;
-        color: #4db8ff;
-        text-shadow: 0 0 10px rgba(77, 184, 255, 0.5);
-      }
-
-      /* About Me paragraph styling: unbold and increase letter spacing */
-      .about-me-text {
-        font-weight: 400 !important;
-        letter-spacing: 0.02em !important;
-        line-height: 1.7;
-      }
-
-      .typing-cursor {
-        display: inline-block;
-        margin-left: 0.15rem;
-        color: #75bddd;
-        animation: blink-cursor 1s steps(1) infinite;
-      }
-
-      @keyframes blink-cursor {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-
-      .neon-html { color: #ff5f44; text-shadow: 0 0 10px rgba(255, 95, 68, 0.85); }
-      .neon-css { color: #3cb7ff; text-shadow: 0 0 10px rgba(60, 183, 255, 0.85); }
-      .neon-js { color: #ffe26a; text-shadow: 0 0 10px rgba(255, 226, 106, 0.85); }
-      .neon-python { color: #7ef7cf; text-shadow: 0 0 10px rgba(126, 247, 207, 0.85); }
-      .neon-react { color: #7ee8ff; text-shadow: 0 0 10px rgba(126, 232, 255, 0.85); }
-      .neon-git { color: #ff8a73; text-shadow: 0 0 10px rgba(255, 138, 115, 0.85); }
-
-      .tech-skill-badge {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50% !important;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        font-size: 1.5rem;
-        line-height: 1;
-      }
-
-      .tech-skill-badge i {
-        font-size: 1.5rem;
-        margin: 0 !important;
-      }
-
-      .tech-table td {
-        vertical-align: middle;
-        text-align: center;
-      }
-
-      .tech-table {
-        table-layout: fixed;
-        width: 100%;
-        background-color: #000 !important;
-      }
-
-      .tech-table th,
-      .tech-table td {
-        width: 33.333%;
-        padding: 1rem 0.5rem;
-        background-color: #000 !important;
-      }
-
-      /* Ensure consistent font size across resume/grid sections */
-      .resume-section .card,
-      .resume-section .card-body,
-      .resume-section .card-body ul,
-      .resume-section .card-body li,
-      .resume-section .card-body table,
-      .resume-section .card-body p,
-      .resume-section .card-body .list-group-item {
-        font-size: 1rem;
-      }
-
-      /* Ensure the 'lead' paragraph in the summary matches other grid text */
-      .resume-summary .lead {
-        font-size: 1rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-      }
-
-      .resume-section .card-body {
-        padding: 1.25rem;
-      }
-
-      @media (max-width: 575.98px) {
-        .display-5 {
-          font-size: 1.8rem;
-        }
-
-        .resume-section .card-body {
-          padding: 1rem;
-        }
-      }
-    </style>
   </head>
 
   <body class="bg-dark text-light has-bottom-social-nav">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <noscript>
       <p class="noscript-alert">
-        JavaScript is disabled. Profile content remains available, but animated text effects are paused.
+        JavaScript is disabled. Profile content remains available.
       </p>
     </noscript>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
-      <div class="container px-3 px-lg-4">
-        <a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#siteNavbar"
-          aria-controls="siteNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="siteNavbar">
-          <ul class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center">
-            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-            <li class="nav-item"><a class="nav-link active" href="aboutme.html">ABOUT ME</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <main id="main-content" class="container-fluid resume-shell text-light py-5 px-3 px-lg-4" data-bionic>
-      <div class="row g-4 align-items-stretch about-me-row mb-4 mb-lg-5">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
+        <div class="container px-3 px-lg-4">
+          <a
+            class="navbar-brand fw-bold text-pink navbar-brand-glow"
+            href="index.html"
+            aria-label="Sarah Collins portfolio home"
+            >&lt; / &gt;</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNavbar"
+            aria-controls="siteNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="siteNavbar">
+            <ul
+              class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="aboutme.html" aria-current="page"
+                  >About Me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container-fluid resume-shell text-light py-5 px-3 px-lg-4">
+      <section class="row g-4 align-items-stretch about-me-row mb-4 mb-lg-5" aria-labelledby="about-heading">
         <div class="col-lg-5 about-me-column">
           <div class="card bg-black border-secondary h-100 shadow-sm">
-            <div class="card-body d-flex flex-column align-items-center justify-content-center text-center p-4">
-              <img src="assets/images/circleprofile.png" alt="Profile photo of Sarah Collins" class="img-fluid rounded-circle resume-photo mb-4">
-              <a class="btn btn-outline-light mt-auto resume-download-btn" href="assets/resume.pdf" download aria-label="Download resume">
-                <i class="fa-solid fa-download me-2"></i>Download Resume
+            <div
+              class="card-body d-flex flex-column align-items-center justify-content-center text-center p-4"
+            >
+              <img
+                src="assets/images/profile-headshot.jpg"
+                alt="Profile photo of Sarah Collins"
+                class="img-fluid rounded-circle resume-photo mb-4"
+                width="960"
+                height="960"
+                loading="lazy"
+                decoding="async"
+              />
+              <a
+                class="btn btn-outline-light mt-auto resume-download-btn"
+                href="assets/resume.pdf"
+                download
+                aria-label="Download Sarah Collins resume"
+              >
+                <i class="fa-solid fa-download me-2" aria-hidden="true"></i>Download Resume
               </a>
             </div>
           </div>
         </div>
 
         <div class="col-lg-7 about-me-column">
-          <div class="card bg-black border-secondary h-100 shadow-sm resume-summary">
+          <article class="card bg-black border-secondary h-100 shadow-sm resume-summary">
             <div class="card-body about-me-bio-body d-flex flex-column justify-content-center">
-              <div class="small text-uppercase text-info fw-semibold mb-2"></div>
-              <h2 class="h3 text-pink mb-3"></h2>
-      
-              <div class="profile-typing" aria-label="Profile typing text">
+              <p class="eyebrow">About Sarah</p>
+              <h1 id="about-heading" class="h2 text-pink mb-3">Sarah Collins</h1>
+
+              <div class="profile-typing" aria-hidden="true">
                 <span class="typing-lines">
-                  <span id="profileTypingLine1" class="typing-line typing-line-name"></span>
-                  <span id="profileTypingLine2" class="typing-line typing-line-role"></span>
+                  <span id="profileTypingLine1" class="typing-line typing-line-name">
+                    Sarah Collins
+                  </span>
+                  <span id="profileTypingLine2" class="typing-line typing-line-role">
+                    Full-Stack Web Developer
+                  </span>
                 </span>
                 <span class="typing-cursor" aria-hidden="true">|</span>
               </div>
-              <p class="h6 fw-normal mb-3 about-me-text">Based in Greater Manchester, I am a Full-Stack Developer currently completing a <span class="text-highlight">Level 5 Diploma</span> in Web Application Development.</p>
 
-              <p class="h6 fw-normal mb-3 about-me-text">I specialize in building robust, data-centric applications using Python, Django, and React.</p>
-
-              <p class="h6 fw-normal mb-0 about-me-text">My background isn't traditional—I bring over a decade of high-stakes experience in <span class="text-highlight">sales and property management</span> to the tech space. This means I don’t just write code; I understand business logic, client relationships, and the importance of delivering projects that drive ROI. I’m a <span class="text-highlight">Vibe Coder</span> at heart, blending cutting-edge AI workflows with clean, high-impact design to solve real-world problems.</p>
+              <p class="h6 fw-normal mb-3 about-me-text">
+                Based in Greater Manchester, I am a full-stack developer currently
+                completing a <span class="text-highlight">Level 5 Diploma</span>
+                in Web Application Development.
+              </p>
+              <p class="h6 fw-normal mb-3 about-me-text">
+                I specialise in building robust, data-centric applications using
+                Python, Django, React, semantic HTML, and responsive CSS.
+              </p>
+              <p class="h6 fw-normal mb-0 about-me-text">
+                My background brings over a decade of experience in
+                <span class="text-highlight">sales and property management</span>
+                into the tech space. That commercial experience helps me think
+                beyond the screen: I care about business logic, client
+                relationships, accessibility, and delivering projects that solve
+                real user problems.
+              </p>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div class="row g-4">
+      <section class="row g-4" aria-label="Skills, competencies, and qualifications">
         <div class="col-12">
-          <div class="card bg-black border-secondary resume-section h-100 shadow-sm">
+          <article class="card bg-black border-secondary resume-section h-100 shadow-sm">
             <div class="card-header bg-dark border-secondary">
               <h2 class="h4 mb-0 text-pink">Technical Skills</h2>
             </div>
             <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-borderless table-dark mb-0 tech-table mx-auto" style="max-width:760px;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">
-                          <span class="tech-skill-name">HTML5</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo">
-                          <span class="tech-skill-name">CSS3</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
-                          <span class="tech-skill-name">JavaScript</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">
-                          <span class="tech-skill-name">Python</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo">
-                          <span class="tech-skill-name">React</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL database logo">
-                          <span class="tech-skill-name">SQL / Databases</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo">
-                          <span class="tech-skill-name">Git</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo">
-                          <span class="tech-skill-name">Node.js</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tech-skill-cell">
-                          <img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django logo">
-                          <span class="tech-skill-name">Django</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <ul class="tech-skill-grid-list" aria-label="Technical skill list">
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="HTML5 logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">HTML5</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS3 logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">CSS3</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">JavaScript</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">Python</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">React</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                    alt="SQL database logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">SQL / Databases</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    alt="Git logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">Git</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node.js logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">Node.js</span>
+                </li>
+                <li class="tech-skill-cell">
+                  <img
+                    class="tech-logo"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                    alt="Django logo"
+                    width="56"
+                    height="56"
+                  />
+                  <span class="tech-skill-name">Django</span>
+                </li>
+              </ul>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="col-12 col-lg-6">
-          <div class="card bg-black border-secondary resume-section h-100 shadow-sm">
+          <article class="card bg-black border-secondary resume-section h-100 shadow-sm">
             <div class="card-header bg-dark border-secondary">
-              <h2 class="h4 mb-0 text-pink"><i class="fa-solid fa-star me-2"></i>Core Competencies</h2>
+              <h2 class="h4 mb-0 text-pink">
+                <i class="fa-solid fa-star me-2" aria-hidden="true"></i>Core Competencies
+              </h2>
             </div>
             <div class="card-body">
               <div class="row g-4">
@@ -402,18 +273,20 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="col-12 col-lg-6">
-          <div class="card bg-black border-secondary resume-section h-100 shadow-sm">
+          <article class="card bg-black border-secondary resume-section h-100 shadow-sm">
             <div class="card-header bg-dark border-secondary">
-              <h2 class="h4 mb-0 text-pink"><i class="fa-solid fa-graduation-cap me-2"></i>Qualifications</h2>
+              <h2 class="h4 mb-0 text-pink">
+                <i class="fa-solid fa-graduation-cap me-2" aria-hidden="true"></i>Qualifications
+              </h2>
             </div>
             <div class="card-body">
               <div class="row g-4">
                 <div class="col-md-6 col-lg-12 col-xl-6">
-                  <h6 class="text-info mb-3 fw-bold">Expertise Areas</h6>
+                  <h3 class="h6 text-info mb-3 fw-bold">Expertise Areas</h3>
                   <ul class="qualification-list text-light">
                     <li>Frontend layout and responsive design</li>
                     <li>UI building with Bootstrap and custom CSS</li>
@@ -421,7 +294,7 @@
                   </ul>
                 </div>
                 <div class="col-md-6 col-lg-12 col-xl-6">
-                  <h6 class="text-info mb-3 fw-bold">Soft Skills</h6>
+                  <h3 class="h6 text-info mb-3 fw-bold">Soft Skills</h3>
                   <ul class="qualification-list text-light">
                     <li>Problem solving and iteration</li>
                     <li>Attention to detail</li>
@@ -430,70 +303,61 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
-
+      </section>
     </main>
 
-    <!-- Side social tab removed; icons moved into navbar -->
-
     <footer class="bg-black text-light py-4 mt-auto">
-      <div class="container d-flex justify-content-end align-items-center">
-        <div class="d-flex gap-4 fs-4 me-2">
-          <a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-pink"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-pink"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://discord.com/users/alsslc220702" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord" class="text-pink"><i class="fa-brands fa-discord"></i></a>
-          <a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-pink"><i class="fa-brands fa-facebook"></i></a>
-        </div>
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
+        <nav class="d-flex gap-4 fs-4" aria-label="Social links">
+          <a
+            href="https://github.com/alssl27"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="GitHub"
+            class="text-pink"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+            class="text-pink"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://discord.com/users/alsslc220702"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Discord"
+            aria-label="Discord"
+            class="text-pink"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/bdens69/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+            aria-label="Facebook"
+            class="text-pink"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </nav>
       </div>
     </footer>
-    <script src="assets/script.js/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var typingLine1 = document.getElementById("profileTypingLine1");
-        var typingLine2 = document.getElementById("profileTypingLine2");
-        if (!typingLine1 || !typingLine2) {
-          return;
-        }
 
-        var lines = [">- SARAH COLLINS", "Full-Stack Web Developer"];
-        var fullText = lines.join("\n");
-        var typingSpeedMs = 55;
-        var deletingSpeedMs = 30;
-        var pauseAfterTypeMs = 1400;
-        var pauseAfterDeleteMs = 350;
-        var charIndex = 0;
-        var deleting = false;
-
-        function tick() {
-          var currentText = fullText.slice(0, charIndex);
-          var splitLines = currentText.split("\n");
-          typingLine1.textContent = splitLines[0] || "";
-          typingLine2.textContent = splitLines[1] || "";
-
-          if (!deleting) {
-            if (charIndex < fullText.length) {
-              charIndex += 1;
-              setTimeout(tick, typingSpeedMs);
-            } else {
-              deleting = true;
-              setTimeout(tick, pauseAfterTypeMs);
-            }
-          } else {
-            if (charIndex > 0) {
-              charIndex -= 1;
-              setTimeout(tick, deletingSpeedMs);
-            } else {
-              deleting = false;
-              setTimeout(tick, pauseAfterDeleteMs);
-            }
-          }
-        }
-
-        setTimeout(tick, 220);
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

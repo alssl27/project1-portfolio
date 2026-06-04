@@ -1,158 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="description"
-			content="UX-focused project case studies by Sarah Collins, including user problems, accessibility decisions, testing evidence, and outcomes."
-		/>
-		<title>Projects | Portfolio</title>
-		<link rel="icon" type="image/png" href="assets/images/programming.png" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="UX-focused project case studies by Sarah Collins, including user problems, accessibility decisions, testing evidence, and outcomes."
+    />
+    <title>Projects | Sarah Collins Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/programming.png" />
 
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		/>
-		<link href="assets/css/style.css" rel="stylesheet" />
-		<style>
-			.projects-page .card {
-				background-color: #000;
-			}
-		</style>
-	</head>
+    <!-- Bootstrap is an external layout and responsive component library. -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome is an external icon library used for social links. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
 
-	<body class="bg-dark text-light projects-page has-bottom-social-nav">
-		<a class="skip-link" href="#main-content">Skip to main content</a>
-		<noscript>
-			<p class="noscript-alert">
-				JavaScript is disabled. Project summaries remain visible, but expandable case-study dialogs need JavaScript.
-			</p>
-		</noscript>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
-			<div class="container px-3 px-lg-4">
-				<a class="navbar-brand fw-bold text-pink navbar-brand-glow" href="index.html">&lt; / &gt;</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#siteNavbar"
-					aria-controls="siteNavbar"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="siteNavbar">
-					<ul class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center">
-						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-						<li class="nav-item"><a class="nav-link" href="aboutme.html">ABOUT ME</a></li>
-						<li class="nav-item"><a class="nav-link active" href="projects.html">PROJECTS</a></li>
-						<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<main id="main-content" class="projects-page-main" data-bionic>
-			<section class="projects-intro" aria-labelledby="projects-heading">
-				<p class="eyebrow">Portfolio case studies</p>
-				<h1 id="projects-heading">Selected UX-Focused Web Projects</h1>
-				<p>
-					Each case study shows the user problem, design decision, accessibility consideration, and testing evidence behind the work.
-				</p>
-			</section>
+  <body class="bg-dark text-light projects-page has-bottom-social-nav">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <p class="noscript-alert">
+        JavaScript is disabled. Project summaries remain visible, but expandable
+        case-study dialogs need JavaScript.
+      </p>
+    </noscript>
 
-			<section class="grid-container" aria-label="Project case studies">
-				<article
-					class="card project-card"
-					data-title="Developer Portfolio"
-					data-desc="A responsive portfolio designed for recruiters, tutors, and collaborators who need to understand Sarah's skills quickly."
-					data-problem="Visitors need a fast route to skills, evidence, and contact details without reading long supporting notes."
-					data-users="Primary users are recruiters, course assessors, and collaborators reviewing work on mobile and desktop."
-					data-decisions="The layout prioritises a clear hero, consistent navigation, concise project cards, and a contact route available from every page."
-					data-accessibility="Semantic page landmarks, visible focus states, descriptive image text, reduced-motion support, and keyboard-operable dialogs are used across the site."
-					data-testing="Manual checks covered navigation, responsive breakpoints, form validation, modal open/close behaviour, and internal asset links."
-					data-outcome="The project now communicates purpose immediately and provides stronger evidence for user-centred frontend development."
-				>
-					<div class="card-image-container">
-						<img src="assets/images/project1.png" alt="Portfolio homepage displayed on a desktop screen" class="card-image" />
-						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
-					</div>
-					<h2 class="h3">Developer Portfolio</h2>
-					<p>Responsive personal brand and project evidence hub.</p>
-					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Developer Portfolio case study">View case study</button>
-				</article>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
+        <div class="container px-3 px-lg-4">
+          <a
+            class="navbar-brand fw-bold text-pink navbar-brand-glow"
+            href="index.html"
+            aria-label="Sarah Collins portfolio home"
+            >&lt; / &gt;</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNavbar"
+            aria-controls="siteNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="siteNavbar">
+            <ul
+              class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutme.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="projects.html" aria-current="page"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-				<article
-					class="card project-card"
-					data-title="Service Booking Interface"
-					data-desc="A booking journey concept focused on reducing friction for customers comparing services and making enquiries."
-					data-problem="Users need a simple way to understand service options, trust the provider, and submit a clear enquiry."
-					data-users="Primary users are time-poor customers on mobile devices who expect clear information hierarchy and fast feedback."
-					data-decisions="Cards, short labels, strong contrast, and validation feedback keep the path to action understandable."
-					data-accessibility="The design uses labelled form fields, clear error messages, large tap targets, and contrast-aware neon accents."
-					data-testing="The flow was checked with required-field validation, keyboard tab order, mobile layout review, and broken-link scanning."
-					data-outcome="The interface supports user confidence by keeping the enquiry route obvious and recoverable."
-				>
-					<div class="card-image-container">
-						<img src="assets/images/project2.png" alt="Service booking interface preview with card-based content" class="card-image" />
-						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
-					</div>
-					<h2 class="h3">Service Booking Interface</h2>
-					<p>Accessible enquiry flow with clear validation feedback.</p>
-					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Service Booking Interface case study">View case study</button>
-				</article>
+    <main id="main-content" class="projects-page-main">
+      <section class="projects-intro" aria-labelledby="projects-heading">
+        <p class="eyebrow">Portfolio case studies</p>
+        <h1 id="projects-heading">Projects and UX Evidence</h1>
+        <p>
+          These case studies summarise the user problem, design choices,
+          accessibility considerations, testing approach, and outcome for each
+          project preview shown on the page.
+        </p>
+      </section>
 
-				<article
-					class="card project-card"
-					data-title="Data Dashboard Concept"
-					data-desc="A dashboard concept for turning business information into scannable, decision-ready summaries."
-					data-problem="Business users need to spot priority information quickly without losing context or control."
-					data-users="Primary users are small business owners and managers who need concise visual summaries."
-					data-decisions="The dashboard uses grouped content, strong headings, consistent visual rhythm, and restrained interaction feedback."
-					data-accessibility="Readable headings, consistent card structure, descriptive media text, and keyboard-friendly expansion behaviour support inclusive use."
-					data-testing="Responsive grid behaviour, image scaling, modal focus handling, and internal links were checked after implementation."
-					data-outcome="The case study demonstrates how visual hierarchy and interaction feedback can support confident decision-making."
-				>
-					<div class="card-image-container">
-						<img src="assets/images/project3.png" alt="Data dashboard concept preview with visual panels" class="card-image" />
-						<img src="assets/images/profile.png" alt="" class="card-avatar" aria-hidden="true" />
-					</div>
-					<h2 class="h3">Data Dashboard Concept</h2>
-					<p>Scannable reporting interface for business decisions.</p>
-					<button class="more-btn" type="button" aria-haspopup="dialog" aria-label="Open Data Dashboard Concept case study">View case study</button>
-				</article>
-			</section>
-		</main>
+      <section class="grid-container" aria-label="Project case studies">
+        <article
+          class="card project-card"
+          data-title="Personal Finance Dashboard"
+          data-desc="A budgeting dashboard concept that turns income, spending, savings, and goal progress into scannable decision support."
+          data-problem="Users need a quick way to understand financial priorities without reading long reports or losing sight of budget goals."
+          data-users="Primary users are individuals and households who want clear monthly finance summaries on desktop or tablet."
+          data-decisions="The screen prioritises summary cards, a central cash-flow chart, clear side navigation, and goal progress panels so the most important information is visible first."
+          data-accessibility="The concept uses high-contrast panels, strong headings, descriptive labels, and grouped information to support scanning and keyboard review."
+          data-testing="Testing should cover chart readability, responsive scaling, tab order, colour contrast, and whether users can identify income, spending, savings, and budget status quickly."
+          data-outcome="The design demonstrates how visual hierarchy and grouped data can support confident personal finance decisions."
+        >
+          <div class="card-image-container">
+            <img
+              src="assets/images/project-portfolio.jpg"
+              alt="Personal finance dashboard preview with income, expenses, savings, and budget goal panels"
+              class="card-image"
+              width="1400"
+              height="764"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/images/profile-avatar.jpg"
+              alt=""
+              class="card-avatar"
+              aria-hidden="true"
+              width="320"
+              height="320"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <h2 class="h3">Personal Finance Dashboard</h2>
+          <p>Budget overview interface with prioritised financial summaries.</p>
+          <button
+            class="more-btn"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="overlay"
+            aria-label="Open Personal Finance Dashboard case study"
+          >
+            View case study
+          </button>
+        </article>
 
-		<!-- Side social tab removed; icons moved into navbar -->
+        <article
+          class="card project-card"
+          data-title="SyncFlow Kanban Board"
+          data-desc="A collaborative task-board concept focused on team visibility, status clarity, and real-time project coordination."
+          data-problem="Project teams need to understand task ownership, progress, and collaboration activity without interrupting each other."
+          data-users="Primary users are small software teams managing sprint tasks, reviews, and handovers across shared boards."
+          data-decisions="Kanban columns, visible task counts, avatar presence, and activity callouts make the workflow understandable at a glance."
+          data-accessibility="Large column headings, visible task grouping, consistent card structure, and descriptive labels support keyboard and screen-reader interpretation."
+          data-testing="Testing should cover drag-and-drop alternatives, keyboard navigation, responsive column stacking, and whether status changes are clearly confirmed."
+          data-outcome="The concept shows how collaborative interfaces can reduce uncertainty by making ownership and progress visible."
+        >
+          <div class="card-image-container">
+            <img
+              src="assets/images/project-booking.jpg"
+              alt="SyncFlow Kanban board preview with task columns, member presence, and collaboration callouts"
+              class="card-image"
+              width="1400"
+              height="764"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/images/profile-avatar.jpg"
+              alt=""
+              class="card-avatar"
+              aria-hidden="true"
+              width="320"
+              height="320"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <h2 class="h3">SyncFlow Kanban Board</h2>
+          <p>Collaborative project board with visible team status and feedback.</p>
+          <button
+            class="more-btn"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="overlay"
+            aria-label="Open SyncFlow Kanban Board case study"
+          >
+            View case study
+          </button>
+        </article>
 
-		<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-			<div class="expanded-card" role="document">
-				<button class="close-btn" id="closeBtn" type="button" aria-label="Close case study">&times;</button>
-				<div id="modalContent"></div>
-			</div>
-		</div>
+        <article
+          class="card project-card"
+          data-title="Pro Storefront"
+          data-desc="An e-commerce storefront concept for product discovery, filtering, cart review, and checkout readiness."
+          data-problem="Shoppers need to compare products, adjust the cart, and understand checkout status without confusion or hidden costs."
+          data-users="Primary users are online shoppers browsing product categories across laptop, tablet, and mobile devices."
+          data-decisions="Search and filter controls sit beside product cards, while the cart summary stays visible to confirm item quantity and total price."
+          data-accessibility="Form-like filters, clear button labels, readable prices, product names, and strong checkout contrast support predictable shopping actions."
+          data-testing="Testing should cover filter controls, cart quantity actions, checkout call-to-action visibility, responsive product grid behaviour, and link checks."
+          data-outcome="The concept demonstrates a clear path from product browsing to cart confidence and checkout action."
+        >
+          <div class="card-image-container">
+            <img
+              src="assets/images/project-dashboard.jpg"
+              alt="E-commerce storefront preview with product cards, search filters, shopping cart, and checkout button"
+              class="card-image"
+              width="1400"
+              height="764"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/images/profile-avatar.jpg"
+              alt=""
+              class="card-avatar"
+              aria-hidden="true"
+              width="320"
+              height="320"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <h2 class="h3">Pro Storefront</h2>
+          <p>E-commerce browsing and cart concept with visible user feedback.</p>
+          <button
+            class="more-btn"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="overlay"
+            aria-label="Open Pro Storefront case study"
+          >
+            View case study
+          </button>
+        </article>
+      </section>
+    </main>
 
-		<footer class="bg-black text-light py-4 mt-auto">
-			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-				<p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
-				<div class="d-flex gap-4 fs-4">
-					<a href="https://github.com/alssl27" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" class="text-pink"><i class="fa-brands fa-github"></i></a>
-					<a href="https://www.linkedin.com/in/sarah-collins-b6741021a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" class="text-pink"><i class="fa-brands fa-linkedin"></i></a>
-					<a href="https://discord.com/users/alsslc220702" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord" class="text-pink"><i class="fa-brands fa-discord"></i></a>
-					<a href="https://www.facebook.com/bdens69/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" class="text-pink"><i class="fa-brands fa-facebook"></i></a>
-				</div>
-			</div>
-		</footer>
-		<!-- Card modal logic is handled in assets/script.js/script.js -->
-		<script src="assets/script.js/script.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-	</body>
+    <div
+      class="overlay"
+      id="overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
+      <div class="expanded-card" role="document">
+        <button
+          class="close-btn"
+          id="closeBtn"
+          type="button"
+          aria-label="Close case study"
+        >
+          &times;
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-light py-4 mt-auto">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <p class="mb-2 mb-md-0">© 2026 Sarah Collins. All rights reserved.</p>
+        <nav class="d-flex gap-4 fs-4" aria-label="Social links">
+          <a
+            href="https://github.com/alssl27"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="GitHub"
+            class="text-pink"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+            class="text-pink"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://discord.com/users/alsslc220702"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Discord"
+            aria-label="Discord"
+            class="text-pink"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/bdens69/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+            aria-label="Facebook"
+            class="text-pink"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

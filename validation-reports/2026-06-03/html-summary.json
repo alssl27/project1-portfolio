@@ -1,0 +1,22 @@
+[
+  {
+    "file": "index.html",
+    "errors": 0,
+    "nonErrors": 8
+  },
+  {
+    "file": "aboutme.html",
+    "errors": 0,
+    "nonErrors": 19
+  },
+  {
+    "file": "projects.html",
+    "errors": 0,
+    "nonErrors": 13
+  },
+  {
+    "file": "contact.html",
+    "errors": 0,
+    "nonErrors": 10
+  }
+]

@@ -1,0 +1,751 @@
+{
+  "cssvalidation": {
+    "uri": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+    "checkedby": "http://www.w3.org/2005/07/css-validator",
+    "csslevel": "css3",
+    "date": "2026-06-01T04:29:32Z",
+    "timestamp": "1780331372517",
+    "validity": true,
+    "result": {
+      "errorcount": 0,
+      "warningcount": 105
+    },
+    "warnings": [
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 75,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 76,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 77,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 78,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 79,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 82,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 91,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 111,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 112,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 128,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 139,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 144,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 146,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 150,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 156,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 161,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 166,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 171,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 172,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 173,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 178,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 179,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 181,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 191,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 192,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 208,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 214,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 254,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 265,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 280,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 298,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 300,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 301,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 306,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 308,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 322,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 333,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 452,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 569,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 570,
+        "message": "\u201c-webkit-backdrop-filter\u201d is a vendor extension",
+        "type": "vendor-extension",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 588,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 589,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 606,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 614,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 618,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 622,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 626,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 630,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 634,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 638,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 642,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 660,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 663,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 667,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 675,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 724,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 725,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 729,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 737,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 741,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 773,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 774,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 783,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 784,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 789,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 790,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 794,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 804,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 817,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 827,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 828,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 849,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 858,
+        "message": "\u201c-webkit-backdrop-filter\u201d is a vendor extension",
+        "type": "vendor-extension",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 874,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 875,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 881,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 882,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 923,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 925,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 930,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 932,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 936,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 948,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 949,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 954,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 957,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1169,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1181,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1194,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1197,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1202,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1204,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1209,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1211,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1230,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1260,
+        "message": "\u201c-webkit-backdrop-filter\u201d is a vendor extension",
+        "type": "vendor-extension",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1283,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1285,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1344,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1378,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1379,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1395,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1409,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1452,
+        "message": "\u201cauto\u201d is not defined by any specification as an allowed value for \u201cpointer-events\u201d, but is supported in multiple browsers",
+        "type": "value-unofficial",
+        "level": 0
+      },
+      {
+        "source": "https://cdn.jsdelivr.net/gh/alssl27/project1-portfolio@main/assets/css/style.css",
+        "line": 1521,
+        "message": "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "type": "css-variable",
+        "level": 0
+      }
+    ]
+  }
+}
