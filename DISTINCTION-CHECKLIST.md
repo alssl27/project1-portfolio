@@ -38,7 +38,7 @@ merit criteria plus the distinction performance characteristics.
 | 4.3 | Use consistent markdown formatting in a well-structured README with few grammar errors. | Meets locally | README is structured with tables, code blocks, headings, lifecycle, testing, deployment, and credits. | Final proofread before submission. |
 | 5.1 | Design and implement manual testing procedures for functionality, usability, and responsiveness. | Meets locally | `TESTING.md` includes manual test cases and expected/actual results. | Add final deployed/browser results. |
 | 5.2 | Document testing in README or a separate file. | Meets locally | README summarizes testing; `TESTING.md` contains detailed evidence. | None. |
-| 5.3 | Deploy final code to a cloud platform and test it matches development version. | Pending final push | GitHub Pages workflow and live URL are documented. | Commit, push, wait for deployment, then compare live vs local. |
+| 5.3 | Deploy final code to a cloud platform and test it matches development version. | Meets | GitHub Pages deployed commit `1316d8d`; live Home, About, Projects, Contact, resume, video assets, and checklist returned HTTP 200. | Rerun only if further changes are pushed before submission. |
 | 5.4 | Remove commented-out code before final push/deploy. | Meets locally | Static checker looks for inline custom code and common unfinished markers; no commented-out custom blocks found in root pages. | Recheck before final commit. |
 | 5.5 | Ensure there are no broken internal links. | Meets locally | `node tools/check-static-site.js` passed on 2026-06-05 after fixing broken video references. | Rerun after any path edits. |
 

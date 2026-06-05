@@ -10,8 +10,39 @@ testing, bug evaluation, and end-testing evidence.
 - Desktop viewport: approximately 1366px wide.
 - Tablet viewport: approximately 768px wide.
 - Mobile viewport: approximately 390px wide.
-- Browsers to test before final submission: Chrome, Edge, Firefox, and Safari if
-  available.
+- Live deployment tested on 2026-06-05 after commit `1316d8d`.
+- GitHub Pages URL: `https://alssl27.github.io/project1-portfolio/`
+- Custom domain resolved from GitHub Pages: `https://sarahcollinsweb.dev/`
+- Browsers checked in this environment: Chromium and installed Microsoft Edge.
+- Firefox and Safari were not installed on this Windows machine.
+
+## Final Deployed-Site Retest
+
+GitHub Actions reported successful deployment for commit
+`1316d8db5faba96d8238b0056943700cb7894e77`.
+
+| Check | Result |
+| --- | --- |
+| GitHub Pages workflow | Pass: `Deploy static site to Pages` completed successfully. |
+| Pages build/deployment | Pass: `pages build and deployment` completed successfully. |
+| GitHub Pages URL | Pass: `https://alssl27.github.io/project1-portfolio/` returned HTTP 200. |
+| Custom domain | Pass: `https://sarahcollinsweb.dev/` returned HTTP 200. |
+| Root pages | Pass: Home, About, Projects, and Contact returned HTTP 200. |
+| Key assets | Pass: resume PDF, `profile.mp4`, portfolio walkthrough MP4, and `DISTINCTION-CHECKLIST.md` returned HTTP 200. |
+| Chromium live smoke test | Pass: hero loaded, motion button worked, project modal opened/closed, project images loaded, contact validation worked, no console errors. |
+| Edge live smoke test | Pass: same checks passed using the installed Microsoft Edge executable. |
+| Firefox | Not tested: Firefox was not installed locally. |
+| Safari | Not tested: Safari was not installed and is not available on this Windows machine. |
+| Live Lighthouse | Performance 73, Accessibility 100, Best Practices 100, SEO 100. |
+
+Final deployed-site screenshots:
+
+- `output/playwright/live-chromium-homepage-desktop.png`
+- `output/playwright/live-chromium-projects-mobile.png`
+- `output/playwright/live-chromium-contact-success.png`
+- `output/playwright/live-edge-homepage-desktop.png`
+- `output/playwright/live-edge-projects-mobile.png`
+- `output/playwright/live-edge-contact-success.png`
 
 ## Manual Test Cases
 
@@ -34,8 +65,8 @@ testing, bug evaluation, and end-testing evidence.
 | T15 | HTML validation | Submit all root HTML pages to W3C Nu Validator. | No errors. | 2026-06-05 official W3C reports show 0 errors for all root pages. | Pass | Removed risky ARIA usage and kept semantic markup. | Pass after rerun. | JSON saved in `validation-reports/2026-06-05/`. |
 | T16 | CSS validation | Submit `assets/css/style.css` to Jigsaw CSS Validator. | No errors. | 2026-06-05 official Jigsaw report shows valid CSS with 0 errors using the CSS3 SVG profile. | Pass | Added section comments and kept syntax validator-safe. | Pass after rerun. | JSON saved in `validation-reports/2026-06-05/`. |
 | T17 | JavaScript syntax | Run `node --check assets/js/script.js`. | No syntax errors. | Command completed with no syntax errors. | Pass | JS rewritten into one external file. | Pass. | Not required. |
-| T18 | Browser compatibility | Test deployed site in Chrome, Edge, Firefox, and Safari if available. | Core layout and interactions work consistently. | Chromium local testing passed. Playwright Firefox and WebKit binaries were not installed in this environment. | Partial | No browser-specific code added. | Manually test Edge, Firefox, and Safari after deployment. | Add notes after manual browser checks. |
-| T19 | Deployment match | Compare local site to live GitHub Pages version after workflow deploy. | Live site matches local source and has no broken internal links. | Current live URL responds at `https://alssl27.github.io/project1-portfolio/`, but latest local edits must be pushed before a final match test. | Pending final redeploy | GitHub Pages workflow now deploys a scoped `_site` artifact. | Retest live URL after pushing. | Add live URL screenshot. |
+| T18 | Browser compatibility | Test deployed site in Chromium, Edge, Firefox, and Safari if available. | Core layout and interactions work consistently. | Chromium and installed Microsoft Edge passed live smoke tests. Firefox and Safari were not installed locally. | Pass for available browsers | No browser-specific code added. | Pass for Chromium and Edge; Firefox/Safari unavailable. | Live screenshots saved in `output/playwright/`. |
+| T19 | Deployment match | Compare local site to live GitHub Pages version after workflow deploy. | Live site matches local source and has no broken internal links. | GitHub Pages deployed commit `1316d8d`; live root pages, key assets, videos, resume, and checklist returned HTTP 200. | Pass | GitHub Pages workflow deploys a scoped `_site` artifact. | Pass after deployment. | Final deployed-site screenshots saved in `output/playwright/`. |
 
 ## Automated and Local Checks
 
@@ -68,6 +99,9 @@ Latest local check results from 2026-06-05:
 | Browser modal smoke test | Pass: first project modal opened and closed with Escape in Chromium |
 | Homepage motion smoke test | Pass: video starts paused and plays after button activation in Chromium |
 | Local URL availability | Pass: `http://localhost:8000` returned HTTP 200 |
+| Live deployment smoke test | Pass: deployed Home, About, Projects, Contact, resume, videos, and checklist returned HTTP 200 |
+| Live Edge smoke test | Pass: installed Microsoft Edge verified homepage, Projects, and Contact flows |
+| Live Lighthouse | Performance 73, Accessibility 100, Best Practices 100, SEO 100 |
 
 Optional CSS parse check using the installed PostCSS dependency:
 
@@ -108,10 +142,10 @@ node -e "const fs=require('fs'); const postcss=require('./aboutme-react/node_mod
   and directs users to social links for an immediate reply.
 - Official W3C and Jigsaw validation should be rerun only if more HTML or CSS
   edits are made before submission.
-- Browser compatibility in Edge, Firefox, and Safari remains pending because
-  only Chromium was available in this environment.
-- Deployment match tests remain pending until a final redeploy has been pushed
-  and checked against the local version.
+- Browser compatibility in Firefox and Safari remains untested because those
+  browsers were not installed in this Windows environment.
+- Deployment match tests passed after commit `1316d8d`; rerun them only if new
+  changes are pushed before submission.
 - Generated dependency and build output has been removed from the current Git
   index and is ignored for future commits. Historical commits may still contain
   those files; do not rewrite history for this assessment submission.

@@ -37,6 +37,15 @@ Local Lighthouse run against `http://localhost:8000/index.html`.
 | Best Practices | 100 |
 | SEO | 100 |
 
+Live Lighthouse run against `https://sarahcollinsweb.dev/`.
+
+| Category | Score |
+| --- | ---: |
+| Performance | 73 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
 ## Artifacts Saved
 
 - `index.html.w3c.json`
@@ -47,3 +56,4 @@ Local Lighthouse run against `http://localhost:8000/index.html`.
 - `style.css.jigsaw.json`
 - `css-summary.json`
 - `lighthouse-index.json`
+- `lighthouse-live.json`
