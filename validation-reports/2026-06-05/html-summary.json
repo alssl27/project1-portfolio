@@ -1,0 +1,30 @@
+[
+  {
+    "file": "index.html",
+    "errors": 0,
+    "messages": 8,
+    "non_errors": 8,
+    "status": "checked"
+  },
+  {
+    "file": "aboutme.html",
+    "errors": 0,
+    "messages": 19,
+    "non_errors": 19,
+    "status": "checked"
+  },
+  {
+    "file": "projects.html",
+    "errors": 0,
+    "messages": 14,
+    "non_errors": 14,
+    "status": "checked"
+  },
+  {
+    "file": "contact.html",
+    "errors": 0,
+    "messages": 10,
+    "non_errors": 10,
+    "status": "checked"
+  }
+]

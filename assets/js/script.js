@@ -195,8 +195,9 @@ function setupMotionToggle() {
 
   if (userPrefersReducedMotion()) {
     video.pause();
-    setPausedState(true);
   }
+
+  setPausedState(video.paused);
 
   button.addEventListener("click", () => {
     if (video.paused) {
@@ -219,12 +220,25 @@ function setupContactForm() {
     return;
   }
 
+  const fields = form.querySelectorAll("input, textarea");
+
+  function updateFieldValidity(field) {
+    field.setAttribute("aria-invalid", String(!field.validity.valid));
+  }
+
+  fields.forEach((field) => {
+    field.setAttribute("aria-invalid", "false");
+    field.addEventListener("input", () => updateFieldValidity(field));
+    field.addEventListener("blur", () => updateFieldValidity(field));
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
       event.stopPropagation();
       form.classList.add("was-validated");
+      fields.forEach(updateFieldValidity);
       const firstInvalid = form.querySelector(":invalid");
       if (firstInvalid && typeof firstInvalid.focus === "function") {
         firstInvalid.focus();
@@ -235,6 +249,7 @@ function setupContactForm() {
     successMessage.hidden = false;
     successMessage.classList.add("show");
     form.reset();
+    fields.forEach((field) => field.setAttribute("aria-invalid", "false"));
     form.classList.remove("was-validated");
     successMessage.scrollIntoView({
       block: "center",

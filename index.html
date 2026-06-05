@@ -82,13 +82,13 @@
       <video
         id="heroVideo"
         class="bg-video"
-        autoplay
         muted
         loop
         playsinline
+        preload="none"
         poster="assets/images/profile-background.jpg"
       >
-        <source src="assets/images/profile.mp4" type="video/mp4" />
+        <source src="assets/videos/profile.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
     </div>
@@ -96,10 +96,10 @@
       class="motion-toggle"
       type="button"
       id="motionToggle"
-      aria-pressed="false"
+      aria-pressed="true"
       aria-controls="heroVideo"
     >
-      Pause motion
+      Play motion
     </button>
 
     <main
@@ -115,11 +115,25 @@
           <p id="typewriter-subtext" class="hero-subtitle h4 text-info">
             Full-Stack Web Developer
           </p>
+          <p class="hero-summary">
+            I build accessible, responsive web applications with clear user
+            journeys, practical testing evidence, and maintainable frontend code.
+          </p>
         </div>
 
-        <div class="mt-4">
+        <div class="hero-actions mt-4">
           <a
             class="btn custom-cta primary-btn px-4 py-2 mt-4"
+            href="projects.html"
+            >View Projects</a
+          >
+          <a
+            class="btn custom-cta primary-btn px-4 py-2 mt-4"
+            href="contact.html"
+            >Contact Me</a
+          >
+          <a
+            class="btn custom-cta primary-btn secondary-btn px-4 py-2 mt-4"
             href="assets/resume.pdf"
             download
             >Download Resume</a

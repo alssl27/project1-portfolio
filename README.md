@@ -22,11 +22,11 @@ Target users:
 
 | User story | How the application answers it |
 | --- | --- |
-| As a recruiter, I want the homepage to show Sarah's name, role, and resume link immediately so I can decide whether to continue. | `index.html` presents Sarah Collins, Full-Stack Web Developer, and a resume download action in the first viewport. |
+| As a recruiter, I want the homepage to show Sarah's name, role, and clear next actions immediately so I can decide whether to continue. | `index.html` presents Sarah Collins, Full-Stack Web Developer, a short value statement, project/contact calls to action, and a resume download action in the first viewport. |
 | As an assessor, I want project case studies to explain users, UX choices, accessibility, and testing so I can judge user-centred design evidence. | `projects.html` provides three case-study cards and a keyboard-operable dialog containing problem, users, UX decisions, accessibility, testing, and outcome. |
 | As a keyboard user, I want clear focus states, skip links, and keyboard-operable interactions so I can use the site without a mouse. | All pages include skip links, visible focus outlines, button-based dialog triggers, Escape close, and focus return. |
 | As a mobile visitor, I want the layout to reflow cleanly so I can browse projects and submit the contact form on a small screen. | CSS Grid, Bootstrap, and media queries stack cards, resize text, and keep the form and navigation usable. |
-| As a motion-sensitive user, I want control over animated media so I can pause movement. | The homepage video is muted, decorative, and controlled by a pause/play button; reduced-motion preferences pause or reduce animation. |
+| As a motion-sensitive user, I want control over animated media so I can choose whether movement starts. | The homepage video starts paused, remains muted and decorative, and is controlled by a play/pause button; reduced-motion preferences keep non-essential movement reduced. |
 
 ## UX Design Rationale
 
@@ -41,7 +41,8 @@ Interaction decisions:
   and overlay close, traps focus while open, and returns focus to the trigger.
 - The contact form validates required fields, email format, minimum lengths, and
   displays a clear confirmation only after valid input.
-- The background video is muted and decorative, with visible user control.
+- The background video is muted, decorative, and user-initiated rather than
+  autoplaying.
 - Neon accents are used consistently for links, buttons, focus states, and
   feedback, while content remains on dark high-contrast surfaces.
 
@@ -65,7 +66,9 @@ Accessibility decisions:
 - Client-side contact validation with non-misleading static-site confirmation.
 - Downloadable resume link.
 - Social links in the footer.
-- Reduced-motion-aware homepage video control.
+- Homepage project, contact, and resume calls to action.
+- Reduced-motion-aware homepage video control that starts paused.
+- Recorded portfolio walkthrough with native video controls.
 
 ## Screenshots
 
@@ -77,14 +80,15 @@ Generated browser-check screenshots:
 
 - `output/playwright/homepage-desktop.png`
 - `output/playwright/projects-mobile.png`
+- `output/playwright/projects-third-card.png`
 - `output/playwright/project-modal.png`
+- `output/playwright/contact-page.png`
 - `output/playwright/contact-success.png`
 
 Screenshots still to capture before final submission:
 
-- Final screenshots after any last validation edits.
-- Official W3C HTML and Jigsaw CSS validator screenshots or JSON exports after
-  final deployment.
+- Final deployed-site screenshots after the latest local changes are pushed.
+- Firefox, Edge, and Safari screenshots if those browsers are available locally.
 
 ## Technologies Used
 
@@ -114,6 +118,7 @@ CDN links.
 ├── README.md
 ├── TESTING.md
 ├── ASSESSMENT-EVIDENCE.md
+├── DISTINCTION-CHECKLIST.md
 ├── docs/
 │   └── color-palette.md
 ├── tools/
@@ -122,10 +127,12 @@ CDN links.
 │   ├── css/style.css
 │   ├── js/script.js
 │   ├── images/
+│   ├── videos/
 │   └── resume.pdf
 ├── validation-reports/
 │   ├── 2026-06-01/
-│   └── 2026-06-03/
+│   ├── 2026-06-03/
+│   └── 2026-06-05/
 ├── output/
 │   └── playwright/
 ├── aboutme-react/
@@ -144,12 +151,15 @@ node --check assets/js/script.js
 ```
 
 The previous official validation reports in `validation-reports/2026-06-01/`
-showed 0 W3C HTML errors and valid Jigsaw CSS at that time. Fresh reports in
-`validation-reports/2026-06-03/` show:
+and `validation-reports/2026-06-03/` showed 0 W3C HTML errors and valid Jigsaw
+CSS at those points in development. Fresh reports in
+`validation-reports/2026-06-05/` show:
 
 - W3C HTML: 0 errors for `index.html`, `aboutme.html`, `projects.html`, and
   `contact.html`.
 - Jigsaw CSS: valid CSS with 0 errors.
+- Lighthouse local homepage run: Performance 75, Accessibility 100, Best
+  Practices 100, SEO 100.
 
 ## Bugs Found and Fixed
 
@@ -160,18 +170,25 @@ showed 0 W3C HTML errors and valid Jigsaw CSS at that time. Fresh reports in
 | Large image assets were used directly. | Created optimised, lowercase JPEG derivatives and updated page references. |
 | Contact form used temporary local logging during development. | Removed `contacts.log` and kept static-site validation feedback honest. |
 | GitHub Pages workflow uploaded the whole repository. | Updated workflow to deploy a scoped `_site` artifact. |
+| Projects page referenced four missing gallery videos. | Replaced the broken gallery with one real recorded walkthrough and moved MP4 assets into `assets/videos/`. |
+| Transparent content panels reduced readability over the page background. | Increased panel opacity so foreground content remains clear and high contrast. |
+| Homepage background media started automatically. | Changed the video to start paused so users initiate motion themselves. |
 
 ## Remaining Bugs and Risks
 
-- Official W3C and Jigsaw validation now pass with 0 errors; rerun them only if
-  further HTML or CSS edits are made before submission.
-- The live GitHub Pages URL responds, but it must be retested after these latest
-  local changes are committed and pushed.
+- Official W3C and Jigsaw validation now pass with 0 errors in
+  `validation-reports/2026-06-05/`; rerun them only if further HTML or CSS edits
+  are made before submission.
+- The live GitHub Pages URL responds, but it must be retested after the latest
+  local changes are committed, pushed, and deployed.
 - Generated prototype dependency/build output has been removed from the current
   Git index with `git rm --cached`; `.gitignore` prevents future `node_modules`,
   `dist`, and `_site` output being re-added.
 - The contact form validates locally but does not send messages to a backend or
   form service.
+- Playwright Firefox and WebKit browser binaries were not installed in this
+  environment, so final cross-browser checks in Firefox, Edge, and Safari should
+  be completed manually before submission.
 
 ## Deployment
 
@@ -199,6 +216,22 @@ python -m http.server 8000
 ```
 
 Then visit `http://localhost:8000`.
+
+## Assessment Criteria Alignment
+
+The project is mapped directly against the supplied Level 5 User Centric Front
+End Development criteria in `DISTINCTION-CHECKLIST.md`. In summary:
+
+- Pass criteria are covered by the four-page semantic site, accessible
+  navigation and form structure, responsive CSS Grid/Bootstrap layouts, external
+  CSS, grouped assets, and official validator evidence.
+- Merit criteria are covered by the clear portfolio rationale, user stories,
+  intuitive information flow, user-controlled interactions, documented manual
+  testing, and Git/GitHub development evidence.
+- Distinction characteristics are targeted through the publishable UI, high
+  contrast foreground panels, keyboard-operable modal, defensive form
+  validation, user-initiated media, fresh Lighthouse/accessibility evidence, and
+  comprehensive documentation of remaining risks.
 
 ## Development Lifecycle
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="UX-focused project case studies by Sarah Collins, including user problems, accessibility decisions, testing evidence, and outcomes."
+      content="UX-focused project case studies by Sarah Collins, including accessibility decisions, testing evidence, outcomes, and a recorded portfolio walkthrough."
     />
     <title>Projects | Sarah Collins Portfolio</title>
     <link rel="icon" type="image/png" href="assets/images/programming.png" />
@@ -87,6 +87,13 @@
           accessibility considerations, testing approach, and outcome for each
           project preview shown on the page.
         </p>
+        <a
+          class="btn custom-cta projects-github-link"
+          href="https://github.com/alssl27"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View GitHub Profile</a
+        >
       </section>
 
       <section class="grid-container" aria-label="Project case studies">
@@ -108,7 +115,7 @@
               class="card-image"
               width="1400"
               height="764"
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
             <img
@@ -129,6 +136,7 @@
             type="button"
             aria-haspopup="dialog"
             aria-controls="overlay"
+            aria-expanded="false"
             aria-label="Open Personal Finance Dashboard case study"
           >
             View case study
@@ -153,7 +161,7 @@
               class="card-image"
               width="1400"
               height="764"
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
             <img
@@ -174,6 +182,7 @@
             type="button"
             aria-haspopup="dialog"
             aria-controls="overlay"
+            aria-expanded="false"
             aria-label="Open SyncFlow Kanban Board case study"
           >
             View case study
@@ -198,7 +207,7 @@
               class="card-image"
               width="1400"
               height="764"
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
             <img
@@ -219,11 +228,42 @@
             type="button"
             aria-haspopup="dialog"
             aria-controls="overlay"
+            aria-expanded="false"
             aria-label="Open Pro Storefront case study"
           >
             View case study
           </button>
         </article>
+      </section>
+
+      <section class="video-gallery" aria-labelledby="gallery-heading">
+        <div class="video-gallery-header">
+          <p class="eyebrow">Walkthrough evidence</p>
+          <h2 id="gallery-heading">Portfolio Walkthrough</h2>
+          <p>
+            A recorded walkthrough showing the portfolio interface and project
+            presentation in use.
+          </p>
+        </div>
+
+        <div class="video-gallery-grid">
+          <article class="gallery-video-card">
+            <video
+              class="gallery-video"
+              controls
+              preload="metadata"
+              playsinline
+              poster="assets/images/portfolio-screenshot-2026-05-12.png"
+              aria-label="Recorded walkthrough of Sarah Collins portfolio"
+            >
+              <source
+                src="assets/videos/portfolio-recording-2026-05-12.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <h3>Portfolio Interface Walkthrough</h3>
+          </article>
+        </div>
       </section>
     </main>
 
