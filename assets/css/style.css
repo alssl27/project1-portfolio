@@ -10,7 +10,7 @@
   --pink-neon: #ff2bd6;
   --cyan: #75bddd;
   --focus: #75bddd;
-  --border: rgba(255, 255, 255, 0.16);
+  --border: rgba(12, 12, 12, 0.16);
   --shadow-pink: 0 0 18px rgba(255, 43, 214, 0.42);
   --shadow-strong: 0 0 28px rgba(255, 43, 214, 0.58);
   --footer-offset: 96px;
@@ -38,21 +38,24 @@ body {
 }
 
 body.has-bottom-social-nav {
-  background: url("../images/profile-background.jpg") center / cover fixed no-repeat;
+  background: var(--page-bg);
 }
 
 body.has-bottom-social-nav .bg-black,
 body.has-bottom-social-nav .card.bg-black {
-  background-color: rgba(0, 0, 0, 0.88) !important;
+  background-color: #000000 !important;
 }
 
 body.has-bottom-social-nav .grid-container,
+body.has-bottom-social-nav .resume-section .card-header.bg-dark {
+  background-color: rgba(0, 0, 0, 0.82) !important;
+}
+
 body.has-bottom-social-nav .contact-page-content,
 body.has-bottom-social-nav #contactForm,
 body.has-bottom-social-nav .project-card,
-body.has-bottom-social-nav .tech-skill-cell,
-body.has-bottom-social-nav .resume-section .card-header.bg-dark {
-  background-color: rgba(0, 0, 0, 0.82) !important;
+body.has-bottom-social-nav .tech-skill-cell {
+  background-color: #000000 !important;
 }
 
 body.has-bottom-social-nav .resume-shell,
@@ -269,14 +272,15 @@ footer a:focus-visible {
   color: #ffffff;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
-  box-shadow: 0 0 12px rgba(255, 43, 214, 0.22);
+  box-shadow: none;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .card:hover,
 .card:focus-within {
-  border-color: var(--pink-neon);
-  box-shadow: var(--shadow-strong);
+  border-color: var(--pink-neon) !important;
+  box-shadow: var(--shadow-strong) !important;
+  transform: translateY(-2px);
 }
 
 /* Homepage hero and motion control */
@@ -501,6 +505,7 @@ footer a:focus-visible {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   background: #000000;
+  box-shadow: none;
   text-align: center;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
@@ -767,7 +772,15 @@ footer a:focus-visible {
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   background: #000000;
-  box-shadow: 0 0 12px rgba(255, 43, 214, 0.22);
+  box-shadow: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.gallery-video-card:hover,
+.gallery-video-card:focus-within {
+  border-color: var(--pink-neon);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .gallery-video {
@@ -815,8 +828,16 @@ body.modal-open {
   padding: clamp(1.25rem, 4vw, 2rem);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
-  background: rgba(0, 0, 0, 0.78);
-  box-shadow: var(--shadow-pink);
+  background: #000000;
+  box-shadow: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.contact-page-content:hover,
+.contact-page-content:focus-within {
+  border-color: var(--pink-neon);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-2px);
 }
 
 .contact-page-content .lead {
@@ -827,7 +848,7 @@ body.modal-open {
   padding: clamp(1rem, 4vw, 2rem);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
-  background: rgba(0, 0, 0, 0.72);
+  background: #000000;
 }
 
 .contact-page .form-control {

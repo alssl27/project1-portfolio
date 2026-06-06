@@ -77,6 +77,30 @@
       </nav>
     </header>
 
+    <div class="main-bg-video" aria-hidden="true">
+      <video
+        id="heroVideo"
+        class="bg-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="assets/images/profile-background.jpg"
+      >
+        <source src="assets/videos/profile.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    </div>
+    <button
+      class="motion-toggle"
+      type="button"
+      id="motionToggle"
+      aria-pressed="true"
+      aria-controls="heroVideo"
+    >
+      Play motion
+    </button>
+
     <main id="main-content" class="container-fluid resume-shell text-light py-5 px-3 px-lg-4">
       <section class="row g-4 align-items-stretch about-me-row mb-4 mb-lg-5" aria-labelledby="about-heading">
         <div class="col-lg-5 about-me-column">
@@ -108,8 +132,7 @@
         <div class="col-lg-7 about-me-column">
           <article class="card bg-black border-secondary h-100 shadow-sm resume-summary">
             <div class="card-body about-me-bio-body d-flex flex-column justify-content-center">
-              <p class="eyebrow">About Sarah</p>
-              <h1 id="about-heading" class="h2 text-pink mb-3">Sarah Collins</h1>
+              <h1 id="about-heading" class="visually-hidden">About Sarah Collins</h1>
 
               <div class="profile-typing" aria-hidden="true">
                 <span class="typing-lines">

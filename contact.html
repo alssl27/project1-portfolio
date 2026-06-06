@@ -78,6 +78,30 @@
       </nav>
     </header>
 
+    <div class="main-bg-video" aria-hidden="true">
+      <video
+        id="heroVideo"
+        class="bg-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="assets/images/profile-background.jpg"
+      >
+        <source src="assets/videos/profile.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    </div>
+    <button
+      class="motion-toggle"
+      type="button"
+      id="motionToggle"
+      aria-pressed="true"
+      aria-controls="heroVideo"
+    >
+      Play motion
+    </button>
+
     <main id="main-content" class="container contact-page-main py-5">
       <section class="contact-page-content" aria-labelledby="contact-heading">
         <h1 id="contact-heading" class="display-4 mb-2">Get In Touch</h1>
