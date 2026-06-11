@@ -11,13 +11,52 @@ function setTextPair(primaryElement, secondaryElement, primaryText, secondaryTex
   secondaryElement.textContent = secondaryText;
 }
 
-function setupHomeTypewriter() {
-  setTextPair(
-    document.getElementById("typewriter-text"),
-    document.getElementById("typewriter-subtext"),
-    "SARAH COLLINS",
-    "Full-Stack Web Developer",
-  );
+function typeText(element, text, delay) {
+  return new Promise((resolve) => {
+    let characterIndex = 0;
+    element.classList.add("is-typing");
+
+    function typeNextCharacter() {
+      if (characterIndex >= text.length) {
+        element.classList.remove("is-typing");
+        resolve();
+        return;
+      }
+
+      element.textContent += text[characterIndex];
+      characterIndex += 1;
+      window.setTimeout(typeNextCharacter, delay);
+    }
+
+    typeNextCharacter();
+  });
+}
+
+async function setupHomeTypewriter() {
+  const name = document.getElementById("typewriter-text");
+  const role = document.getElementById("typewriter-subtext");
+  const nameText = "SARAH COLLINS";
+  const roleText = "Full-Stack Web Developer";
+
+  if (!name || !role) {
+    return;
+  }
+
+  name.setAttribute("aria-label", nameText);
+  role.setAttribute("aria-label", roleText);
+
+  if (userPrefersReducedMotion()) {
+    setTextPair(name, role, nameText, roleText);
+    return;
+  }
+
+  name.textContent = "";
+  role.textContent = "";
+
+  await typeText(name, nameText, 115);
+  await new Promise((resolve) => window.setTimeout(resolve, 300));
+  await typeText(role, roleText, 70);
+  role.classList.add("typing-complete");
 }
 
 function setupProfileTypewriter() {
@@ -195,9 +234,12 @@ function setupMotionToggle() {
 
   if (userPrefersReducedMotion()) {
     video.pause();
+    setPausedState(true);
+  } else {
+    video.play().then(() => setPausedState(false)).catch(() => {
+      setPausedState(true);
+    });
   }
-
-  setPausedState(video.paused);
 
   button.addEventListener("click", () => {
     if (video.paused) {
