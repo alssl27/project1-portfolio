@@ -31,7 +31,7 @@ jobs:
       - name: Prepare static site artifact
         run: |
           mkdir _site
-          cp index.html aboutme.html projects.html contact.html README.md TESTING.md ASSESSMENT-EVIDENCE.md DISTINCTION-CHECKLIST.md _site/
+          cp index.html aboutme.html projects.html contact.html README.md TESTING.md DISTINCTION-CHECKLIST.md CNAME _site/
           cp -R assets _site/assets
           cp -R docs _site/docs
 

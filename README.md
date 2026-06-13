@@ -1,111 +1,200 @@
-# Sarah Collins Portfolio
+# Sarah Collins Web Developer Portfolio
 
-Sarah Collins Portfolio is a static, multi-page frontend portfolio for
-recruiters, assessors, and collaborators who need to understand Sarah's skills,
-project evidence, and contact route quickly. The site is built with semantic
-HTML, external custom CSS, Bootstrap, and JavaScript.
+[View the live website](https://www.sarahcollinsweb.dev)
 
-## Purpose and Value
+[View the GitHub repository](https://github.com/alssl27/project1-portfolio)
 
-The project responds to a real-world portfolio need: a visitor should be able to
-identify who Sarah is, understand what she builds, review project evidence,
-download a resume, and make contact without reading supporting documentation.
+Sarah Collins Web Developer Portfolio is a responsive, multi-page website built
+with HTML and CSS for Code Institute Portfolio Project 1: HTML/CSS Essentials.
+It introduces Sarah, explains her experience and skills, presents selected
+project work, and gives recruiters and potential clients a direct contact route.
 
-Target users:
+![Desktop homepage](assets/images/readme/desktop-home.png)
 
-- Recruiters checking technical fit, project style, and contact routes.
-- Course assessors reviewing frontend implementation, UX, accessibility,
-  documentation, testing, and deployment evidence.
-- Collaborators looking for development strengths and social links.
+## Project Overview
+
+The website supports a real-world professional goal: helping a visitor decide
+whether Sarah may be a suitable junior developer, collaborator, or freelance
+website provider.
+
+The site is designed to let visitors:
+
+- Understand who Sarah is and what she offers from the homepage.
+- Learn how her previous commercial experience supports her development work.
+- Review selected projects and the decisions behind them.
+- View her resume and development profiles.
+- Contact her by email without relying on a non-functional demonstration form.
+
+## Target Audience
+
+- Recruiters and hiring managers seeking a junior or trainee web developer.
+- Small-business owners who need a clear, responsive brochure website.
+- Developers and collaborators reviewing Sarah's work and learning progress.
+- Code Institute assessors reviewing UX, accessibility, HTML, CSS, testing, and
+  documentation.
+
+## User Goals
+
+- Find Sarah's role, location, and value quickly.
+- Review relevant skills and experience.
+- Understand the purpose and quality of each featured project.
+- Open live projects and repositories safely.
+- Contact Sarah or view her resume with minimal effort.
+
+## Site Owner Goals
+
+- Present a credible and professional personal brand.
+- Demonstrate semantic HTML and custom CSS skills.
+- Show awareness of user experience, accessibility, and responsive design.
+- Provide evidence of testing and iterative improvement.
+- Create opportunities for junior employment, collaboration, and freelance work.
 
 ## User Stories
 
-| User story | How the application answers it |
+| User story | Website response |
 | --- | --- |
-| As a recruiter, I want the homepage to show Sarah's name, role, and clear next actions immediately so I can decide whether to continue. | `index.html` presents Sarah Collins, Full-Stack Web Developer, a short value statement, project/contact calls to action, and a resume download action in the first viewport. |
-| As an assessor, I want project case studies to explain users, UX choices, accessibility, and testing so I can judge user-centred design evidence. | `projects.html` provides three case-study cards and a keyboard-operable dialog containing problem, users, UX decisions, accessibility, testing, and outcome. |
-| As a keyboard user, I want clear focus states, skip links, and keyboard-operable interactions so I can use the site without a mouse. | All pages include skip links, visible focus outlines, button-based dialog triggers, Escape close, and focus return. |
-| As a mobile visitor, I want the layout to reflow cleanly so I can browse projects and submit the contact form on a small screen. | CSS Grid, Bootstrap, and media queries stack cards, resize text, and keep the form and navigation usable. |
-| As a motion-sensitive user, I want control over animated media so I can choose whether movement starts. | The homepage video starts paused, remains muted and decorative, and is controlled by a play/pause button; reduced-motion preferences keep non-essential movement reduced. |
+| As a recruiter, I want to understand Sarah's role and strengths quickly so that I can decide whether to review more. | The homepage opens with a clear role, location, value statement, and links to projects and contact details. |
+| As a potential client, I want to see examples of Sarah's work so that I can judge whether her style suits my needs. | The Projects page presents live work and an interface concept with images, goals, design decisions, accessibility notes, and testing priorities. |
+| As a keyboard user, I want to move around the site without a mouse so that I can access all content. | Every page has a skip link, logical source order, visible focus states, and standard links and native media controls. |
+| As a mobile visitor, I want readable content and usable navigation so that I can browse on a small screen. | Flexible layouts and media queries reorganise navigation, cards, buttons, images, and footer content at smaller widths. |
+| As a visitor who wants to make contact, I want a reliable contact route so that I do not submit information to a form that goes nowhere. | The Contact page provides a direct email link, LinkedIn, GitHub, location, and resume link. |
+| As an assessor, I want project-specific planning and testing evidence so that I can evaluate the development process. | This README and [TESTING.md](TESTING.md) document users, design decisions, accessibility, bugs, checks, and remaining manual evidence. |
 
 ## UX Design Rationale
 
-The information hierarchy follows a simple user journey: identity and resume on
-the homepage, profile and skills on About, project evidence on Projects, and a
-contact route on Contact. The global navigation is consistent across pages, and
-each page uses one clear main heading.
+The information architecture follows the questions a new visitor is most likely
+to ask:
 
-Interaction decisions:
+1. **Home:** Who is Sarah, what does she build, and where should I go next?
+2. **About:** What skills, qualifications, and transferable experience does she
+   bring?
+3. **Projects:** What has she made and how does she think about users?
+4. **Contact:** How can I reach her?
 
-- The project dialog opens only after a user activates a button, supports Escape
-  and overlay close, traps focus while open, and returns focus to the trigger.
-- The contact form validates required fields, email format, minimum lengths, and
-  displays a clear confirmation only after valid input.
-- The background video is muted, decorative, and user-initiated rather than
-  autoplaying.
-- Neon accents are used consistently for links, buttons, focus states, and
-  feedback, while content remains on dark high-contrast surfaces.
+The same header and footer appear on every page. The active navigation link is
+identified visually and with `aria-current="page"`. Primary actions use the
+pink accent, while secondary actions use an outlined treatment. Project details
+are visible in the page rather than hidden behind JavaScript interactions.
 
-Accessibility decisions:
+### Colour Scheme
 
-- Semantic landmarks: `header`, `nav`, `main`, `section`, `article`, and
-  `footer`.
-- Skip links and visible focus indicators across pages.
-- Meaningful alternative text for informative images and empty `alt` with
-  `aria-hidden="true"` for decorative avatars.
-- Form labels and field-specific validation messages.
-- External links open in new tabs with `rel="noopener noreferrer"`.
-- Reduced-motion support in CSS and JavaScript.
+| Colour | Hex | Use |
+| --- | --- | --- |
+| Near black | `#08070d` | Main background |
+| Dark surface | `#11101a` | Section and panel backgrounds |
+| Off-white | `#f8f7fb` | Main text |
+| Muted grey | `#c8c5d0` | Supporting text |
+| Neon pink | `#ff4fd8` | Primary actions and brand accent |
+| Cyan | `#73ddf2` | Secondary accent and labels |
+| Yellow | `#fff275` | Keyboard focus indicator |
+
+Pink and cyan are used as accents rather than as the only way to communicate
+meaning. Text labels, borders, underlines, and `aria-current` support the colour
+signals. The detailed palette is also recorded in
+[docs/color-palette.md](docs/color-palette.md).
+
+### Typography
+
+The website uses system fonts so that it loads quickly and does not depend on an
+external font service:
+
+- A system sans-serif stack for readable body copy.
+- `Courier New` and the browser monospace fallback for headings, navigation, and
+  calls to action.
+- Responsive `clamp()` values so headings scale without becoming unreadable or
+  overflowing small screens.
+
+### Imagery Choices
+
+- The neon developer illustration supports the personal brand on the homepage.
+- The profile illustration creates continuity on the About page.
+- Project media is used only where it directly relates to the project summary.
+- Meaningful images have descriptive alternative text.
+- Decorative background imagery is applied through CSS and does not duplicate
+  content for screen-reader users.
+
+## Wireframes
+
+No original pre-development wireframe exports were retained. To avoid presenting
+new files as false historical evidence, the current information structure is
+documented in [docs/wireframes.md](docs/wireframes.md) as a post-audit layout
+reference. Future projects should save dated mobile and desktop wireframes
+before development begins.
 
 ## Features
 
-- Four-page static portfolio: Home, About Me, Projects, Contact.
-- Responsive Bootstrap navigation and CSS Grid layouts.
-- Optimised project/profile image assets.
-- Project case-study dialog with keyboard and mouse support.
-- Client-side contact validation with non-misleading static-site confirmation.
-- Downloadable resume link.
-- Social links in the footer.
-- Homepage project, contact, and resume calls to action.
-- Reduced-motion-aware homepage video control that starts paused.
-- Recorded portfolio walkthrough with native video controls.
+### Responsive Navigation
 
-## Screenshots
+The navigation remains visible on every screen size and wraps into a compact
+four-column row on smaller devices. It does not require JavaScript.
 
-Current visual evidence file:
+### Purpose-Led Homepage
 
-- `assets/images/portfolio-screenshot-2026-05-12.png`
+The homepage identifies Sarah's role, location, strengths, and primary visitor
+actions in the opening section.
 
-Generated browser-check screenshots:
+![Mobile homepage](assets/images/readme/mobile-home.png)
 
-- `output/playwright/homepage-desktop.png`
-- `output/playwright/projects-mobile.png`
-- `output/playwright/projects-third-card.png`
-- `output/playwright/project-modal.png`
-- `output/playwright/contact-page.png`
-- `output/playwright/contact-success.png`
+### About and Skills
 
-Screenshots still to capture before final submission:
+The About page combines Sarah's technical learning with the commercial and
+people skills gained through her previous career.
 
-- Final deployed-site screenshots after the latest local changes are pushed.
-- Firefox, Edge, and Safari screenshots if those browsers are available locally.
+### Project Case Studies
+
+Each project states its status, user goal, design decision, accessibility focus,
+and testing focus. Live projects include links to both the deployed site and
+repository.
+
+![Projects page](assets/images/readme/features.png)
+
+### Direct Contact Route
+
+The Contact page uses a real email link and professional profile links. A
+demonstration form was deliberately removed because the static project had no
+backend or approved form service to deliver messages.
+
+### Resume Access
+
+The resume can be opened from the homepage, About page, and Contact page.
+
+## Future Features
+
+- Add a properly configured contact form using a secure form service when
+  backend or service integration is within the project scope.
+- Add more completed case studies with live links and repository links.
+- Add written project retrospectives after user testing.
+- Replace the interface concept with a fully deployed, tested application.
+- Add an optional downloadable portfolio case-study PDF.
+
+## Accessibility Considerations
+
+- Semantic landmarks including `header`, `nav`, `main`, `section`, `article`,
+  `aside`, and `footer`.
+- One clear `h1` on every page with logical heading order.
+- Skip links on every page.
+- Visible high-contrast focus indicators.
+- Descriptive link text rather than repeated vague labels.
+- Descriptive alternative text for meaningful images.
+- Native video controls and muted project media.
+- No content or navigation depends on JavaScript.
+- Text and interface controls reflow at 320px without horizontal scrolling.
+- Reduced-motion media query removes smooth scrolling and near-eliminates
+  transition duration for users who request reduced motion.
 
 ## Technologies Used
 
-- HTML5 for semantic page structure.
-- CSS3 for custom layout, responsive rules, focus states, and visual identity.
-- JavaScript for modal behaviour, motion control, and form
-  validation feedback.
-- Bootstrap 5 from CDN for responsive navigation and utility classes.
-- Font Awesome from CDN for social and section icons.
-- Devicon SVG CDN for technology logos on the About page.
-- Vite, React, Tailwind, Framer Motion, and Lucide React in the separate
-  `aboutme-react/` prototype.
+- HTML5
+- CSS3
+- CSS Grid
+- Flexbox
+- Git
+- GitHub
+- GitHub Pages
+- PowerShell and Node.js for local project checks
+- Playwright CLI for responsive browser checks and screenshots
 
-Custom code is in the root HTML files, `assets/css/style.css`,
-`assets/js/script.js`, and the React source files. CDN libraries and package
-dependencies are external code and are credited here and by comments above the
-CDN links.
+No frameworks or custom JavaScript are used in the submitted website.
 
 ## Project Structure
 
@@ -117,160 +206,159 @@ CDN links.
 ├── contact.html
 ├── README.md
 ├── TESTING.md
-├── ASSESSMENT-EVIDENCE.md
 ├── DISTINCTION-CHECKLIST.md
-├── docs/
-│   └── color-palette.md
-├── tools/
-│   └── check-static-site.js
-├── assets/
-│   ├── css/style.css
-│   ├── js/script.js
-│   ├── images/
-│   ├── videos/
+├── CNAME
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   └── readme
+│   ├── videos
+│   │   └── project1.mp4
 │   └── resume.pdf
-├── validation-reports/
-│   ├── 2026-06-01/
-│   ├── 2026-06-03/
-│   └── 2026-06-05/
-├── output/
-│   └── playwright/
-├── aboutme-react/
-└── .github/workflows/deploy-pages.yml
+├── docs
+│   ├── color-palette.md
+│   └── wireframes.md
+├── tools
+│   └── check-static-site.js
+└── validation-reports
+    └── 2026-06-12
 ```
 
 ## Testing
 
-Full manual testing evidence is in `TESTING.md`.
+Detailed manual, responsive, browser, link, and accessibility checks are in
+[TESTING.md](TESTING.md).
 
-Local checks added for repeatability:
+Run the local static-site check from the repository root:
 
 ```bash
 node tools/check-static-site.js
-node --check assets/js/script.js
 ```
 
-The previous official validation reports in `validation-reports/2026-06-01/`
-and `validation-reports/2026-06-03/` showed 0 W3C HTML errors and valid Jigsaw
-CSS at those points in development. Fresh reports in
-`validation-reports/2026-06-05/` show:
+### Browser Testing
 
-- W3C HTML: 0 errors for `index.html`, `aboutme.html`, `projects.html`, and
-  `contact.html`.
-- Jigsaw CSS: valid CSS with 0 errors.
-- Lighthouse local homepage run: Performance 75, Accessibility 100, Best
-  Practices 100, SEO 100.
+The final local version should be checked in current Chromium and Microsoft Edge.
+Firefox and Safari require a manual check where those browsers are available.
+
+### Responsiveness Testing
+
+The target test widths are:
+
+- 320px
+- 375px
+- 768px
+- 1024px
+- 1440px
+
+### Validator Testing
+
+On 12 June 2026, the final local source was submitted to the official services:
+
+- W3C Nu HTML Checker: 0 errors and 0 warnings on all four pages.
+- W3C Jigsaw CSS Validator: valid CSS with 0 errors.
+
+The current result summary is stored in
+`validation-reports/2026-06-12/VALIDATION-SUMMARY.md`. Screenshots of the result
+pages still need to be added before submission. Old reports were removed because
+they tested a previous Bootstrap/JavaScript version.
+
+### Lighthouse Testing
+
+The local mobile-mode Lighthouse run on 12 June 2026 returned:
+
+- Performance: 81
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+The raw report is stored at
+`validation-reports/2026-06-12/lighthouse-local.json`. Performance should be
+retested on the deployed host because caching and server delivery affect the
+score.
 
 ## Bugs Found and Fixed
 
-| Issue | Fix |
+| Bug or risk | Improvement |
 | --- | --- |
-| Project case-study text did not match the available project screenshots. | Rewrote case studies to match the finance dashboard, Kanban board, and e-commerce storefront images. |
-| Custom CSS and JavaScript were split between external files and inline page blocks. | Moved custom behaviour into `assets/js/script.js` and custom styling into `assets/css/style.css`. |
-| Large image assets were used directly. | Created optimised, lowercase JPEG derivatives and updated page references. |
-| Contact form used temporary local logging during development. | Removed `contacts.log` and kept static-site validation feedback honest. |
-| GitHub Pages workflow uploaded the whole repository. | Updated workflow to deploy a scoped `_site` artifact. |
-| Projects page referenced four missing gallery videos. | Replaced the broken gallery with one real recorded walkthrough and moved MP4 assets into `assets/videos/`. |
-| Transparent content panels reduced readability over the page background. | Increased panel opacity so foreground content remains clear and high contrast. |
-| Homepage background media started automatically. | Changed the video to start paused so users initiate motion themselves. |
+| The submitted site depended on Bootstrap despite the HTML/CSS-only brief. | Replaced framework classes and components with custom HTML and CSS. |
+| JavaScript controlled navigation, typewriter text, motion, modals, and form feedback. | Removed custom JavaScript and made all core content and navigation available as static HTML. |
+| The Projects page contained malformed nested article markup and mismatched project titles. | Rebuilt the project structure with valid articles and project-specific content. |
+| Some image paths used Windows backslashes. | Standardised all web paths with forward slashes. |
+| One image filename contained a space and a spelling error. | Renamed it to `mindweek-dashboard.png`. |
+| Project summaries described screenshots that did not match the visible work. | Rewrote each summary to match the real media and labelled concept work honestly. |
+| The contact form validated information but did not send it anywhere. | Replaced it with a reliable direct email route and professional profile links. |
+| Social links used icon fonts and labels that were not visible to every visitor. | Replaced icons with visible text links. |
+| Background video increased motion, weight, and complexity. | Replaced it with a responsive static background image. |
+| Old screenshots and validator files represented a previous implementation. | Removed stale evidence so final documentation cannot accidentally mislead the assessor. |
+| The repository contained a separate React/Tailwind prototype. | Removed the prototype from the PP1 submission boundary. |
 
-## Remaining Bugs and Risks
+## Known Bugs
 
-- Official W3C and Jigsaw validation now pass with 0 errors in
-  `validation-reports/2026-06-05/`; rerun them only if further HTML or CSS edits
-  are made before submission.
-- The live GitHub Pages URL responds, but it must be retested after the latest
-  local changes are committed, pushed, and deployed.
-- Generated prototype dependency/build output has been removed from the current
-  Git index with `git rm --cached`; `.gitignore` prevents future `node_modules`,
-  `dist`, and `_site` output being re-added.
-- The contact form validates locally but does not send messages to a backend or
-  form service.
-- Playwright Firefox and WebKit browser binaries were not installed in this
-  environment, so final cross-browser checks in Firefox, Edge, and Safari should
-  be completed manually before submission.
+No known functional bugs remain in the local HTML/CSS build at the time of the
+final local test. The following evidence still requires manual completion after
+the final deployment:
+
+- Screenshots of the passing W3C HTML and CSS validator pages.
+- Lighthouse results and screenshot for the final live site.
+- Firefox and Safari testing where available.
+- A final comparison between the local site and the deployed site.
 
 ## Deployment
 
-This is a static site and can be deployed to GitHub Pages, Netlify, Vercel, or
-any static host. A GitHub Pages workflow is included in
-`.github/workflows/deploy-pages.yml`.
+The project uses GitHub Actions to deploy the static files to GitHub Pages.
 
-GitHub Pages procedure:
+1. Push the final branch to GitHub.
+2. Open the repository **Settings**.
+3. Select **Pages**.
+4. Set the source to **GitHub Actions**.
+5. Open the **Actions** tab and confirm that `Deploy static site to Pages`
+   completes successfully.
+6. Visit [www.sarahcollinsweb.dev](https://www.sarahcollinsweb.dev).
+7. Retest navigation, project links, email links, media, resume access, and
+   responsive layouts on the deployed site.
 
-1. Push the repository to GitHub.
-2. Open repository settings and enable Pages through GitHub Actions.
-3. Run the `Deploy static site to Pages` workflow.
-4. Visit the published URL.
-5. Re-test navigation, media, form validation, dialogs, internal links, and
-   responsive layouts against the deployed site.
-
-Live deployment link: `https://alssl27.github.io/project1-portfolio/`
-
-GitHub repository link: `https://github.com/alssl27/project1-portfolio`
-
-Local preview:
+To preview locally:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then open `http://localhost:8000`.
 
-## Assessment Criteria Alignment
+## Version Control
 
-The project is mapped directly against the supplied Level 5 User Centric Front
-End Development criteria in `DISTINCTION-CHECKLIST.md`. In summary:
+Git is used for local version control and GitHub stores the remote repository.
+Git history should not be rewritten for assessment. Final changes should be
+committed in small, descriptive groups where practical.
 
-- Pass criteria are covered by the four-page semantic site, accessible
-  navigation and form structure, responsive CSS Grid/Bootstrap layouts, external
-  CSS, grouped assets, and official validator evidence.
-- Merit criteria are covered by the clear portfolio rationale, user stories,
-  intuitive information flow, user-controlled interactions, documented manual
-  testing, and Git/GitHub development evidence.
-- Distinction characteristics are targeted through the publishable UI, high
-  contrast foreground panels, keyboard-operable modal, defensive form
-  validation, user-initiated media, fresh Lighthouse/accessibility evidence, and
-  comprehensive documentation of remaining risks.
+Suggested future commit messages:
 
-## Development Lifecycle
+- `Add semantic HTML structure`
+- `Improve responsive navigation`
+- `Add accessibility alt text`
+- `Refactor CSS sections`
+- `Update README testing evidence`
+- `Fix broken internal links`
+- `Improve mobile layout`
 
-1. Planning: define target users, user stories, and required portfolio evidence.
-2. Design: choose a dark portfolio identity, clear page hierarchy, global
-   navigation, accessible forms, controlled media, and responsive card layouts.
-3. Implementation: build semantic HTML pages, external CSS, JavaScript
-   interactions, and supporting assets.
-4. Testing: perform manual checks for functionality, accessibility,
-   responsiveness, validation, links, and deployment readiness.
-5. Deployment: publish the static site using the GitHub Pages workflow and retest
-   the deployed version.
-6. Review: document bugs fixed, remaining risks, validation evidence, and
-   version-control guidance.
+## Credits and Acknowledgements
 
-## Version Control and Development Process
+### Code
 
-Recent commits show iterative work, but the assessment standard expects small,
-well-defined commits for each feature or fix. Recommended commit structure:
+All submitted website HTML and CSS is custom project code. No framework,
+component library, copied template, or custom JavaScript is used in the final
+site.
 
-- `fix: improve semantic HTML structure`
-- `fix: add accessible alt text and labels`
-- `style: organise external CSS and responsive rules`
-- `docs: expand README with user stories and lifecycle evidence`
-- `test: add manual testing documentation and static checks`
-- `chore: remove generated prototype output from git tracking`
+### Media
 
-Do not rewrite Git history. Future cleanup should use a dedicated commit that
-keeps generated files ignored while retaining `package.json` and
-`package-lock.json` as the source of dependency truth.
+- Profile and developer illustrations were supplied by the site owner.
+- Project screenshots and project video were supplied by the site owner and
+  represent Sarah's work or identified interface concept.
+- Resume content and contact details were supplied by the site owner.
 
-## Credits and Attribution
+### Acknowledgements
 
-- Bootstrap: layout, navbar, forms, and responsive utilities.
-- Font Awesome: footer and section icons.
-- Google Fonts: Inter and Orbitron typography.
-- Devicon: technology logos on the About page.
-- React, Vite, Tailwind CSS, Framer Motion, and Lucide React: used only in the
-  separate `aboutme-react/` prototype.
-
-All portfolio page content, custom styling, and custom JavaScript behaviour are
-project-specific unless explicitly credited above.
+- Code Institute course material and assessment guidance.
+- W3C HTML and CSS validation services.
+- GitHub Pages for static hosting.

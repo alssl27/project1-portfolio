@@ -1,269 +1,152 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Contact Sarah Collins through an accessible portfolio contact form and professional social links."
-    />
-    <title>Contact | Sarah Collins Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/programming.png" />
-
-    <!-- Bootstrap is an external layout and responsive component library. -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <!-- Font Awesome is an external icon library used for social links. -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link href="assets/css/style.css" rel="stylesheet" />
+      content="Contact Sarah Collins about junior web development opportunities, collaboration, or small-business website projects."
+    >
+    <title>Contact Sarah Collins | Junior Web Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/programming.png">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
-  <body class="bg-dark text-light contact-page has-bottom-social-nav">
+  <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <noscript>
-      <p class="noscript-alert">
-        JavaScript is disabled. The form fields remain visible, but confirmation
-        feedback needs JavaScript.
-      </p>
-    </noscript>
 
     <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 py-lg-4">
-        <div class="container px-3 px-lg-4">
-          <a
-            class="navbar-brand fw-bold text-pink navbar-brand-glow"
-            href="index.html"
-            aria-label="Sarah Collins portfolio home"
-            >&lt; / &gt;</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#siteNavbar"
-            aria-controls="siteNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="siteNavbar">
-            <ul
-              class="navbar-nav justify-content-center align-items-lg-center gap-lg-4 mt-3 mt-lg-0 text-center"
-            >
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutme.html">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="contact.html" aria-current="page"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div class="site-header__inner">
+        <a
+          class="site-logo"
+          href="index.html"
+          aria-label="SC developer logo, Sarah Collins home"
+        >
+          <span aria-hidden="true">&lt;SC /&gt;</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div class="main-bg-video" aria-hidden="true">
-      <video
-        id="heroVideo"
-        class="bg-video"
-        muted
-        loop
-        playsinline
-        preload="none"
-        poster="assets/images/profile-background.jpg"
-      >
-        <source src="assets/videos/profile.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-    </div>
-    <button
-      class="motion-toggle"
-      type="button"
-      id="motionToggle"
-      aria-pressed="true"
-      aria-controls="heroVideo"
-    >
-      Play motion
-    </button>
+    <main id="main-content">
+      <section class="page-hero" aria-labelledby="contact-heading">
+        <div class="content-width contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h1 id="contact-heading">Let us talk about your next project.</h1>
+            <p class="lead">
+              I welcome enquiries about junior developer roles, freelance
+              website work, and opportunities to collaborate and learn.
+            </p>
+            <p>
+              Email is the quickest way to reach me. Include a short description
+              of the role or project, the outcome you need, and any important
+              dates. I will reply as soon as I can.
+            </p>
 
-    <main id="main-content" class="container contact-page-main py-5">
-      <section class="contact-page-content" aria-labelledby="contact-heading">
-        <h1 id="contact-heading" class="display-4 mb-2">Get In Touch</h1>
-        <p class="lead mb-5">
-          Have a question or want to work together? Send me a message.
-        </p>
-
-        <form
-          id="contactForm"
-          class="needs-validation"
-          novalidate
-          aria-describedby="formHelp"
-        >
-          <p id="formHelp" class="visually-hidden">
-            All fields are required. The form validates input before showing
-            confirmation.
-          </p>
-
-          <div class="mb-4">
-            <label for="name" class="form-label">Full Name</label>
-            <input
-              type="text"
-              class="form-control form-control-lg bg-secondary text-light border-secondary"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              autocomplete="name"
-              minlength="2"
-              maxlength="80"
-              required
-              aria-describedby="nameError"
-            />
-            <div id="nameError" class="invalid-feedback">
-              Please enter a name of at least two characters.
-            </div>
+            <a
+              class="button button--primary contact-email"
+              href="mailto:sarahcollins702@gmail.com?subject=Portfolio%20enquiry"
+            >Email Sarah Collins</a>
           </div>
 
-          <div class="mb-4">
-            <label for="email" class="form-label">Email Address</label>
-            <input
-              type="email"
-              class="form-control form-control-lg bg-secondary text-light border-secondary"
-              id="email"
-              name="email"
-              placeholder="your.email@example.com"
-              autocomplete="email"
-              inputmode="email"
-              maxlength="120"
-              required
-              aria-describedby="emailError"
-            />
-            <div id="emailError" class="invalid-feedback">
-              Please enter a valid email address.
-            </div>
+          <aside class="contact-card" aria-labelledby="contact-options-heading">
+            <h2 id="contact-options-heading">Other ways to connect</h2>
+            <ul class="contact-list">
+              <li>
+                <span>Location</span>
+                <strong>Greater Manchester, UK</strong>
+              </li>
+              <li>
+                <span>GitHub</span>
+                <a
+                  href="https://github.com/alssl27"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >github.com/alssl27</a>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View professional profile</a>
+              </li>
+              <li>
+                <span>Resume</span>
+                <a href="assets/resume.pdf">View PDF resume</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--dark" aria-labelledby="help-heading">
+        <div class="content-width">
+          <div class="section-heading">
+            <p class="eyebrow">Useful information</p>
+            <h2 id="help-heading">What I can help with</h2>
           </div>
 
-          <div class="mb-4">
-            <label for="subject" class="form-label">Subject</label>
-            <input
-              type="text"
-              class="form-control form-control-lg bg-secondary text-light border-secondary"
-              id="subject"
-              name="subject"
-              placeholder="What is this about?"
-              minlength="3"
-              maxlength="120"
-              required
-              aria-describedby="subjectError"
-            />
-            <div id="subjectError" class="invalid-feedback">
-              Please enter a subject of at least three characters.
-            </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Junior opportunities</h3>
+              <p>
+                Front-end, junior web developer, trainee developer, and
+                apprenticeship roles where I can contribute and keep growing.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Small websites</h3>
+              <p>
+                Clear, responsive brochure websites for individuals and small
+                businesses that need a professional online presence.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Website improvements</h3>
+              <p>
+                Content structure, responsive layout, accessibility, and visual
+                consistency reviews for existing simple websites.
+              </p>
+            </article>
           </div>
-
-          <div class="mb-4">
-            <label for="message" class="form-label">Message</label>
-            <textarea
-              class="form-control form-control-lg bg-secondary text-light border-secondary"
-              id="message"
-              name="message"
-              rows="6"
-              placeholder="Your message here..."
-              minlength="20"
-              maxlength="2000"
-              required
-              aria-describedby="messageError"
-            ></textarea>
-            <div id="messageError" class="invalid-feedback">
-              Please enter a message of at least twenty characters.
-            </div>
-          </div>
-
-          <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-lg custom-cta">Send Message</button>
-          </div>
-        </form>
-
-        <div
-          class="alert alert-success alert-dismissible fade success-message"
-          id="successMessage"
-          role="status"
-          aria-live="polite"
-          tabindex="-1"
-          hidden
-        >
-          <strong>Thank you.</strong> Your message details passed validation.
-          Please use the social links in the sidebar for an immediate reply.
-          <button
-            type="button"
-            class="btn-close"
-            id="successClose"
-            aria-label="Close confirmation"
-          ></button>
         </div>
       </section>
     </main>
 
-    <nav class="social-sidebar" aria-label="Social media links">
-      <a
-        href="https://github.com/alssl27"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="GitHub"
-        aria-label="GitHub"
-        ><i class="fa-brands fa-github" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-        aria-label="LinkedIn"
-        ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://discord.com/users/alsslc220702"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Discord"
-        aria-label="Discord"
-        ><i class="fa-brands fa-discord" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://www.facebook.com/bdens69/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-        aria-label="Facebook"
-        ><i class="fa-brands fa-facebook" aria-hidden="true"></i
-      ></a>
-    </nav>
-
-    <footer class="bg-black text-light py-4 mt-auto">
-      <div class="container d-flex justify-content-center align-items-center">
-        <p class="mb-0 text-center">© 2026 Sarah Collins. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Sarah Collins. Built with HTML and CSS.</p>
+        <nav aria-label="Social and contact links">
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://github.com/alssl27"
+                target="_blank"
+                rel="noopener noreferrer"
+              >GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >LinkedIn</a>
+            </li>
+            <li><a href="mailto:sarahcollins702@gmail.com">Email</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/script.js"></script>
   </body>
 </html>

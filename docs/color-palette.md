@@ -1,18 +1,26 @@
 # Colour Palette
 
-The portfolio uses a dark interface with neon accents. The palette is applied
-through CSS custom properties in `assets/css/style.css`.
+The portfolio uses a dark base with neon accents to retain Sarah's existing
+personal brand while keeping long-form content readable.
 
-| Purpose | Colour |
-| --- | --- |
-| Page background | `#000000` |
-| Raised surface | `#050505` |
-| Primary accent | `#ff2bd6` |
-| Secondary accent | `#75bddd` |
-| Body text | `#ffffff` |
-| Muted text | `rgba(255, 255, 255, 0.78)` |
+| Token | Hex | Purpose |
+| --- | --- | --- |
+| Background | `#08070d` | Main page background |
+| Surface | `#11101a` | Alternating section background |
+| Raised surface | `#191725` | Cards and panels |
+| Text | `#f8f7fb` | Main text |
+| Muted text | `#c8c5d0` | Supporting copy |
+| Pink | `#ff4fd8` | Primary buttons, brand, and highlights |
+| Cyan | `#73ddf2` | Eyebrows, terms, and secondary highlights |
+| Border | `#3c374b` | Panel boundaries |
+| Focus | `#fff275` | Keyboard focus outline |
 
-Accessibility note: foreground text is kept white or high-contrast cyan/pink on
-black surfaces. Neon effects are decorative and are not the only way interactive
-state is shown; hover and focus states also change borders, backgrounds, or
-outlines.
+## Accessibility Use
+
+- Main and muted text are placed on very dark backgrounds.
+- Pink and cyan are not used as the only way to identify an action or state.
+- Active navigation also uses `aria-current`, a filled background, and an
+  underline-like inset border.
+- Links remain underlined in body copy.
+- Keyboard focus uses a separate yellow outline rather than the brand colours.
+- Validator and Lighthouse evidence should be added after final deployment.

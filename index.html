@@ -1,197 +1,177 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Sarah Collins portfolio showcasing full-stack development skills, UX-focused projects, accessibility, and contact information."
-    />
-    <title>Sarah Collins Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/programming.png" />
-
-    <!-- Bootstrap is an external layout and responsive component library. -->
+      content="Sarah Collins is a junior web developer in Greater Manchester who builds accessible, responsive websites for people and small businesses."
+    >
+    <title>Sarah Collins | Junior Web Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/programming.png">
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <!-- Font Awesome is an external icon library used for social links. -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link href="assets/css/style.css" rel="stylesheet" />
+      rel="preload"
+      href="assets/images/profile-background.jpg"
+      as="image"
+      fetchpriority="high"
+    >
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
-  <body class="bg-dark text-light d-flex flex-column min-vh-100">
+  <body class="home-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <noscript>
-      <p class="noscript-alert">
-        JavaScript is disabled. Core portfolio content remains available, but
-        motion controls need JavaScript.
-      </p>
-    </noscript>
 
     <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 z-3">
-        <div class="container">
-          <a
-            class="navbar-brand fw-bold text-pink navbar-brand-glow"
-            href="index.html"
-            aria-label="Sarah Collins portfolio home"
-            >&lt; / &gt;</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#siteNavbar"
-            aria-controls="siteNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="siteNavbar">
-            <ul
-              class="navbar-nav justify-content-center align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0 text-center"
-            >
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html" aria-current="page"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutme.html">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div class="site-header__inner">
+        <a
+          class="site-logo"
+          href="index.html"
+          aria-label="SC developer logo, Sarah Collins home"
+        >
+          <span aria-hidden="true">&lt;SC /&gt;</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div class="main-bg-video" aria-hidden="true">
-      <video
-        id="heroVideo"
-        class="bg-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        poster="assets/images/profile-background.jpg"
-      >
-        <source src="assets/videos/profile.mp4" type="video/mp4" />
-      </video>
-      <div
-        class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
-      ></div>
-    </div>
-    <button
-      class="motion-toggle"
-      type="button"
-      id="motionToggle"
-      aria-pressed="true"
-      aria-controls="heroVideo"
-    >
-      Play motion
-    </button>
-
-    <main
-      id="main-content"
-      class="container flex-grow-1 d-flex align-items-end justify-content-center py-5"
-    >
-      <section class="profile-info z-2 px-3 px-md-0 w-100 text-center">
-        <div class="typewriter-bg typewriter-wrapper">
-          <p class="terminal-prompt text-pink" aria-hidden="true">&gt;</p>
-          <h1
-            id="typewriter-text"
-            class="hero-title fw-black display-1 text-uppercase"
-          >
-            Sarah Collins
-          </h1>
-          <p id="typewriter-subtext" class="hero-subtitle h4 text-info">
-            Full-Stack Web Developer
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__content">
+          <p class="eyebrow">Junior web developer · Greater Manchester</p>
+          <h1 id="hero-heading">I build clear, accessible websites for real people.</h1>
+          <p class="hero__intro">
+            I am Sarah Collins, a career-change developer combining front-end
+            skills with more than twenty years of customer service and property
+            management experience.
           </p>
-        </div>
 
-        <div class="hero-actions mt-4">
-          <a
-            class="btn custom-cta primary-btn px-4 py-2 mt-4"
-            href="projects.html"
-            >View Projects</a
+          <div class="button-group">
+            <a class="button button--primary" href="projects.html">Explore my work</a>
+            <a class="button button--secondary" href="contact.html">Contact me</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" aria-labelledby="value-heading">
+        <div class="content-width">
+          <div class="section-heading">
+            <p class="eyebrow">What I bring</p>
+            <h2 id="value-heading">Thoughtful development from user need to final test</h2>
+            <p>
+              My goal is to create websites that feel straightforward to use,
+              work across screen sizes, and communicate their purpose without
+              making visitors search for answers.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <p class="feature-card__number" aria-hidden="true">01</p>
+              <h3>User-focused thinking</h3>
+              <p>
+                I turn business needs and user questions into clear page
+                structures, readable content, and obvious next steps.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <p class="feature-card__number" aria-hidden="true">02</p>
+              <h3>Accessible foundations</h3>
+              <p>
+                I use semantic HTML, logical headings, visible focus states,
+                descriptive links, and strong colour contrast.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <p class="feature-card__number" aria-hidden="true">03</p>
+              <h3>Responsive delivery</h3>
+              <p>
+                I build flexible layouts with custom CSS and test them from
+                small mobile screens through to large desktops.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-heading">
+        <div class="content-width split-panel">
+          <div>
+            <p class="eyebrow">Selected project</p>
+            <h2 id="featured-heading">Aura Hair Studio</h2>
+            <p>
+              A polished salon website designed to help prospective clients
+              understand the brand, explore services, and find a clear route to
+              booking.
+            </p>
+            <a class="text-link" href="projects.html#aura-project">
+              Read the project summary
+            </a>
+          </div>
+
+          <img
+            class="split-panel__image"
+            src="assets/images/project_booking.jpg"
+            alt="Aura Hair Studio homepage with salon navigation, stylist photograph, and booking call to action"
+            width="1904"
+            height="856"
           >
-          <a
-            class="btn custom-cta primary-btn px-4 py-2 mt-4"
-            href="contact.html"
-            >Contact Me</a
-          >
-          <a
-            class="btn custom-cta primary-btn secondary-btn px-4 py-2 mt-4"
-            href="assets/resume.pdf"
-            download
-            >Download Resume</a
-          >
+        </div>
+      </section>
+
+      <section class="section section--accent" aria-labelledby="next-step-heading">
+        <div class="content-width callout">
+          <div>
+            <p class="eyebrow">Let us start a conversation</p>
+            <h2 id="next-step-heading">Looking for a committed junior developer?</h2>
+            <p>
+              View my background, download my resume, or contact me directly
+              about entry-level opportunities and small-business web projects.
+            </p>
+          </div>
+
+          <div class="button-group">
+            <a class="button button--primary" href="aboutme.html">About me</a>
+            <a class="button button--secondary" href="assets/resume.pdf">
+              View resume
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <nav class="social-sidebar" aria-label="Social media links">
-      <a
-        href="https://github.com/alssl27"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="GitHub"
-        aria-label="GitHub"
-        ><i class="fa-brands fa-github" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-        aria-label="LinkedIn"
-        ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://discord.com/users/alsslc220702"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Discord"
-        aria-label="Discord"
-        ><i class="fa-brands fa-discord" aria-hidden="true"></i
-      ></a>
-      <a
-        href="https://www.facebook.com/bdens69/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Facebook"
-        aria-label="Facebook"
-        ><i class="fa-brands fa-facebook" aria-hidden="true"></i
-      ></a>
-    </nav>
-
-    <footer class="bg-black text-light py-4 z-3">
-      <div class="container d-flex justify-content-center align-items-center">
-        <p class="mb-0 text-center text-md-start">
-          © 2026 Sarah Collins. All rights reserved.
-        </p>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Sarah Collins. Built with HTML and CSS.</p>
+        <nav aria-label="Social and contact links">
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://github.com/alssl27"
+                target="_blank"
+                rel="noopener noreferrer"
+              >GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/sarah-collins-b6741021a/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >LinkedIn</a>
+            </li>
+            <li><a href="mailto:sarahcollins702@gmail.com">Email</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
-
-    <!-- Bootstrap JavaScript powers the responsive navbar. -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
