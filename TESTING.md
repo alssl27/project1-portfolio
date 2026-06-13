@@ -37,7 +37,7 @@ Collins Web Developer Portfolio.
 | Check 1024px layout | Desktop/tablet transition remains balanced | Project cards and general grids use available space without overflow | Pass |
 | Check 1440px layout | Content remains contained and does not become difficult to scan | Maximum content width keeps lines and media controlled | Pass |
 | Check contact route | The page does not claim to submit data without delivery | Non-functional form was removed and direct email/profile links are provided | Pass |
-| Run local static checker | No missing files, duplicate IDs, unsafe external links, inline styles/scripts, frameworks, or JavaScript files | `node tools/check-static-site.js` completes successfully | Pass |
+| Run local static checker | At least three HTML5 pages, labelled main navigation, the custom stylesheet, required README sections, and AI attribution comments are present; no missing files, duplicate IDs, unsafe external links, inline styles/scripts, frameworks, or unexpected JavaScript files are found | `node tools/check-static-site.js` completes successfully | Pass |
 
 ## Browser Compatibility
 

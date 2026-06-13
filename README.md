@@ -196,6 +196,17 @@ The resume can be opened from the homepage, About page, and Contact page.
 
 No frameworks or custom JavaScript are used in the submitted website.
 
+## Requirement Coverage
+
+| Mandatory requirement | Project evidence |
+| --- | --- |
+| Static front-end project | Four separate HTML5 pages are included: Home, About, Projects, and Contact. The presentation layer is written in custom CSS3. |
+| Information architecture | Every page uses the same labelled main navigation and a structured layout built with semantic `header`, `nav`, `main`, `section`, `article`, `aside`, and `footer` elements where appropriate. |
+| Documentation | This README explains the website's purpose, target users, value, features, design decisions, accessibility, testing, and deployment. |
+| Version control | Git tracks the local project and the repository is hosted on [GitHub](https://github.com/alssl27/project1-portfolio). |
+| Attribution | The code provenance below distinguishes original project work, AI-assisted refinement, media, and third-party services. AI-assisted source files also contain attribution comments. No external code, framework, library, or tutorial snippet is included in the final website. |
+| Deployment | GitHub Actions deploys the `main` branch to GitHub Pages at [www.sarahcollinsweb.dev](https://www.sarahcollinsweb.dev). |
+
 ## Project Structure
 
 ```text
@@ -344,11 +355,23 @@ Suggested future commit messages:
 
 ## Credits and Acknowledgements
 
-### Code
+### Code Provenance
 
-All submitted website HTML and CSS is custom project code. No framework,
-component library, copied template, or custom JavaScript is used in the final
-site.
+- The project author supplied the project goals, personal content, branding
+  direction, media, and final approval of all submitted work.
+- The final website uses project-specific custom HTML5 and CSS3.
+- No Bootstrap, external framework, component library, copied template,
+  tutorial code, or custom JavaScript is used by the deployed website.
+- File-level comments identify source files that received AI assistance.
+
+### AI Assistance
+
+OpenAI Codex AI was used during this project to assist with reviewing and
+refining the HTML and CSS, improving accessibility and responsive design,
+debugging, creating local validation checks, reviewing the GitHub Pages
+workflow, and updating project documentation. Codex was used as an assistance
+tool rather than as an unreviewed external code source. All AI-assisted changes
+were reviewed, tested, and approved by the project author before inclusion.
 
 ### Media
 

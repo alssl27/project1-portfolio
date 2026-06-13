@@ -1,3 +1,6 @@
+// AI assistance: OpenAI Codex helped create and refine these project checks.
+// The project author reviewed and approved the final script.
+
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -14,6 +17,7 @@ const requiredFiles = [
   "assets/resume.pdf",
 ];
 const failures = [];
+const aiAttributionPattern = /AI assistance:\s*OpenAI Codex/i;
 
 function fail(message) {
   failures.push(message);
@@ -43,6 +47,10 @@ for (const file of requiredFiles) {
   }
 }
 
+if (htmlFiles.length < 3) {
+  fail(`expected at least 3 HTML pages, found ${htmlFiles.length}`);
+}
+
 for (const file of htmlFiles) {
   const html = read(file);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
@@ -59,6 +67,18 @@ for (const file of htmlFiles) {
 
   if (!/<main\b[^>]*\bid="main-content"/i.test(html)) {
     fail(`${file}: missing main-content target`);
+  }
+
+  if (!/<nav\b[^>]*class="site-nav"[^>]*aria-label="Main navigation"/i.test(html)) {
+    fail(`${file}: missing labelled main navigation`);
+  }
+
+  if (!/<link\b[^>]*rel="stylesheet"[^>]*href="assets\/css\/style\.css"/i.test(html)) {
+    fail(`${file}: missing custom stylesheet link`);
+  }
+
+  if (!aiAttributionPattern.test(html)) {
+    fail(`${file}: missing AI assistance attribution comment`);
   }
 
   if (!/<a\b[^>]*class="skip-link"[^>]*href="#main-content"/i.test(html)) {
@@ -125,8 +145,29 @@ for (const file of htmlFiles) {
 
 const css = read(cssFile);
 
+if (!aiAttributionPattern.test(css)) {
+  fail(`${cssFile}: missing AI assistance attribution comment`);
+}
+
 if (/@import\b/i.test(css)) {
   fail(`${cssFile}: contains an external @import`);
+}
+
+const readme = read("README.md");
+const requiredReadmeSections = [
+  "Project Overview",
+  "Technologies Used",
+  "Requirement Coverage",
+  "Deployment",
+  "Version Control",
+  "Credits and Acknowledgements",
+  "AI Assistance",
+];
+
+for (const section of requiredReadmeSections) {
+  if (!new RegExp(`^#{2,3}\\s+${section}\\s*$`, "im").test(readme)) {
+    fail(`README.md: missing "${section}" section`);
+  }
 }
 
 const javascriptFiles = [];
