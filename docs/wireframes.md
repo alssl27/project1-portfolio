@@ -4,6 +4,11 @@ These diagrams document the final information architecture created during the
 June 2026 project audit. They are post-audit references, not original
 pre-development wireframes.
 
+The editable SVG
+[responsive wireframe](responsive-wireframes.svg) documents the homepage at
+desktop, tablet, and mobile widths. It can also be imported into Figma as
+editable vector layers.
+
 ## Desktop
 
 ```text

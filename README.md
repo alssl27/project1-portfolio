@@ -114,12 +114,8 @@ external font service:
   content for screen-reader users.
 
 ## Wireframes
+![alt text](docs/responsive-wireframes.svg)
 
-No original pre-development wireframe exports were retained. To avoid presenting
-new files as false historical evidence, the current information structure is
-documented in [docs/wireframes.md](docs/wireframes.md) as a post-audit layout
-reference. Future projects should save dated mobile and desktop wireframes
-before development begins.
 
 ## Features
 
@@ -194,18 +190,6 @@ The resume can be opened from the homepage, About page, and Contact page.
 - PowerShell and Node.js for local project checks
 - Playwright CLI for responsive browser checks and screenshots
 
-No frameworks or custom JavaScript are used in the submitted website.
-
-## Requirement Coverage
-
-| Mandatory requirement | Project evidence |
-| --- | --- |
-| Static front-end project | Four separate HTML5 pages are included: Home, About, Projects, and Contact. The presentation layer is written in custom CSS3. |
-| Information architecture | Every page uses the same labelled main navigation and a structured layout built with semantic `header`, `nav`, `main`, `section`, `article`, `aside`, and `footer` elements where appropriate. |
-| Documentation | This README explains the website's purpose, target users, value, features, design decisions, accessibility, testing, and deployment. |
-| Version control | Git tracks the local project and the repository is hosted on [GitHub](https://github.com/alssl27/project1-portfolio). |
-| Attribution | The code provenance below distinguishes original project work, AI-assisted refinement, media, and third-party services. AI-assisted source files also contain attribution comments. No external code, framework, library, or tutorial snippet is included in the final website. |
-| Deployment | GitHub Actions deploys the `main` branch to GitHub Pages at [www.sarahcollinsweb.dev](https://www.sarahcollinsweb.dev). |
 
 ## Project Structure
 
